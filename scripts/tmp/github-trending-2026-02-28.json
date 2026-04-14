@@ -1,0 +1,96 @@
+{
+  "children": [
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "📅 抓取时间: 2026-02-28 19:00 (北京时间)"}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 moeru-ai/airi"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: TypeScript | ⭐ 今日: +199 | 总计: 18,870"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported."}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/moeru-ai/airi", "link": {"url": "https://github.com/moeru-ai/airi"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 anthropics/claude-code"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands."}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/anthropics/claude-code", "link": {"url": "https://github.com/anthropics/claude-code"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 tukaani-project/xz"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: C | ⭐ 今日: +85 | 总计: 1,183"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "XZ Utils - 压缩工具库"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/tukaani-project/xz", "link": {"url": "https://github.com/tukaani-project/xz"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 Shubhamsaboo/awesome-llm-apps"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models."}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/Shubhamsaboo/awesome-llm-apps", "link": {"url": "https://github.com/Shubhamsaboo/awesome-llm-apps"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 ruvnet/ruflo"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: TypeScript | ⭐ 今日: +531 | 总计: 16,102"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, distributed swarm intelligence, RAG integration, and native Claude Code / Codex Integration"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/ruvnet/ruflo", "link": {"url": "https://github.com/ruvnet/ruflo"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 bytedance/deer-flow"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skills and subagents, it handles different levels of tasks that could take minutes to hours."}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/bytedance/deer-flow", "link": {"url": "https://github.com/bytedance/deer-flow"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 Wei-Shaw/claude-relay-service"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: JavaScript | ⭐ 今日: +53 | 总计: 8,635"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "CRS-自建Claude Code镜像，一站式开源中转服务，让 Claude、OpenAI、Gemini、Droid 订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/Wei-Shaw/claude-relay-service", "link": {"url": "https://github.com/Wei-Shaw/claude-relay-service"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 NousResearch/hermes-agent"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: Python | ⭐ 今日: +183 | 总计: 980"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/NousResearch/hermes-agent", "link": {"url": "https://github.com/NousResearch/hermes-agent"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 superset-sh/superset"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: TypeScript | ⭐ 今日: +156 | 总计: 2,219"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "IDE for the AI Agents Era - Run an army of Claude Code, Codex, etc. on your machine"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/superset-sh/superset", "link": {"url": "https://github.com/superset-sh/superset"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 moonshine-ai/moonshine"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: C | ⭐ 今日: +593 | 总计: 6,072"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "Fast and accurate automatic speech recognition (ASR) for edge devices"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/moonshine-ai/moonshine", "link": {"url": "https://github.com/moonshine-ai/moonshine"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 PaddlePaddle/Paddle"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训练和跨平台部署）"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/PaddlePaddle/Paddle", "link": {"url": "https://github.com/PaddlePaddle/Paddle"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 datagouv/datagouv-mcp"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: Python | ⭐ 今日: +122 | 总计: 560"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "Official data.gouv.fr Model Context Protocol (MCP) server that allows AI chatbots to search, explore, and analyze datasets from the French national Open Data platform, directly through conversation."}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/datagouv/datagouv-mcp", "link": {"url": "https://github.com/datagouv/datagouv-mcp"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 Wei-Shaw/sub2api"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: Go | ⭐ 今日: +97 | 总计: 2,307"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/Wei-Shaw/sub2api", "link": {"url": "https://github.com/Wei-Shaw/sub2api"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 X-PLUG/MobileAgent"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: Python | ⭐ 今日: +33 | 总计: 7,409"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "Mobile-Agent: The Powerful GUI Agent Family"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/X-PLUG/MobileAgent", "link": {"url": "https://github.com/X-PLUG/MobileAgent"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 alibaba/OpenSandbox"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: Python | ⭐ 今日: +105 | 总计: 1,664"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "OpenSandbox is a general-purpose sandbox platform for AI applications, offering multi-language SDKs, unified sandbox APIs, and Docker/Kubernetes runtimes for scenarios like Coding Agents, GUI Agents, Agent Evaluation, AI Code Execution, and RL Training."}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/alibaba/OpenSandbox", "link": {"url": "https://github.com/alibaba/OpenSandbox"}}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 obra/superpowers"}, "annotations": {"bold": true}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "语言: Shell | ⭐ 今日: +1,546 | 总计: 65,440"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "An agentic skills framework & software development methodology that works."}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "🔗 "}}, {"type": "text", "text": {"content": "https://github.com/obra/superpowers", "link": {"url": "https://github.com/obra/superpowers"}}}]}}
+  ]
+}

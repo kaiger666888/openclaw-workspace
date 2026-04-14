@@ -1,0 +1,52 @@
+# 每日任务配置 — event/parent/title 映射
+# 脚本 daily-task-write.sh 和 daily-tasks-v3.sh 共用此配置
+
+batch1:
+  - event: github-review
+    parent: "32711082-af8e-8185-9883-fdff1f18a577"
+    title: "代码审查-{date}"
+    special: true  # 需要 github-review.sh，有提交才执行
+  - event: vibecoding
+    parent: "2fc11082-af8e-817f-9542-ddf609cecc49"
+    title: "VibeCoding-{date}"
+  - event: reading-notes
+    parent: "2fc11082-af8e-8138-8fca-c70bcced3395"
+    title: "读书笔记-{date}"
+  - event: failure-lessons
+    parent: "2fc11082-af8e-8120-b640-cf5eb9e2b134"
+    title: "失败经验-{date}"
+  - event: tech-research
+    parent: "2fc11082-af8e-81de-98bb-d1741c3cee68"
+    title: "技术研究-{date}"
+  - event: daily-language
+    parent: "30411082-af8e-8191-9fb5-d1ca8f6d7b6f"
+    title: "每日英语德语-{date}"
+    dedup: true  # 需要去重
+    dedup_type: english-german
+    dedup_fields: "quote,author"
+  - event: daily-aigc
+    parent: "33411082-af8e-81a5-a5a6-f393d9079764"
+    title: "AIGC前沿-{date}"
+
+batch2:
+  - event: daily-news
+    parent: "2f811082-af8e-8186-af95-e126966aead6"
+    title: "每日新闻-{date}"
+  - event: claude-code-insights
+    parent: "2fc11082-af8e-810b-a6c8-d9e075abe87c"
+    title: "Claude Code心得-{date}"
+  - event: github-trending
+    parent: "2fc11082-af8e-81c0-a440-f53168e67d10"
+    title: "GitHub Trending-{date}"
+  - event: investment-wisdom
+    parent: "2b011082-af8e-8035-a849-eabd27cadac3"
+    title: "投资大师思想-{date}"
+  - event: startup-failures
+    parent: "2fc11082-af8e-8120-b640-cf5eb9e2b134"
+    title: "创业失败经验-{date}"
+  - event: knowledge-viz
+    parent: "2fc11082-af8e-81de-98bb-d1741c3cee68"
+    title: "知识可视化研究-{date}"
+  - event: mental-models
+    parent: "31d11082-af8e-8116-83f3-f87f63dbafb1"
+    title: "心智模型-{date}"

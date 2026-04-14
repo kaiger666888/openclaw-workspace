@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>婆媳关系可视化</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+  :root {
+    --pink: #FF6B8A;
+    --pink-bg: #FFF0F3;
+    --blue: #5B9BD5;
+    --blue-bg: #EBF5FF;
+    --yellow: #F4B942;
+    --yellow-bg: #FFF8E1;
+    --green: #5CB85C;
+    --green-bg: #F0FFF0;
+    --coral: #FF5252;
+    --purple: #9C6ADE;
+    --text: #2D2D2D;
+    --muted: #888;
+    --bg: #FEFCF9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'ZCOOL KuaiLe', 'Noto Sans SC', cursive;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+  }
+
+  .page { max-width: 1080px; margin: 0 auto; }
+
+  /* 1080x1440 小红书标准 */
+  .card {
+    width: 1080px;
+    height: 1440px;
+    background: white;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .card-header {
+    padding: 48px 48px 20px;
+  }
+
+  .card-header h1 {
+    font-size: 42px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .card-header .subtitle {
+    font-size: 20px;
+    color: var(--muted);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+  }
+
+  .card-body {
+    padding: 10px 48px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-footer {
+    padding: 24px 48px;
+    text-align: center;
+    font-size: 15px;
+    color: #bbb;
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+
+  /* Mermaid 样式 */
+  .mermaid {
+    font-family: 'ZCOOL KuaiLe', cursive !important;
+  }
+
+  .mermaid .node rect, .mermaid .node circle, .mermaid .node polygon, .mermaid .node path {
+    rx: 10; ry: 10;
+    stroke-width: 2px !important;
+    filter: url(#sketch);
+  }
+
+  .mermaid .edgePath .path {
+    stroke-width: 2px !important;
+    filter: url(#sketch);
+  }
+
+  .mermaid .nodeLabel {
+    font-family: 'ZCOOL KuaiLe', cursive !important;
+    font-size: 14px !important;
+  }
+
+  .mermaid .edgeLabel {
+    font-family: 'ZCOOL KuaiLe', cursive !important;
+    font-size: 13px !important;
+  }
+
+  .mermaid .label {
+    font-family: 'ZCOOL KuaiLe', cursive !important;
+  }
+
+  .mermaid .actor {
+    stroke-width: 2px !important;
+    filter: url(#sketch);
+  }
+
+  .mermaid .messageLine0, .mermaid .messageLine1 {
+    stroke-width: 2px !important;
+    filter: url(#sketch);
+  }
+
+  .mermaid text.actor > tspan {
+    font-family: 'ZCOOL KuaiLe', cursive !important;
+  }
+
+  /* 色块 */
+  .box {
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin: 10px 0;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    border: 2.5px solid;
+    filter: url(#sketch);
+  }
+
+  .box strong {
+    display: block;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 19px;
+    margin-bottom: 6px;
+  }
+
+  .box-pk { background: var(--pink-bg); border-color: var(--pink); }
+  .box-bl { background: var(--blue-bg); border-color: var(--blue); }
+  .box-yl { background: var(--yellow-bg); border-color: var(--yellow); }
+  .box-gn { background: var(--green-bg); border-color: var(--green); }
+  .box-rd { background: #FFF5F5; border-color: var(--coral); }
+
+  /* ===== 封面 ===== */
+  .cover {
+    background: linear-gradient(160deg, #FFF0F3 0%, #EBF5FF 40%, #FFF8E1 100%);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 60px;
+    position: relative;
+  }
+
+  .cover-deco {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+  }
+
+  .cover h1 {
+    font-size: 64px;
+    line-height: 1.25;
+    color: var(--text);
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .cover h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cover .tag-row {
+    display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+    margin-top: 36px;
+  }
+
+  .cover .tag-row span {
+    background: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    border: 2.5px solid;
+    filter: url(#sketch);
+  }
+
+  .cover .swipe {
+    margin-top: auto;
+    font-size: 18px;
+    color: #bbb;
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+
+  .hand-emoji {
+    font-size: 80px;
+    margin-bottom: 20px;
+    filter: url(#sketch);
+  }
+
+  /* 序号圆 */
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: white;
+    margin-right: 12px;
+    flex-shrink: 0;
+    filter: url(#sketch);
+  }
+
+  .step-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .step-row .box {
+    flex: 1;
+    margin: 0;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .score-card {
+    text-align: center;
+    border-radius: 16px;
+    padding: 28px 16px;
+    border: 2.5px solid;
+    filter: url(#sketch);
+  }
+
+  .score-card .big {
+    font-size: 52px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .score-card .small {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 15px;
+    color: #666;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .cta {
+    font-size: 26px;
+    text-align: center;
+    margin: 32px 0 8px;
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 16px; right: 24px;
+    font-size: 13px;
+    color: #ddd;
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0">
+  <defs>
+    <filter id="sketch">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" seed="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="page">
+
+<!-- ===== 1 封面 ===== -->
+<div class="card cover">
+  <div class="cover-deco" style="width:300px;height:300px;background:var(--pink);top:-80px;left:-80px"></div>
+  <div class="cover-deco" style="width:200px;height:200px;background:var(--blue);bottom:40px;right:-40px"></div>
+  <div class="cover-deco" style="width:150px;height:150px;background:var(--yellow);top:200px;right:80px"></div>
+
+  <div class="hand-emoji">👩‍👧‍👦</div>
+  <h1><em>婆媳关系</em><br/>看这张图就够了！</h1>
+  <p style="font-size:22px;color:#666;font-family:'Noto Sans SC',sans-serif">用系统思维破解千古难题 · 3张核心图</p>
+
+  <div class="tag-row">
+    <span style="border-color:var(--pink)">📌 3张核心图</span>
+    <span style="border-color:var(--blue)">💡 系统思维</span>
+    <span style="border-color:var(--green)">✅ 实操方案</span>
+  </div>
+
+  <p class="swipe">左滑查看完整内容 →</p>
+  <div class="watermark">@系统思维实验室</div>
+</div>
+
+<!-- ===== 2 系统图 ===== -->
+<div class="card">
+  <div class="card-header">
+    <h1 style="color:var(--pink)">图1️⃣ 婆媳关系系统图</h1>
+    <p class="subtitle">谁在做什么？谁期待什么？</p>
+  </div>
+  <div class="card-body">
+    <div class="mermaid">
+graph TB
+    subgraph 家庭系统
+        MIL[👵 婆婆]:::mil
+        DIL[👩 媳妇]:::dil
+        H[👨 丈夫]:::hus
+        C[👶 孩子]:::ch
+
+        UC1[🍼 照顾孩子]
+        UC2[🧹 家务分工]
+        UC3[💰 经济管理]
+        UC4[🤔 家庭决策]
+        UC5[❤️ 情感支持]
+    end
+
+    MIL -->|想帮忙| UC1
+    MIL -->|习惯主导| UC2
+    MIL -->|期待参与| UC4
+
+    DIL -->|科学育儿| UC1
+    DIL -->|平等分工| UC2
+    DIL -->|独立管理| UC3
+    DIL -->|平等决策| UC4
+    DIL -->|需要支持| UC5
+
+    H -->|主要责任| UC3
+    H -->|最终决策者| UC4
+    H -->|支持双方| UC5
+
+    C -->|被照顾| UC1
+
+    classDef mil fill:#FFF0F3,stroke:#FF6B8A,stroke-width:3px
+    classDef dil fill:#EBF5FF,stroke:#5B9BD5,stroke-width:3px
+    classDef hus fill:#FFF8E1,stroke:#F4B942,stroke-width:3px
+    classDef ch fill:#F0FFF0,stroke:#5CB85C,stroke-width:3px
+    </div>
+
+    <div class="grid-3" style="margin-top:24px">
+      <div class="box box-pk"><strong>👵 婆婆的期待</strong>传统角色 · 主导家务<br/>参与育儿 · 被尊重</div>
+      <div class="box box-bl"><strong>👩 媳妇的期待</strong>现代角色 · 平等分工<br/>科学育儿 · 独立空间</div>
+      <div class="box box-yl"><strong>👨 丈夫的困境</strong>左右为难 · 当传话筒<br/>不敢决策 · 两头受气</div>
+    </div>
+  </div>
+  <div class="card-footer">90%的矛盾来自这3个系统性问题 →</div>
+</div>
+
+<!-- ===== 3 冲突时序图 ===== -->
+<div class="card">
+  <div class="card-header">
+    <h1 style="color:var(--coral)">图2️⃣ 冲突升级时序图</h1>
+    <p class="subtitle">为什么你们总是在吵架？</p>
+  </div>
+  <div class="card-body">
+    <div class="mermaid">
+sequenceDiagram
+    participant 婆婆 👵
+    participant 丈夫 👨
+    participant 媳妇 👩
+
+    Note over 婆婆,媳妇: 💥 场景：孩子吃什么？
+
+    婆婆->>丈夫: 孩子该吃米糊了（经验判断）
+    Note right of 婆婆: 我养大3个孩子！
+
+    丈夫->>媳妇: 妈说吃米糊（简单传话）
+    Note left of 丈夫: ❌ 只当传话筒
+
+    媳妇->>丈夫: 医生建议6个月后（科学依据）
+    Note right of 媳妇: 专业权威
+
+    丈夫->>婆婆: 媳妇说要听医生的
+    Note over 婆婆: 😢 我不被信任
+
+    婆婆-->>媳妇: 我还不知道？（情绪化）
+    Note over 媳妇: 😤 专业被质疑
+
+    媳妇-->>婆婆: 现在科学不一样！（反击）
+
+    Note over 婆婆,媳妇: 💥 冲突爆发！
+
+    婆婆->>丈夫: 你媳妇不尊重我
+    媳妇->>丈夫: 你妈太固执了
+    Note over 丈夫: 😫 我太难了
+    </div>
+
+    <div class="box box-rd" style="margin-top:16px">
+      <strong>🔍 根本原因</strong>
+      ① 沟通路径错误（丈夫只当传话筒）<br/>
+      ② 缺乏共同决策机制<br/>
+      ③ 期待不同（经验 vs 科学）<br/>
+      ④ 情绪化表达代替理性讨论
+    </div>
+  </div>
+  <div class="card-footer">问题不在人，在系统 →</div>
+</div>
+
+<!-- ===== 4 决策流程 ===== -->
+<div class="card">
+  <div class="card-header">
+    <h1 style="color:var(--green)">图3️⃣ 理想决策流程</h1>
+    <p class="subtitle">这样决策，和谐度提升80%</p>
+  </div>
+  <div class="card-body">
+    <div class="mermaid">
+flowchart TD
+    S([问题出现]) --> A[👩 媳妇提出需求]
+    A --> B[👵 婆婆表达意见]
+    B --> C[👨 丈夫收集信息]
+    C --> D[👨 查证权威]
+    D --> E{🏠 家庭会议讨论}
+    E -->|一致 ✅| F[全员执行]
+    F --> G[📅 定期复盘]
+    E -->|不一致 ❌| H[👨 丈夫决策]
+    H --> I[说明理由]
+    I --> J[全员尊重执行]
+    G --> K([解决 ✓])
+    J --> K
+
+    style S fill:#E8F5E9,stroke:#5CB85C,stroke-width:3px
+    style K fill:#E8F5E9,stroke:#5CB85C,stroke-width:3px
+    style E fill:#FFF8E1,stroke:#F4B942,stroke-width:3px
+    style A fill:#EBF5FF,stroke:#5B9BD5,stroke-width:2px
+    style B fill:#FFF0F3,stroke:#FF6B8A,stroke-width:2px
+    style C fill:#FFF8E1,stroke:#F4B942,stroke-width:2px
+    style D fill:#FFF8E1,stroke:#F4B942,stroke-width:2px
+    </div>
+
+    <div class="box box-gn" style="margin-top:16px">
+      <strong>🔑 关键原则</strong>
+      ① 丈夫是决策者，不是和事佬<br/>
+      ② 所有人参与讨论，不偏不倚<br/>
+      ③ 决策基于信息，不基于情绪<br/>
+      ④ 决策后全员执行，不翻旧账
+    </div>
+  </div>
+  <div class="card-footer">记住这4个原则 →</div>
+</div>
+
+<!-- ===== 5 期待差异 ===== -->
+<div class="card">
+  <div class="card-header">
+    <h1 style="color:var(--purple)">图4️⃣ 期待差异对比</h1>
+    <p class="subtitle">5个冲突点，你中了几个？</p>
+  </div>
+  <div class="card-body">
+    <div class="mermaid">
+graph LR
+    subgraph 👵 婆婆
+        P1[传统角色]
+        P2[主导家务]
+        P3[经验育儿]
+        P4[被尊重]
+        P5[传承经验]
+    end
+    subgraph ⚡ 冲突
+        C1[角色]
+        C2[主导权]
+        C3[育儿]
+        C4[边界]
+        C5[决策]
+    end
+    subgraph 👩 媳妇
+        D1[现代角色]
+        D2[平等分工]
+        D3[科学育儿]
+        D4[独立空间]
+        D5[专业权威]
+    end
+    P1 -.- C1 & D1 -.- C1
+    P2 -.- C2 & D2 -.- C2
+    P3 -.- C3 & D3 -.- C3
+    P4 -.- C4 & D4 -.- C4
+    P5 -.- C5 & D5 -.- C5
+    </div>
+
+    <div class="grid-2" style="margin-top:24px">
+      <div class="box box-pk"><strong>💡 关键洞察</strong>婆婆不是"坏人"<br/>她只是期待被尊重</div>
+      <div class="box box-bl"><strong>💡 关键洞察</strong>媳妇不是"难搞"<br/>她只是需要平等对话</div>
+    </div>
+  </div>
+  <div class="card-footer">理解了差异，就理解了一切 →</div>
+</div>
+
+<!-- ===== 6 解决方案 ===== -->
+<div class="card">
+  <div class="card-header">
+    <h1 style="color:var(--coral)">图5️⃣ 解决方案全景</h1>
+    <p class="subtitle">三个层面，系统解决</p>
+  </div>
+  <div class="card-body">
+    <div class="mermaid">
+mindmap
+  root((婆媳关系<br/>解决方案))
+    系统层面
+      明确角色
+        婆婆：顾问
+        媳妇：主体
+        丈夫：协调者
+      建立边界
+        生活空间
+        决策范围
+        情感边界
+      制定规则
+        沟通机制
+        决策流程
+        冲突处理
+    个人层面
+      婆婆
+        接受新观念
+        尊重专业性
+        适度参与
+      媳妇
+        理解用心
+        尊重经验
+        温和表达
+      丈夫
+        主动担责
+        不传话
+        公平决策
+    实践层面
+      定期会议
+        每月一次
+        轻松氛围
+      共同活动
+        一起做饭
+        一起带娃
+      专业支持
+        育儿课程
+        家庭咨询
+    </div>
+  </div>
+  <div class="card-footer">不只是道理，是可执行的方案 →</div>
+</div>
+
+<!-- ===== 7 行动清单 ===== -->
+<div class="card">
+  <div class="card-header">
+    <h1 style="color:var(--green)">📋 今天就开始行动！</h1>
+    <p class="subtitle">4步改善家庭关系</p>
+  </div>
+  <div class="card-body">
+    <div class="step-row">
+      <div class="step-num" style="background:var(--pink)">1</div>
+      <div class="box box-pk" style="flex:1"><strong>开一次家庭会议</strong>选择轻松时间，大家坐下来<br/>💡 第一次不讨论敏感话题</div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:var(--blue)">2</div>
+      <div class="box box-bl" style="flex:1"><strong>画出自家的系统图</strong>明确每个人期待和责任<br/>💡 纸笔画就行，不用复杂</div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:var(--yellow)">3</div>
+      <div class="box box-yl" style="flex:1"><strong>共同制定决策规则</strong>谁提出？谁讨论？谁决策？<br/>💡 丈夫是最终决策者</div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:var(--green)">4</div>
+      <div class="box box-gn" style="flex:1"><strong>每月复盘一次</strong>什么有效？什么要调整？<br/>💡 持续优化系统</div>
+    </div>
+
+    <div style="text-align:center;margin-top:36px;font-size:22px;color:var(--muted);font-family:'Noto Sans SC',sans-serif">
+      行动比完美更重要 ✨
+    </div>
+  </div>
+  <div class="card-footer">→</div>
+</div>
+
+<!-- ===== 8 总结 ===== -->
+<div class="card cover">
+  <div class="cover-deco" style="width:250px;height:250px;background:var(--pink);top:-60px;right:-60px"></div>
+  <div class="cover-deco" style="width:180px;height:180px;background:var(--green);bottom:80px;left:-40px"></div>
+
+  <h1 style="font-size:48px;color:var(--text);margin-bottom:36px">记住这3句话</h1>
+
+  <div style="width:100%;max-width:800px">
+    <div class="box box-pk" style="margin-bottom:18px"><strong>👵 婆婆不是"坏人"</strong>她只是期待被尊重</div>
+    <div class="box box-bl" style="margin-bottom:18px"><strong>👨 丈夫不是"没用"</strong>他只是不知道怎么决策</div>
+    <div class="box box-yl" style="margin-bottom:18px"><strong>👩 媳妇不是"难搞"</strong>她只是需要平等对话</div>
+  </div>
+
+  <p style="font-size:26px;color:#666;margin-top:40px;font-family:'Noto Sans SC',sans-serif;line-height:1.6">
+    婆媳关系不是零和游戏<br/>
+    而是一个需要优化的系统 ❤️
+  </p>
+
+  <p class="swipe" style="margin-top:auto">用系统思维，让家庭更和谐</p>
+  <div class="watermark">@系统思维实验室</div>
+</div>
+
+<!-- ===== 9 互动 ===== -->
+<div class="card cover">
+  <div class="cover-deco" style="width:200px;height:200px;background:var(--yellow);top:40px;left:40px"></div>
+  <div class="cover-deco" style="width:160px;height:160px;background:var(--blue);bottom:120px;right:60px"></div>
+
+  <div class="hand-emoji">💬</div>
+  <h1 style="font-size:56px;color:var(--text)">你家婆媳关系<br/><em>打几分？</em></h1>
+
+  <div class="grid-2" style="max-width:800px;width:100%;margin-top:40px;gap:18px">
+    <div class="score-card" style="border-color:var(--coral)">
+      <span class="big" style="color:var(--coral)">0</span>
+      <span class="small">😫 天天吵架<br/>水火不容</span>
+    </div>
+    <div class="score-card" style="border-color:var(--yellow)">
+      <span class="big" style="color:var(--yellow)">5</span>
+      <span class="small">😐 偶尔摩擦<br/>基本和谐</span>
+    </div>
+    <div class="score-card" style="border-color:var(--blue)">
+      <span class="big" style="color:var(--blue)">8</span>
+      <span class="small">😊 互相尊重<br/>偶尔分歧</span>
+    </div>
+    <div class="score-card" style="border-color:var(--green)">
+      <span class="big" style="color:var(--green)">10</span>
+      <span class="small">😍 相处融洽<br/>亲如母女</span>
+    </div>
+  </div>
+
+  <p class="cta">👇 评论区告诉我，我帮你分析！</p>
+  <p class="swipe">❤️ 收藏 + 关注，不迷路</p>
+  <div class="watermark">@系统思维实验室</div>
+</div>
+
+</div>
+
+<script>
+mermaid.initialize({
+  startOnLoad: true,
+  theme: 'base',
+  themeVariables: {
+    primaryColor: '#EBF5FF',
+    primaryTextColor: '#2D2D2D',
+    primaryBorderColor: '#5B9BD5',
+    lineColor: '#C5C5C5',
+    secondaryColor: '#FFF0F3',
+    tertiaryColor: '#FFF8E1',
+    fontFamily: "'ZCOOL KuaiLe', cursive",
+    fontSize: '15px'
+  },
+  flowchart: { curve: 'basis', padding: 16 },
+  sequence: { actorMargin: 70, messageMargin: 30 }
+});
+</script>
+</body>
+</html>

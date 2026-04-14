@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "skills": {
+    "notion-skill": {
+      "version": "1.0.0",
+      "installedAt": 1770107755820
+    },
+    "rssaurus": {
+      "version": "1.0.0",
+      "installedAt": 1770124485404
+    },
+    "pre-mortem-analyst": {
+      "version": "1.0.0",
+      "installedAt": 1770124495715
+    },
+    "chart-image": {
+      "version": "2.1.0",
+      "installedAt": 1770124507630
+    },
+    "thinking-partner": {
+      "version": "1.0.0",
+      "installedAt": 1770124523152
+    },
+    "chromadb-memory": {
+      "version": "1.0.0",
+      "installedAt": 1770124542553
+    },
+    "arxiv-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1770124555692
+    },
+    "habit-tracker": {
+      "version": "1.0.0",
+      "installedAt": 1770124562368
+    }
+  }
+}

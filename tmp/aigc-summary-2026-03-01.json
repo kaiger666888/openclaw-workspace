@@ -1,0 +1,276 @@
+{
+  "children": [
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "🔥 今日头条：OpenAI完成$1100亿融资，估值达$8400亿"},
+            "annotations": {"bold": true}
+          }
+        ],
+        "icon": {"type": "emoji", "emoji": "🔥"},
+        "color": "red_background"
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "为什么重要：这是史上最大规模私人融资，Amazon($500亿)、Nvidia($300亿)、SoftBank($300亿)联手押注，标志着AI基础设施竞赛进入"军备竞赛"阶段。开发者需关注：OpenAI将使用2GW AWS Trainium算力和3GW Nvidia Vera Rubin算力，企业级AI部署成本可能大幅下降。"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "来源："}},
+          {"type": "text", "text": {"content": "The Guardian"}, "annotations": {"code": true}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "📊 模型动态"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "模型名称 | 参数量 | 上下文窗口 | 价格 (Input/Output)"}, "annotations": {"code": true}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "Claude Opus 4.6 | 未公开 | 200K | 企业版定价"}, "annotations": {"code": true}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "来源: Anthropic - AI驱动代码安全扫描，发现500+高危漏洞"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "GPT-5.3 Codex | 未公开 | 128K | API可用"}, "annotations": {"code": true}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "来源: OpenAI - Codex v0.106.0新增macOS/Linux安装脚本"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "DeepSeek 新模型 | 未公开 | 未公开 | 与华为合作降成本"}, "annotations": {"code": true}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "来源: FT - 中国AI公司与华为合作降低对Nvidia芯片依赖"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "💰 商业动态"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟢 $1100亿"}, "annotations": {"color": "green", "bold": true}},
+          {"type": "text", "text": {"content": " - OpenAI 完成史上最大私人融资，Amazon($500亿)+Nvidia($300亿)+SoftBank($300亿)投资，估值$8400亿"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟢 $5亿"}, "annotations": {"color": "green", "bold": true}},
+          {"type": "text", "text": {"content": " - MatX (AI芯片初创) Series B，Jane Street领投，专注SRAM+HBM混合架构LLM加速器"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟢 $2.5亿"}, "annotations": {"color": "green", "bold": true}},
+          {"type": "text", "text": {"content": " - Axelera (荷兰AI芯片) 新轮融资，专注边缘RISC-V AI加速器"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🔧 工具更新"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Claude Code Security"}, "annotations": {"color": "blue", "bold": true}},
+          {"type": "text", "text": {"content": " - Anthropic发布AI驱动代码安全扫描工具，基于Claude Opus 4.6，已发现500+高危漏洞，支持业务逻辑漏洞检测"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "OpenAI Codex v0.106.0"}, "annotations": {"color": "blue", "bold": true}},
+          {"type": "text", "text": {"content": " - 新增macOS/Linux直接安装脚本，扩展app-server线程API支持实时端点，优化内存行为"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "📈 趋势观察"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "📈"},
+        "color": "gray_background"
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "AI基础设施投资从"模型竞赛"转向"算力军备竞赛"，SRAM+HBM混合架构、RISC-V边缘AI芯片成为VC新宠。同时，AI安全工具开始超越传统SAST，业务逻辑漏洞检测成为新战场。"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🎬 创作素材备忘"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "🎬"},
+        "color": "purple_background"
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟣 [架构对比] MatX SRAM+HBM混合架构 vs Nvidia HBM"}, "annotations": {"color": "purple", "bold": true}},
+          {"type": "text", "text": {"content": " - 可视化建议：对比SRAM高速缓存与HBM大容量存储的分工机制，展示2000 tokens/s的MoE推理速度如何实现"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟣 [机制拆解] Claude Code Security AI漏洞检测流程"}, "annotations": {"color": "purple", "bold": true}},
+          {"type": "text", "text": {"content": " - 可视化建议：多阶段验证流程图，展示AI推理→置信度评分→人工审核的工作流，对比传统SAST的规则匹配机制"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "📚 信息来源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[OpenAI融资] "}},
+          {"type": "text", "text": {"content": "https://www.theguardian.com/technology/2026/feb/27/openai-110-billion-funding-round", "link": {"url": "https://www.theguardian.com/technology/2026/feb/27/openai-110-billion-funding-round"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[OpenAI融资详情] "}},
+          {"type": "text", "text": {"content": "https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/", "link": {"url": "https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[AI芯片融资] "}},
+          {"type": "text", "text": {"content": "https://www.theregister.com/2026/02/25/ai_chips_vc_funding_1point1billion/", "link": {"url": "https://www.theregister.com/2026/02/25/ai_chips_vc_funding_1point1billion/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[Claude Code Security] "}},
+          {"type": "text", "text": {"content": "https://help.apiyi.com/en/claude-code-security-ai-vulnerability-scanning-guide-en.html", "link": {"url": "https://help.apiyi.com/en/claude-code-security-ai-vulnerability-scanning-guide-en.html"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[OpenAI Codex更新] "}},
+          {"type": "text", "text": {"content": "https://releasebot.io/updates/openai", "link": {"url": "https://releasebot.io/updates/openai"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[DeepSeek新模型] "}},
+          {"type": "text", "text": {"content": "https://www.onenewspage.com/n/Business/1zte55oiiy/DeepSeek-to-release-long-awaited-AI-model-in.htm", "link": {"url": "https://www.onenewspage.com/n/Business/1zte55oiiy/DeepSeek-to-release-long-awaited-AI-model-in.htm"}}}
+        ]
+      }
+    }
+  ]
+}

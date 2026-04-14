@@ -1,0 +1,47 @@
+# OpenClaw Workspace - 只跟踪核心配置
+
+# 大文件项目（独立 repo 管理）
+projects/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# LFS 缓存
+.git/lfs/
+
+# 临时文件
+*.tmp
+*.log
+.score.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 敏感文件
+.github-token
+*.token
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+
+# 已有独立 repo 的 skill（不纳入 workspace repo）
+claude-code-via-openclaw
+git-uml-agent
+mengjing-cihua
+skills/claude-code-via-openclaw
+skills/kais-archi
+skills/kais-mind
+skills/kais-movie-agent
+skills/kais-pilot
+skills/knowledge-visualizer
+skills/soul-guide
+temp_review

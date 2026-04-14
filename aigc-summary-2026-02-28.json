@@ -1,0 +1,465 @@
+{
+  "children": [
+    {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "🔥 今日头条"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "OpenAI 完成 "},
+            "annotations": {"color": "default"}
+          },
+          {
+            "type": "text",
+            "text": {"content": "$110B"},
+            "annotations": {"bold": true, "color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " 融资 — 史上最大私募轮次\n\n2月27日宣布，Amazon、Nvidia、SoftBank 参投。此轮融资使 OpenAI 估值突破历史记录，成为 AI 领域资金最雄厚的公司。"},
+            "annotations": {"color": "default"}
+          }
+        ],
+        "icon": {"type": "emoji", "emoji": "🚨"},
+        "color": "red_background"
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "📊 模型动态"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "2026年2月成为AI模型发布最密集月份，五大前沿模型在两周内集中发布"},
+            "annotations": {"bold": true}
+          }
+        ],
+        "icon": {"type": "emoji", "emoji": "💡"}
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "模型名称"},
+            "annotations": {"bold": true}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "上下文"},
+            "annotations": {"bold": true}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "关键指标"},
+            "annotations": {"bold": true}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "发布日期"},
+            "annotations": {"bold": true}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Gemini 3.1 Pro"},
+            "annotations": {"color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | 1M tokens | "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "77.1% ARC-AGI-2"},
+            "annotations": {"color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | 2月19日"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "GPT-5.3"},
+            "annotations": {"color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | - | 性能领先13/16基准 | 2月5日"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Claude Opus 4.6"},
+            "annotations": {"color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | 1M tokens | 研究模型 | 2月5日"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Claude Sonnet 4.6"},
+            "annotations": {"color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | - | - | 2月17日"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "DeepSeek V4"},
+            "annotations": {"color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | 1M tokens | "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "90% HumanEval"},
+            "annotations": {"color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " | 预期2月中"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "💰 商业动态"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "OpenAI: "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "$110B"},
+            "annotations": {"bold": true, "color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " 融资（史上最大私募轮，Amazon/Nvidia/SoftBank参投）"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Anthropic: "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "$30B"},
+            "annotations": {"bold": true, "color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " Series D，估值 "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "$380B"},
+            "annotations": {"bold": true, "color": "green"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Amazon: 拟投资 OpenAI "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "$50B"},
+            "annotations": {"bold": true, "color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": "（与AGI里程碑或IPO挂钩）"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "SpaceX: 收购 xAI 后估值达 "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "$1.25T"},
+            "annotations": {"bold": true, "color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": "，计划2026年中IPO"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "DBS + Granite Asia: 推出 "},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "$110M"},
+            "annotations": {"bold": true, "color": "green"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " AI IPO 基金（亚洲）"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "🔧 工具更新"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Claude Code Security"},
+            "annotations": {"bold": true, "color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " — AI驱动的代码漏洞扫描，已发现500+漏洞（Enterprise/Team计划可用）"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Notion Custom Agents"},
+            "annotations": {"bold": true, "color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " — 自主AI队友，自动化端到端工作流（免费Beta至5月3日）"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "Brave Search API"},
+            "annotations": {"bold": true, "color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " — 集成到 Snowflake，支持企业AI工具（Cortex Code/Agents）"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "WordPress 7.0 Beta"},
+            "annotations": {"bold": true, "color": "blue"}
+          },
+          {
+            "type": "text",
+            "text": {"content": " — 新增AI功能与协作工具"},
+            "annotations": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "📈 趋势观察"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "AI行业进入「"},
+            "annotations": {}
+          },
+          {
+            "type": "text",
+            "text": {"content": "模型战争2.0"},
+            "annotations": {"bold": true}
+          },
+          {
+            "type": "text",
+            "text": {"content": "」阶段 — 不再有单一霸主，多模型并立格局形成。资金向头部集中（OpenAI $110B + Anthropic $30B），AGI竞赛加速，企业工具化趋势明显（Claude Code Security、Notion Custom Agents）。"},
+            "annotations": {}
+          }
+        ],
+        "icon": {"type": "emoji", "emoji": "🔮"}
+      }
+    }
+  ]
+}

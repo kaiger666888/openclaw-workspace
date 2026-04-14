@@ -1,0 +1,74 @@
+{
+  "children": [
+    {"type": "heading_1", "heading_1": {"rich_text": [{"type": "text", "text": {"content": "创业失败经验教训 - 2026年02月28日"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "来源：CB Insights 创业失败案例库（483+案例）、Failory 创业失败复盘"}}]}},
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "📊 当前创业环境"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "全球创业融资从2021年到2023年下降了61%，Q1'24融资仍比2021年峰值低68%。交易数量连续8个季度下降，创8年来新低。"}}], "icon": {"type": "emoji", "emoji": "📉"}}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 2024年重大失败案例分析"}}]}},
+    
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "1. Olive（医疗AI）- 融资$8.5亿，估值$40亿"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "业务：医疗AI自动化解决方案（预授权审批、临床分析）"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "投资人：SVB、Google Ventures、Sequoia、Tiger Global"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "失败原因：经济环境恶化 + 客户期望变化 + 管理层失误"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "教训：即使有顶级投资人支持，管理执行力和市场时机同样关键"}}], "icon": {"type": "emoji", "emoji": "💡"}}},
+    
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "2. Convoy（数字货运）- 融资$8.36亿，估值$38亿"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "业务：\"卡车界的Uber\"，数字货运网络"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "投资人：Bill Gates、Jeff Bezos、Marc Benioff、Y Combinator、CapitalG"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "失败原因：管理层缺乏卡车行业经验 + 故意亏损模式无法持续 + 运输需求下降 + VC市场收缩"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "收入暴跌：2023年前9个月$3.2亿 vs 2022年全年$6.3亿"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "教训：颠覆传统行业需要深厚的行业经验，烧钱模式在资本寒冬必死"}}], "icon": {"type": "emoji", "emoji": "⚠️"}}},
+    
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "3. Hyperloop One（超级高铁）- 融资$4.72亿"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "业务：时速760英里的高速交通系统"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "投资人：Virgin Group、DP World、Khosla Ventures、GE Ventures"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "失败原因：无法获得实际运营合同 + 技术和监管障碍无法克服"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "转型失败：从客运转向货运后仍无法生存"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "教训：愿景再宏大，没有商业落地路径和监管突破，融资再多也是零"}}], "icon": {"type": "emoji", "emoji": "💡"}}},
+    
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "4. InVision（设计协作）- 融资$3.5亿，估值$19亿"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "业务：协作产品设计平台"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "投资人：Tiger Global、Accel、Atlassian、Goldman Sachs"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "失败原因：产品停滞不前，被Figma等竞争对手超越"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "警示：2018年Series F后再无融资，13年运营后关闭"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "教训：产品创新不能停，一旦停滞就会被竞争对手超越，即使曾经是市场领导者"}}], "icon": {"type": "emoji", "emoji": "⚠️"}}},
+    
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🎯 创业失败的12大原因（CB Insights总结）"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "没有市场需求（42%）- 解决不存在的问题"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "现金流耗尽（29%）- 融资失败或烧钱过快"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "团队问题（23%）- 创始团队不和或能力不足"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "被竞争对手超越（19%）- 产品落后于市场"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "定价/成本问题（18%）- 单位经济模型跑不通"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "产品不用户友好（17%）- 忽视用户体验"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "没有商业模式（17%）- 不知道怎么赚钱"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "糟糕的营销（14%）- 获客成本过高"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "忽视客户（14%）- 不听用户反馈"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "产品推出时机错误（13%）- 太早或太晚"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "失去专注（13%）- 资源分散，什么都想做"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "与团队/投资人分歧（13%）- 内部矛盾导致失败"}}]}},
+    
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "💎 核心教训总结"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "1. 行业经验比资金更重要 - Convoy的失败证明，没有行业know-how的团队难以颠覆传统行业"}}], "icon": {"type": "emoji", "emoji": "1️⃣"}}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "2. 烧钱模式在资本寒冬必死 - 当融资窗口关闭，无法盈利的公司会迅速倒闭"}}], "icon": {"type": "emoji", "emoji": "2️⃣"}}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "3. 产品创新不能停 - InVision的教训：曾经的市场领导者一旦停止创新，会被快速超越"}}], "icon": {"type": "emoji", "emoji": "3️⃣"}}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "4. 商业落地比愿景更重要 - Hyperloop One融资近5亿，但没有实际合同和收入，最终归零"}}], "icon": {"type": "emoji", "emoji": "4️⃣"}}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "5. 顶级投资人不是护身符 - Olive有Sequoia、GV加持，依然因管理层失误而失败"}}], "icon": {"type": "emoji", "emoji": "5️⃣"}}},
+    
+    {"type": "divider", "divider": {}},
+    
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "📚 参考资源"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "CB Insights: 483+ Startup Failure Post-Mortems - https://cbinsights.com/research/startup-failure-post-mortem/"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Failory: 创业失败案例周报 - https://www.failory.com/"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "CB Insights: Top 12 Reasons Startups Fail - https://www.cbinsights.com/research/startup-failure-reasons-top/"}}]}},
+    
+    {"type": "divider", "divider": {}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "生成时间：2026年02月28日 19:45 (Asia/Shanghai)"}, "annotations": {"italic": true}}]}}
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "children": [
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "🔥 "},
+            "annotations": {"bold": true}
+          },
+          {
+            "type": "text",
+            "text": {"content": "今日头条"},
+            "annotations": {"bold": true}
+          }
+        ],
+        "icon": {"type": "emoji", "emoji": "🔥"},
+        "color": "red_background"
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "OpenAI完成1100亿美元融资，估值达7300亿美元"},
+            "annotations": {"bold": true}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "这是史上最大规模私人融资轮次之一。Amazon投资500亿美元，Nvidia和SoftBank各投资300亿美元。对开发者的意义：OpenAI将获得2GW AWS Trainium算力和3GW Nvidia Vera Rubin推理容量，API可用性和性能将大幅提升。"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "[来源: TechCrunch]"},
+            "annotations": {"italic": true}
+          },
+          {
+            "type": "text",
+            "text": {"content": "(https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/)"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {"content": "📊 模型动态"}
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Gemini 3 Pro | 未公开 | 10M tokens | "}, "annotations": {"bold": false}},
+          {"type": "text", "text": {"content": "$1.25/M"}, "annotations": {"color": "green"}},
+          {"type": "text", "text": {"content": " / $10/M"}, "annotations": {"bold": false}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[来源: Google]"}},
+          {"type": "text", "text": {"content": "(https://www.elvex.com/blog/context-length-comparison-ai-models-2026)"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Grok 4.1 | 未公开 | 未公开 | "}, "annotations": {"bold": false}},
+          {"type": "text", "text": {"content": "$0.20/M"}, "annotations": {"color": "green"}},
+          {"type": "text", "text": {"content": " / "}, "annotations": {"bold": false}},
+          {"type": "text", "text": {"content": "$0.50/M"}, "annotations": {"color": "green"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[来源: xAI]"}},
+          {"type": "text", "text": {"content": "(https://intuitionlabs.ai/articles/ai-api-pricing-comparison-grok-gemini-openai-claude)"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Claude Opus 4 | 未公开 | 未公开 | "}, "annotations": {"bold": false}},
+          {"type": "text", "text": {"content": "$15/M"}, "annotations": {"color": "red"}},
+          {"type": "text", "text": {"content": " / "}, "annotations": {"bold": false}},
+          {"type": "text", "text": {"content": "$75/M"}, "annotations": {"color": "red"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "[来源: Anthropic]"}},
+          {"type": "text", "text": {"content": "(https://intuitionlabs.ai/articles/ai-api-pricing-comparison-grok-gemini-openai-claude)"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "💰 商业动态"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟢 $1100亿"}, "annotations": {"color": "green"}},
+          {"type": "text", "text": {"content": " - OpenAI完成史上最大私人融资，估值达7300亿美元"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟢 $6000万"}, "annotations": {"color": "green"}},
+          {"type": "text", "text": {"content": " - Encord完成C轮融资，专注机器人数据基础设施"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔧 工具更新"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Claude Code Security"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"content": " - Anthropic推出代码安全工具，增强AI辅助编程的安全能力"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Power BI Copilot"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"content": " - 2026年2月更新带来更智能的AI助手和新的报表工具"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "📈 "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"content": "趋势观察"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "📈"},
+        "color": "gray_background"
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "2026年2月AI融资总额超1950亿美元，成为AI史上最重要月份。OpenAI与Amazon/Nvidia的深度基础设施合作标志着\"算力即护城河\"时代的到来，开发者应关注API稳定性和成本优化。"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🎬 "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"content": "创作素材备忘"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "🎬"},
+        "color": "purple_background"
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟣 [架构对比] "}, "annotations": {"color": "purple"}},
+          {"type": "text", "text": {"content": "OpenAI基础设施生态"}, "annotations": {"color": "purple"}},
+          {"type": "text", "text": {"content": " - 可视化AWS Trainium与Nvidia Vera Rubin的算力分配架构"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🟣 [数据可视化] "},annotations": {"color": "purple"}},
+          {"type": "text", "text": {"content": "AI API价格对比"}, "annotations": {"color": "purple"}},
+          {"type": "text", "text": {"content": " - Grok($0.20) vs Gemini($1.25) vs GPT-4o($5) vs Claude($15)的成本曲线"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "toggle",
+      "toggle": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "📚 信息来源"}}
+        ],
+        "children": [
+          {
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [
+                {"type": "text", "text": {"content": "[TechCrunch]"}},
+                {"type": "text", "text": {"content": "(https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/)"}}
+              ]
+            }
+          },
+          {
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [
+                {"type": "text", "text": {"content": "[The Guardian]"}},
+                {"type": "text", "text": {"content": "(https://www.theguardian.com/technology/2026/feb/27/openai-110-billion-funding-round)"}}
+              ]
+            }
+          },
+          {
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [
+                {"type": "text", "text": {"content": "[Elvex]"}},
+                {"type": "text", "text": {"content": "(https://www.elvex.com/blog/context-length-comparison-ai-models-2026)"}}
+              ]
+            }
+          },
+          {
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [
+                {"type": "text", "text": {"content": "[IntuitionLabs]"}},
+                {"type": "text", "text": {"content": "(https://intuitionlabs.ai/articles/ai-api-pricing-comparison-grok-gemini-openai-claude)"}}
+              ]
+            }
+          },
+          {
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [
+                {"type": "text", "text": {"content": "[AI Funding Tracker]"}},
+                {"type": "text", "text": {"content": "(https://aifundingtracker.com/ai-startup-funding-news-today/)"}}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

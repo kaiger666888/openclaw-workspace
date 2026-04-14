@@ -1,0 +1,147 @@
+{
+  "children": [
+    {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [{"type": "text", "text": {"content": "AIGC前沿总结 - 2026-03-02"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "⚠️ "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"content": "执行失败：网络服务不可用"}, "annotations": {"bold": true, "color": "red"}}
+        ],
+        "icon": {"type": "emoji", "emoji": "❌"},
+        "color": "red_background"
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "本次任务执行失败，原因如下："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "web_search 工具返回 fetch failed 错误"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "browser 工具连接超时（gateway服务可能未运行）"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "根据任务要求，在无法获取真实数据时不编造信息。请检查网络连接或稍后重试。"}}]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "1. 🔥 今日头条"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "暂无数据 - 网络服务不可用"}}],
+        "icon": {"type": "emoji", "emoji": "📡"},
+        "color": "red_background"
+      }
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "2. 📊 模型动态"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "暂无数据 - 网络服务不可用"}}]
+      }
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "3. 💰 商业动态"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "暂无重大融资动态"}}]
+      }
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "4. 🔧 工具更新"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "暂无数据 - 网络服务不可用"}}]
+      }
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "5. 📈 趋势观察"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "暂无数据 - 网络服务不可用"}}],
+        "icon": {"type": "emoji", "emoji": "📊"},
+        "color": "gray_background"
+      }
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "6. 🎬 创作素材备忘"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "🟣 今日暂无高可视化价值动态"}, "annotations": {"color": "purple"}}],
+        "icon": {"type": "emoji", "emoji": "🎬"},
+        "color": "purple_background"
+      }
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "7. 📚 信息来源"}}]
+      }
+    },
+    {
+      "type": "toggle",
+      "toggle": {
+        "rich_text": [{"type": "text", "text": {"content": "点击展开来源列表"}}],
+        "children": [
+          {
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [{"type": "text", "text": {"content": "无 - 数据获取失败"}}]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

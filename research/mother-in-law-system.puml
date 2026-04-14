@@ -1,0 +1,70 @@
+@startuml 婆媳关系系统图
+!define RECTANGLE class
+
+left to right direction
+
+actor "婆婆 👵" as MIL #pink
+actor "媳妇 👩" as DIL #lightblue
+actor "丈夫 👨" as H #lightyellow
+actor "孩子 👶" as C #lightgreen
+
+rectangle "家庭系统 🏠" {
+  usecase "照顾孩子\n🍼" as UC1
+  usecase "家务分工\n🧹" as UC2
+  usecase "经济管理\n💰" as UC3
+  usecase "家庭决策\n🤔" as UC4
+  usecase "情感支持\n❤️" as UC5
+}
+
+MIL --> UC1 : 想帮忙
+MIL --> UC2 : 习惯主导
+MIL --> UC4 : 期待参与
+
+DIL --> UC1 : 科学育儿
+DIL --> UC2 : 平等分工
+DIL --> UC3 : 独立管理
+DIL --> UC4 : 平等决策
+DIL --> UC5 : 需要支持
+
+H --> UC3 : 主要责任
+H --> UC4 : 最终决策者
+H --> UC5 : 支持双方
+
+C --> UC1 : 被照顾
+
+note right of MIL #pink
+  **婆婆的期待**
+  ━━━━━━━━━━━━
+  ✓ 传统角色
+  ✓ 主导家务
+  ✓ 参与育儿
+  ✓ 被尊重
+end note
+
+note left of DIL #lightblue
+  **媳妇的期待**
+  ━━━━━━━━━━━━
+  ✓ 现代角色
+  ✓ 平等分工
+  ✓ 科学育儿
+  ✓ 独立空间
+end note
+
+note bottom of H #lightyellow
+  **丈夫的困境**
+  ━━━━━━━━━━━━
+  ✗ 左右为难
+  ✗ 当传话筒
+  ✗ 不敢决策
+  ✗ 两头受气
+end note
+
+legend right
+  |= 图例 |
+  | Actor = 家庭成员 |
+  | UseCase = 家庭事务 |
+  | 箭头 = 参与关系 |
+  | Note = 内心期待 |
+endlegend
+
+@enduml

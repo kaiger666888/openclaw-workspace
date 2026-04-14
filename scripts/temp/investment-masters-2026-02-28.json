@@ -1,0 +1,65 @@
+{
+  "children": [
+    {"type": "heading_1", "heading_1": {"rich_text": [{"type": "text", "text": {"content": "投资大师思想精华 - 2026年02月28日"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "本文汇总巴菲特、芒格、段永平三位投资大师的核心思想精华，帮助建立正确的投资理念。"}}]}},
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "一、沃伦·巴菲特 (Warren Buffett)"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "别人贪婪时我恐惧，别人恐惧时我贪婪。"}}], "icon": {"type": "emoji", "emoji": "💰"}}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "核心投资理念"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "价值投资：关注企业内在价值，而非短期股价波动"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "股价短期是投票机，长期是称重机"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "以合理价格买入优秀企业"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "长期持有：\"如果你不想持有一只股票10年，那你就不要持有它一分钟\""}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "尽量避免风险，保住本金"}}]}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "经典名言"}}]}},
+    {"type": "quote", "quote": {"rich_text": [{"type": "text", "text": {"content": "价格是你要付出的，价值是你要得到的。"}}]}},
+    {"type": "quote", "quote": {"rich_text": [{"type": "text", "text": {"content": "投资最重要的两件事：第一，不要亏损；第二，记住第一条。"}}]}},
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "二、查理·芒格 (Charlie Munger)"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "要得到你想要的东西，最可靠的方法是让自己配得上它。"}}], "icon": {"type": "emoji", "emoji": "🧠"}}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "核心思想体系"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "多元思维模型：跨学科学习，建立多维度的认知框架"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "能力圈原则：清楚界定自己真正理解的领域，在边界内操作"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "逆向思维：\"反过来想，总是反过来想\" — 先想如何失败，再避免它"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "考虑二阶、三阶后果：不满足于表面答案，思考连锁反应"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "安全边际：为错误留出足够空间"}}]}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "普世智慧"}}]}},
+    {"type": "quote", "quote": {"rich_text": [{"type": "text", "text": {"content": "我这辈子遇到的聪明人，没有一个不是每天都在阅读的。"}}]}},
+    {"type": "quote", "quote": {"rich_text": [{"type": "text", "text": {"content": "不要和猪摔跤，你会弄一身泥，而猪会很开心。"}}]}},
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "三、段永平"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "买股票就是买公司，要以股东的心态看待投资。"}}], "icon": {"type": "emoji", "emoji": "🎯"}}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "投资理念核心"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "长期主义：关注企业的长期发展，享受成长带来的收益"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "回归本质：排除外界干扰，辨别是非与对错"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "底线原则：不做空、不借钱、不懂不碰"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "定性优于定量：先判断商业模式，再看财务数据"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "护城河思维：好公司拥有持久的竞争优势"}}]}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "平常心投资"}}]}},
+    {"type": "quote", "quote": {"rich_text": [{"type": "text", "text": {"content": "在喧嚣中守住本心，在复杂中抓住本质，让每一次选择都成为\"对的事情\"。"}}]}},
+    {"type": "quote", "quote": {"rich_text": [{"type": "text", "text": {"content": "利润不过是水到渠成的结果，要有利润之上的追求。"}}]}},
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "四、共同智慧提炼"}}]}},
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "三位大师的共同点：价值投资 + 长期主义 + 能力圈 + 独立思考"}}], "icon": {"type": "emoji", "emoji": "✨"}}},
+
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "买股票就是买公司：以股东心态长期持有优质企业"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "安全边际：用合理或便宜的价格买入"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "能力圈：只投资自己真正理解的领域"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "逆向思维：在市场恐慌时贪婪，在市场贪婪时恐惧"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "独立思考：不盲从市场，基于深入研究做决策"}}]}},
+    {"type": "numbered_list_item", "numbered_list_item": {"rich_text": [{"type": "text", "text": {"content": "持续学习：保持阅读习惯，不断扩展认知边界"}}]}},
+
+    {"type": "divider", "divider": {}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "📅 生成日期：2026年02月28日"}, "annotations": {"italic": true}}]}}
+  ]
+}

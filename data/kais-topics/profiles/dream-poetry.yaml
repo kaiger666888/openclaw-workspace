@@ -1,0 +1,71 @@
+# 梦境词话 — 系列 Profile
+# 创建: 2026-04-13
+# 版本: 1.0
+
+series_id: dream-poetry
+series_name: 梦境词话
+version: 1.0
+
+# === 不可妥协的约束 ===
+constraints:
+  positioning: "用诗意重新诠释当下热点，让热点有温度、让诗有当下感"
+  positioning_anti: "不是讲诗，是用诗的视角重新看世界"
+  emotion_target: "太美了"
+  emotion_anti: "不明觉厉、看不懂、无聊"
+  audience_strategy: "每个人都能共鸣"
+  audience_anti: "文化精英、行业内部、小众圈层"
+  visual_direction: "现实场景与梦幻场景的无缝融合"
+  visual_anti: "纯写实、纯幻想、割裂感"
+  selection_formula: "当前热点 → 匹配一首诗 → 诗+热点再创作 → AIGC视觉"
+  monetization_goal: "涨粉变现"
+  monetization_anti: "纯艺术表达、无商业化考量"
+  format: "AI短视频 55-60秒 竖屏 9:16"
+  platform_primary: "B站"
+  platform_secondary: "小红书（切片）"
+
+# === 涨粉四大原因 ===
+growth_factors:
+  - factor: "受众基数决定天花板"
+    weight: 25%
+    description: "选题必须不挑人，无文化门槛，所有人都能代入"
+    check: "我爸妈能看懂并被打动吗？"
+  - factor: "情绪匹配最精准"
+    weight: 20%
+    description: "治愈+共鸣是最强情绪驱动，选题必须触发这个情绪"
+    check: "看完有没有'这不就是我吗'的感觉？"
+  - factor: "视觉差异化是杀手锏"
+    weight: 20%
+    description: "现实+梦幻融合市场上几乎没有竞品，必须强化这个优势"
+    check: "这个画面是即梦能做但别人没做过的吗？"
+  - factor: "系列化能力强"
+    weight: 15%
+    description: "素材取之不尽，不会枯竭"
+    check: "这个方向能做20期不重复吗？"
+
+# === 选题红线（绝对不做）===
+red_lines:
+  - "需要专业背景知识才能看懂"
+  - "纯抽象无具体场景"
+  - "视觉风格与其他AI视频雷同"
+  - "说教或给结论"
+  - "超过60秒"
+  - "硬蹭热点，诗和热点没有深层情感连接"
+  - "只讲热点不讲诗，或只讲诗不讲热点"
+
+# === 首期方向锁定 ===
+first_episode:
+  direction: "日常诗意"
+  topic: "半梦半醒的那2秒"
+  style: "现实+梦幻融合"
+  status: "🟡 策划中"
+
+# === 历史决策记录 ===
+decisions:
+  - date: "2026-04-13"
+    decision: "首期方向锁定为日常诗意，非古典诗词"
+    reasons:
+      - "受众基数决定天花板 — 日常诗意不挑人"
+      - "情绪匹配最精准 — 治愈+共鸣是2026最强情绪驱动"
+      - "视觉差异化杀手锏 — 现实+梦幻融合无竞品"
+      - "系列化能力强 — 每天都在发生不会枯竭"
+    note: "古典诗词作为压轴（第5/10期）穿插，给老粉丝惊喜"

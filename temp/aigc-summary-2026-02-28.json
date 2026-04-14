@@ -1,0 +1,375 @@
+{
+  "children": [
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "今日 AI 行业重大事件：OpenAI 完成 $110B 融资 + 与五角大楼签约；Anthropic 被美国政府禁用；DeepSeek 将发布新模型。"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "📰"}
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🔥 今日头条"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "OpenAI 完成 $110B 融资并与五角大楼签约"}, "annotations": {"bold": true, "color": "red"}}
+        ],
+        "icon": {"type": "emoji", "emoji": "🚨"}
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "• OpenAI 宣布完成 "}},
+          {"type": "text", "text": {"content": "$110B"}, "annotations": {"bold": true, "color": "green"}},
+          {"type": "text", "text": {"content": " 融资，估值达 "}},
+          {"type": "text", "text": {"content": "$730B-$840B"}, "annotations": {"bold": true, "color": "green"}},
+          {"type": "text", "text": {"content": "，由 Amazon($50B)、Nvidia($30B)、SoftBank($30B) 领投"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "• 同日，Anthropic 因拒绝无限制军事用途被特朗普政府列入\"供应链风险\"名单，所有联邦机构禁用 Claude"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "• OpenAI 随即与五角大楼签署机密系统合作协议"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "📌 "}},
+          {"type": "text", "text": {"content": "为什么重要："}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"content": "这是史上最大规模私募融资，同时标志着 AI 公司在军事应用上的立场分化——OpenAI 选择合作，Anthropic 坚持安全边界。"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "Bloomberg"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://www.bloomberg.com/news/articles/2026-02-27/openai-finalizes-110-billion-funding-at-730-billion-valuation"}, "content": "https://www.bloomberg.com/news/articles/2026-02-27/openai-finalizes-110-billion-funding-at-730-billion-valuation"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "NYTimes"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://www.nytimes.com/2026/02/27/technology/openai-agreement-pentagon-ai.html"}, "content": "https://www.nytimes.com/2026/02/27/technology/openai-agreement-pentagon-ai.html"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "AP News"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://apnews.com/article/anthropic-pentagon-ai-hegseth-dario-amodei-b72d1894bc842d9acf026df3867bee8a"}, "content": "https://apnews.com/article/anthropic-pentagon-ai-hegseth-dario-amodei-b72d1894bc842d9acf026df3867bee8a"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "📊 模型动态"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "DeepSeek 即将发布新模型，与华为合作减少对 Nvidia 芯片依赖"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "🤖"}
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "• 中国 AI 公司 DeepSeek 即将发布长期期待的新模型，已与华为合作降低对 Nvidia 芯片的依赖"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "FT"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://www.onenewspage.com/n/Business/1zte55oiiy/DeepSeek-to-release-long-awaited-AI-model-in.htm"}, "content": "https://www.onenewspage.com/n/Business/1zte55oiiy/DeepSeek-to-release-long-awaited-AI-model-in.htm"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "💰 商业动态"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "2026年2月成为 AI 投资史上最重要的月份"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "💰"}
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "OpenAI: "}},
+          {"type": "text", "text": {"content": "$110B"}, "annotations": {"bold": true, "color": "green"}},
+          {"type": "text", "text": {"content": " 融资，估值 "}},
+          {"type": "text", "text": {"content": "$730B-$840B"}, "annotations": {"bold": true, "color": "green"}},
+          {"type": "text", "text": {"content": " (史上最大私募融资)"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Anthropic: "}},
+          {"type": "text", "text": {"content": "$30B"}, "annotations": {"bold": true, "color": "green"}},
+          {"type": "text", "text": {"content": " Series G 融资 (2月12日)，估值 "}},
+          {"type": "text", "text": {"content": "$380B"}, "annotations": {"bold": true, "color": "green"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Bezos AI Lab: 计划再融资数百亿美元收购制造业公司"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "AI Funding Tracker"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://aifundingtracker.com/ai-startup-funding-news-today/"}, "content": "https://aifundingtracker.com/ai-startup-funding-news-today/"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "Crunchbase"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://news.crunchbase.com/venture/openai-raise-largest-ai-venture-deal-ever/"}, "content": "https://news.crunchbase.com/venture/openai-raise-largest-ai-venture-deal-ever/"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🔧 工具更新"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Claude 承诺保持无广告"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "🛠️"}
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "• "}},
+          {"type": "text", "text": {"content": "Claude"}, "annotations": {"bold": true, "color": "blue"}},
+          {"type": "text", "text": {"content": " 承诺将保持无广告体验，与竞争对手 OpenAI 在免费版 ChatGPT 中引入广告形成对比"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "• "}},
+          {"type": "text", "text": {"content": "Edimakor"}, "annotations": {"bold": true, "color": "blue"}},
+          {"type": "text", "text": {"content": " 推出 3D 卡通视频生成器，突破 AI 视觉技术"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "Wikipedia - Anthropic"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://en.wikipedia.org/wiki/Anthropic"}, "content": "https://en.wikipedia.org/wiki/Anthropic"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔗 "}},
+          {"type": "text", "text": {"content": "Edimakor PR"}, "annotations": {"color": "blue"}},
+          {"type": "text", "text": {"link": {"url": "https://www.openpr.com/news/4408179/edimakor-launches-3d-cartoon-video-generator-to-breakthrough-ai"}, "content": "https://www.openpr.com/news/4408179/edimakor-launches-3d-cartoon-video-generator-to-breakthrough-ai"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "📈 趋势观察"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "AI 军事化与商业分化的临界点已至"}, "annotations": {"bold": true}}
+        ],
+        "icon": {"type": "emoji", "emoji": "📊"}
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "OpenAI 与 Anthropic 的不同选择揭示了 AI 公司在面对政府合作时的价值观分歧——是追求商业利益最大化，还是坚守安全边界。这个选择可能会影响未来整个行业的走向。"}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "📚 信息来源汇总"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "OpenAI $110B 融资: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://www.bloomberg.com/news/articles/2026-02-27/openai-finalizes-110-billion-funding-at-730-billion-valuation"}, "content": "Bloomberg"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "OpenAI 五角大楼协议: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://www.nytimes.com/2026/02/27/technology/openai-agreement-pentagon-ai.html"}, "content": "NYTimes"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Anthropic 被禁用: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://apnews.com/article/anthropic-pentagon-ai-hegseth-dario-amodei-b72d1894bc842d9acf026df3867bee8a"}, "content": "AP News"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "DeepSeek 新模型: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://www.onenewspage.com/n/Business/1zte55oiiy/DeepSeek-to-release-long-awaited-AI-model-in.htm"}, "content": "One News Page"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "AI 融资追踪: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://aifundingtracker.com/ai-startup-funding-news-today/"}, "content": "AI Funding Tracker"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Anthropic Wikipedia: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://en.wikipedia.org/wiki/Anthropic"}, "content": "Wikipedia"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Edimakor 3D 生成器: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://www.openpr.com/news/4408179/edimakor-launches-3d-cartoon-video-generator-to-breakthrough-ai"}, "content": "OpenPR"}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Crunchbase 分析: "}, "annotations": {"bold": true}},
+          {"type": "text", "text": {"link": {"url": "https://news.crunchbase.com/venture/openai-raise-largest-ai-venture-deal-ever/"}, "content": "Crunchbase"}}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2026-03-24T06:05:09.570981",
+    "total_count": 3,
+    "description": "心智模型数据库 - 结构化存储已推送的心智模型"
+  },
+  "models": [
+    {
+      "id": "mm_20260309_001",
+      "date": "2026-03-09",
+      "name": "机会成本",
+      "category": "经济学/商学",
+      "day_of_week": "周一",
+      "status": "published",
+      "page_id": "31d11082-af8e-8116-83f3-f87f63dbafb1",
+      "sources": [
+        "FunBlocks AI",
+        "ScienceDirect",
+        "Wall Street Mojo"
+      ],
+      "keywords": [
+        "经济学",
+        "决策",
+        "资源配置",
+        "选择成本"
+      ],
+      "summary": "每个选择的真实成本是你放弃的次优选择"
+    },
+    {
+      "id": "mm_20260312_001",
+      "date": "2026-03-12",
+      "name": "红皇后效应",
+      "category": "生物学/进化论",
+      "day_of_week": "周四",
+      "status": "published",
+      "page_id": "32011082-af8e-818b-ae5e-c6fbac192157",
+      "sources": [
+        "Farnam Street",
+        "Perspectiveship",
+        "FunBlocks AI",
+        "Stanford GSB"
+      ],
+      "keywords": [
+        "进化论",
+        "竞争",
+        "适应性",
+        "军备竞赛"
+      ],
+      "summary": "竞争环境中的奔跑才能保持在原地现象"
+    },
+    {
+      "date": "2026-03-24",
+      "name": "损失厌恶",
+      "category": "心理学",
+      "status": "published",
+      "page_id": "32c11082-af8e-818e-a514-c05b12f07bc5"
+    }
+  ],
+  "schema": {
+    "id": "唯一标识符 (mm_YYYYMMDD_序号)",
+    "date": "推送日期 (YYYY-MM-DD)",
+    "name": "模型名称",
+    "category": "学科类别",
+    "day_of_week": "星期几",
+    "status": "状态 (published/draft/archived)",
+    "page_id": "Notion 页面 ID",
+    "sources": "来源列表",
+    "keywords": "关键词标签",
+    "summary": "一句话总结"
+  }
+}

@@ -1,0 +1,103 @@
+@startuml 理想家庭决策流程
+!define ACTIVITY activity
+
+|媳妇 👩|
+start
+#lightblue:提出需求或问题;
+note right
+  例如：
+  - 孩子辅食问题
+  - 家务分工
+  - 经济支出
+end note
+
+|婆婆 👵|
+#pink:表达意见和经验;
+note right
+  婆婆的优势：
+  ✓ 生活经验
+  ✓ 实用技巧
+  ✓ 关心家庭
+end note
+
+|丈夫 👨|
+#lightyellow:收集双方观点;
+#lightyellow:查找权威信息;
+note right
+  丈夫的职责：
+  ✓ 听取双方意见
+  ✓ 查证专业信息
+  ✓ 不偏不倚
+end note
+
+|家庭会议 🏠|
+#lightgreen:共同讨论;
+note right
+  **讨论原则**
+  ━━━━━━━━━
+  ✓ 所有人发言
+  ✓ 不打断
+  ✓ 不批评
+  ✓ 记录要点
+end note
+
+if (达成一致？) then (是 ✅)
+  |全员 👨‍👩‍👧‍👦|
+  #lightgreen:执行决策;
+  #lightgreen:定期复盘;
+  note right
+    复盘内容：
+    - 效果如何？
+    - 是否需要调整？
+    - 有什么新问题？
+  end note
+else (否 ❌)
+  |丈夫 👨|
+  #lightyellow:作为最终决策者;
+  #lightyellow:说明决策理由;
+
+  note right #lightyellow
+    **丈夫的决策原则**
+    ━━━━━━━━━━━━
+    1. 考虑所有人利益
+    2. 基于信息做判断
+    3. 说明理由
+    4. 不偏袒任何一方
+  end note
+
+  |全员 👨‍👩‍👧‍👦|
+  #lightgreen:尊重决策;
+  #lightgreen:全力执行;
+  note right
+    执行原则：
+    ✓ 决策后不翻旧账
+    ✓ 给决策机会尝试
+    ✓ 用事实说话
+  end note
+endif
+
+|家庭会议 🏠|
+#lightgreen:记录到家庭档案;
+#lightgreen:下次会议回顾;
+
+stop
+
+legend right
+  |= 颜色 | 角色 |
+  | <#lightblue> | 媳妇 |
+  | <#pink> | 婆婆 |
+  | <#lightyellow> | 丈夫 |
+  | <#lightgreen> | 共同 |
+endlegend
+
+footer
+  **关键成功因素**：
+  1. 丈夫是决策者，不是和事佬
+  2. 所有人参与讨论
+  3. 决策基于信息，不基于情绪
+  4. 决策后全员执行
+  5. 允许复盘调整
+  6. 定期家庭会议（建议每月一次）
+endfooter
+
+@enduml

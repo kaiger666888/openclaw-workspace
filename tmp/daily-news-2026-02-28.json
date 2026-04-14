@@ -1,0 +1,59 @@
+{
+  "children": [
+    {"type": "heading_1", "heading_1": {"rich_text": [{"type": "text", "text": {"content": "📰 每日新闻 - 2026年02月28日"}}]}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "今日科技、商业、AI 领域重要新闻汇总"}}]}},
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🔥 重大新闻"}}]}},
+
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "OpenAI 完成 1100 亿美元融资，创历史纪录"}, "annotations": {"bold": true}}], "icon": {"type": "emoji", "emoji": "🚀"}}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "OpenAI 完成史上最大规模私募融资——1100亿美元，估值达7300亿美元（投前）/8400亿美元（投后）。投资方包括：亚马逊（500亿美元）、英伟达（300亿美元）、软银（300亿美元）。作为交易的一部分，OpenAI将在AWS Bedrock上启动有状态运行环境，承诺至少消耗2GW的AWS Trainium算力。英伟达则提供3GW专用推理容量和2GW Vera Rubin训练系统。"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "来源: Reuters, AI Funding Tracker"}}]}},
+
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🤖 AI 领域"}}]}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "AI 融资动态"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Basis: 1亿美元B轮融资，估值11.5亿美元，AI会计自动化，30%顶级会计公司已采用"}, "annotations": {"bold": false}}]},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Encord: 6000万美元C轮融资，物理AI数据基础设施平台"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "UpGuard: 7500万美元C轮融资，AI驱动的网络风险管理平台"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Humand: 6600万美元A轮融资，面向一线工人的移动优先AI操作系统"}}]}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "AI 研究突破"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "密歇根大学开发AI系统，可在几秒内解读脑部MRI扫描，准确识别多种神经系统疾病并判断紧急程度"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "2026年AI基础设施支出预计将再次大幅增长，AI资本支出已占GDP的2%（约6500亿美元）"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "美国计划建设约2800个数据中心以满足AI算力需求"}}]}},
+
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "💻 科技领域"}}]}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "英伟达 (Nvidia)"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Q4季度利润达430亿美元，AI芯片销售强劲"}, "annotations": {"bold": true}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "市值约4.5万亿美元，仍是全球最有价值公司"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Blackwell和Rubin订单预计将超过5000亿美元的初始预估"}}]}},
+
+    {"type": "heading_3", "heading_3": {"rich_text": [{"type": "text", "text": {"content": "大型科技公司市值变化"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "2026年以来，Apple、Alphabet、Nvidia、Amazon、Microsoft合计市值下跌超过1.3万亿美元"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Alphabet超越Apple成为全球第二大公司（仅次于Nvidia）"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "Nvidia和Apple是万亿美元俱乐部中仅有的2026年股价上涨的公司"}}]}},
+
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "⚡ 能源与基础设施"}}]}},
+
+    {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "Google斥资10亿美元采购Form Energy铁空气电池"}, "annotations": {"bold": true}}], "icon": {"type": "emoji", "emoji": "🔋"}}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "Google从Form Energy购买价值10亿美元的铁空气电池，用于其新建的明尼苏达数据中心。该电池使用铁空气化学（控制生锈）可连续放电100小时，功率300兆瓦，将配合1.4GW风能和200MW太阳能使用。这是史上最大的单笔电池采购，表明超大规模企业正在用硬件解决AI数据中心的能源可靠性问题。"}}]}},
+
+    {"type": "divider", "divider": {}},
+
+    {"type": "heading_2", "heading_2": {"rich_text": [{"type": "text", "text": {"content": "📈 市场趋势"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "2026年2月估计有超过1950亿美元AI相关资本流动，成为风投史上最重要的月份"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "垂直AI代理（Vertical AI Agents）成为2026年主要投资类别，尤其是针对受监管行业"}}]}},
+    {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "AI相关大宗商品自2023年1月以来上涨65%"}}]}},
+
+    {"type": "divider", "divider": {}},
+    {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "📌 数据来源: Reuters, AI Funding Tracker, CNBC, MIT Technology Review, IBM Think, ScienceDaily"}}]}}
+  ]
+}
