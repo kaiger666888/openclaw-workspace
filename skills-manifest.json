@@ -1,0 +1,17 @@
+{
+  "_说明": "独立管理的 skill/project 目录及其 GitHub 仓库。克隆 workspace 后运行恢复命令即可。",
+  "_恢复命令": "jq -r '.repos | to_entries[] | \"mkdir -p $(dirname \\(.key)) && git clone \\(.value) \\(.key)\"' skills-manifest.json | bash",
+  "repos": {
+    "claude-code-via-openclaw": "https://github.com/zhangkaidhb/claude-code-via-openclaw.git",
+    "git-uml-agent": "git@github.com:zhangkaidhb/git-uml-agent.git",
+    "mengjing-cihua": "https://github.com/kaiger666888/mengjing-cihua.git",
+    "skills/claude-code-via-openclaw": "https://github.com/kaiger666888/claude-code-via-openclaw.git",
+    "skills/kais-archi": "https://github.com/kaiger666888/kais-archi.git",
+    "skills/kais-mind": "https://github.com/kaiger666888/kais-mind.git",
+    "skills/kais-movie-agent": "https://github.com/kaiger666888/kais-movie-agent.git",
+    "skills/kais-pilot": "https://github.com/kaiger666888/kais-pilot.git",
+    "skills/knowledge-visualizer": "git@github.com:zhangkaidhb/OpenClaw_umlVisionAgent.git",
+    "skills/soul-guide": "https://github.com/kaiger666888/soul-guide.git",
+    "temp_review": "https://github.com/zhangkaidhb/umlVisionAgent.git"
+  }
+}
