@@ -23,22 +23,31 @@ metadata:
 
 ## 执行流程
 
-### Step 1: 并行搜集（spawn 4 个 sub-agent）
+### Step 1: 智能搜集（主 agent 搜索 + 2 个 sub-agent 深入）
 
-对每个任务，同时启动 4 个 sub-agent 从不同方向搜集：
+#### 1a. 主 agent 先搜 1 次，确定搜集方向
 
+```python
+web_search(query="{topic} 2026 最新", count=5)
+```
+
+根据搜索结果，确定 2 个最有价值的搜集方向（如"AI Agent 产品发布"+"AI Agent 技术突破"），分配给 2 个 sub-agent。
+
+#### 1b. 启动 2 个 sub-agent 交错搜集
+
+**⚠️ Brave Search 限流：每分钟最多 1 次请求。两个 sub-agent 之间间隔 30 秒启动。**
+
+**sub-agent A — 英文方向**：
 ```python
 sessions_spawn(
     runtime="subagent",
-    task="""你是「{task_name}」的搜集员。请搜索「{topic}」相关最新内容（2026年）。
-
-搜索方向：{direction}
+    task="""你是「{task_name}」的英文搜集员。请搜索「{direction_A}」相关最新内容（2026年）。
 
 要求：
-1. web_search 搜索 2-3 次（中英文各一次）
-2. 重要结果用 web_fetch 抓详情
+1. web_search 搜索 2 次（英文关键词，两次之间 sleep 60 秒避免限流）
+2. 对排名前 3 的结果用 web_fetch 抓取详细内容
 3. 每条信息：标题、要点摘要（2-3句）、来源URL
-4. 至少 5-8 条有价值信息
+4. 至少 5 条有价值信息
 5. 只输出搜集结果，不要生成文章
 6. 输出格式：
 ### 1. [标题]
@@ -48,11 +57,35 @@ sessions_spawn(
 )
 ```
 
-4 个搜集方向：
-- **A**: 英文主流媒体（TechCrunch, The Verge, Wired）
-- **B**: 中文科技媒体（36kr, 量子位, 机器之心）
-- **C**: 开发者社区（GitHub, Hacker News, Reddit）
-- **D**: 学术/深度（ArXiv, 技术博客, 研究报告）
+**等待 30 秒后启动 sub-agent B**：
+
+**sub-agent B — 中文方向**：
+```python
+sessions_spawn(
+    runtime="subagent",
+    task="""你是「{task_name}」的中文搜集员。请搜索「{direction_B}」相关最新内容（2026年）。
+
+要求：
+1. web_search 搜索 2 次（中文关键词，search_lang="zh-hans"，两次之间 sleep 60 秒避免限流）
+2. 对排名前 3 的结果用 web_fetch 抓取详细内容
+3. 每条信息：标题、要点摘要（2-3句）、来源URL
+4. 至少 5 条有价值信息
+5. 只输出搜集结果，不要生成文章
+6. 输出格式：
+### 1. [标题]
+- 摘要：...
+- 来源：[来源名](URL)
+- 关键数据：..."""
+)
+```
+
+#### 搜集预算
+
+每个任务总计：
+- 主 agent：1 次搜索（定方向）
+- sub-agent A：2 次搜索 + 3 次 web_fetch
+- sub-agent B：2 次搜索 + 3 次 web_fetch
+- **总计：5 次搜索 + 6 次抓取**（之前是 8-12 次搜索）
 
 参考模板：`references/sub-agent-tasks.md`
 

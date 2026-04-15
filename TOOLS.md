@@ -94,3 +94,11 @@ Add whatever helps you do your job. This is your cheat sheet.
 ### 调查研究报告归档
 - 研究报告根页面: 32811082af8e8191aa20cc364202b1f9
 - 规则：所有非每日任务的调查研究报告都放到此页面下对应主题子页面中
+
+### 即梦 API 自维护
+- **容器名**：`jimeng-free-api`
+- **重启**：`docker restart jimeng-free-api`
+- **彻底重建**：`docker stop jimeng-free-api && docker rm jimeng-free-api && docker run -d --name jimeng-free-api -p 8000:8000 jimeng-free-api`
+- **诊断**：`docker logs --tail 20 jimeng-free-api`
+- **status:45**：任务排队中阻塞新请求，等完成或重建容器
+- **空响应**：session 过期或即梦限流，需重建+更新 session

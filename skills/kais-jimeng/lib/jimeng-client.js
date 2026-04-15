@@ -100,6 +100,24 @@ export class JimengClient {
     this.baseUrl = baseUrl.replace(/\/+$/, "");
     this.sessionId = process.env.JIMENG_SESSION_ID || "";
     this.limiter = options.limiter || sharedLimiter;
+    this._envFile = options.envFile || null;
+  }
+
+  /**
+   * 从 .env 文件加载 sessionid（替代环境变量）
+   */
+  loadSessionFromFile(envFile) {
+    try {
+      const { readFileSync, existsSync } = require("node:fs");
+      if (!existsSync(envFile)) return false;
+      const content = readFileSync(envFile, "utf-8");
+      const match = content.match(/JIMENG_SESSION_ID=(.+)/);
+      if (match?.[1]?.trim()) {
+        this.sessionId = match[1].trim();
+        return true;
+      }
+    } catch {}
+    return false;
   }
 
   /**
@@ -267,6 +285,31 @@ export class JimengClient {
     }
 
     throw new Error(`异步任务超时 (${timeoutMs / 1000}s)，task_id: ${taskId}`);
+  }
+
+  /**
+   * 检测当前 session 是否有效，无效时提示刷新
+   * @returns {Promise<boolean>}
+   */
+  async checkSession() {
+    if (!this.sessionId) return false;
+    try {
+      const res = await fetch(`${this.baseUrl}/v1/images/generations`, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${this.sessionId}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ model: "jimeng-5.0", prompt: "test", ratio: "1:1", resolution: "1k" }),
+        signal: AbortSignal.timeout(15_000),
+      });
+      if (res.status === 429 || res.status === 200) return true;
+      if (res.status === 401) return false;
+      const text = await res.text().catch(() => "");
+      return !text.includes("请先登录") && !text.includes("未登录");
+    } catch {
+      return null; // API 不可达
+    }
   }
 
   /** 下载文件到本地（不限流，不走 API） */

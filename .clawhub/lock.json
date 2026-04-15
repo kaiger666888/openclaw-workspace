@@ -32,6 +32,22 @@
     "habit-tracker": {
       "version": "1.0.0",
       "installedAt": 1770124562368
+    },
+    "multi-search-engine": {
+      "version": "2.1.3",
+      "installedAt": 1776135302021
+    },
+    "reverse-image-search": {
+      "version": "1.0.0",
+      "installedAt": 1776143041773
+    },
+    "smart-image-search": {
+      "version": "0.1.0",
+      "installedAt": 1776143049411
+    },
+    "bgm": {
+      "version": "1.0.0",
+      "installedAt": 1776144901919
     }
   }
 }

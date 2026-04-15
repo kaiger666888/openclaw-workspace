@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>创作者数据看板</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 24px 32px; border-bottom: 1px solid #2a2a4a; }
+.header h1 { font-size: 24px; color: #fff; }
+.header .meta { font-size: 13px; color: #888; margin-top: 4px; }
+.container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.card { background: #1a1a2e; border-radius: 12px; padding: 20px; border: 1px solid #2a2a4a; }
+.card .platform { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.card .platform.xiaohongshu { color: #ff4757; }
+.card .platform.douyin { color: #00f2ea; }
+.card .platform.bilibili { color: #00a1d6; }
+.card .value { font-size: 28px; font-weight: 700; color: #fff; }
+.card .label { font-size: 12px; color: #666; margin-top: 4px; }
+.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.chart-box { background: #1a1a2e; border-radius: 12px; padding: 20px; border: 1px solid #2a2a4a; }
+.chart-box h3 { font-size: 15px; color: #ccc; margin-bottom: 12px; }
+.full-width { grid-column: 1 / -1; }
+table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #2a2a4a; font-size: 13px; }
+th { color: #888; font-weight: 500; }
+td { color: #ddd; }
+.up { color: #2ed573; }
+.down { color: #ff4757; }
+@media (max-width: 768px) { .charts { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 创作者数据看板</h1>
+  <div class="meta">最后更新: 2026-04-14 17:39 | 数据来源: 小红书 · 抖音 · B站</div>
+</div>
+<div class="container">
+  <div class="cards" id="cards"></div>
+  <div class="charts">
+    <div class="chart-box full-width">
+      <h3>📈 近30天播放/阅读趋势</h3>
+      <canvas id="viewsChart" height="80"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3>👥 粉丝趋势</h3>
+      <canvas id="followersChart"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3>📊 平台数据对比</h3>
+      <canvas id="compareChart"></canvas>
+    </div>
+  </div>
+  <div class="chart-box full-width">
+    <h3>📋 最近采集记录</h3>
+    <table id="dataTable">
+      <thead><tr><th>平台</th><th>日期</th><th>粉丝</th><th>播放/阅读</th><th>点赞</th><th>评论</th><th>收藏</th><th>互动率</th></tr></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+</div>
+<script>
+const latest = ;
+const trends = {
+  xiaohongshu: ,
+  douyin: ,
+  bilibili: 
+};
+
+// 渲染总览卡片
+const cardsEl = document.getElementById('cards');
+const platformNames = { xiaohongshu: '小红书', douyin: '抖音', bilibili: 'B站' };
+const platformColors = { xiaohongshu: '#ff4757', douyin: '#00f2ea', bilibili: '#00a1d6' };
+
+if (latest && latest.length > 0) {
+  latest.forEach(p => {
+    cardsEl.innerHTML += `
+      <div class="card">
+        <div class="platform ${p.platform}">${platformNames[p.platform] || p.platform}</div>
+        <div class="value">${Number(p.followers).toLocaleString()}</div>
+        <div class="label">粉丝</div>
+      </div>
+      <div class="card">
+        <div class="platform ${p.platform}">${platformNames[p.platform]}</div>
+        <div class="value">${Number(p.total_views).toLocaleString()}</div>
+        <div class="label">播放/阅读</div>
+      </div>
+      <div class="card">
+        <div class="platform ${p.platform}">${platformNames[p.platform]}</div>
+        <div class="value">${Number(p.total_likes).toLocaleString()}</div>
+        <div class="label">点赞</div>
+      </div>
+      <div class="card">
+        <div class="platform ${p.platform}">${platformNames[p.platform]}</div>
+        <div class="value">${p.interaction_rate || '-'}%</div>
+        <div class="label">互动率</div>
+      </div>`;
+  });
+} else {
+  cardsEl.innerHTML = '<div class="card"><div class="value" style="font-size:16px;color:#888;">暂无数据</div><div class="label">请先执行数据采集</div></div>';
+}
+
+// 趋势图
+const chartOpts = { responsive: true, plugins: { legend: { labels: { color: '#888' } } }, scales: { x: { ticks: { color: '#666' }, grid: { color: '#2a2a4a' } }, y: { ticks: { color: '#666' }, grid: { color: '#2a2a4a' } } } };
+
+function trendData(platform) {
+  const d = trends[platform] || [];
+  return { labels: d.map(r => r.date).reverse(), data: d.map(r => r.total_views).reverse() };
+}
+
+new Chart(document.getElementById('viewsChart'), {
+  type: 'line',
+  data: {
+    labels: trendData('xiaohongshu').labels,
+    datasets: [
+      { label: '小红书', data: trendData('xiaohongshu').data, borderColor: '#ff4757', tension: 0.3, fill: false },
+      { label: '抖音', data: trendData('douyin').data, borderColor: '#00f2ea', tension: 0.3, fill: false },
+      { label: 'B站', data: trendData('bilibili').data, borderColor: '#00a1d6', tension: 0.3, fill: false }
+    ]
+  },
+  options: chartOpts
+});
+
+new Chart(document.getElementById('followersChart'), {
+  type: 'line',
+  data: {
+    labels: trendData('xiaohongshu').labels,
+    datasets: [
+      { label: '小红书', data: (trends.xiaohongshu||[]).map(r=>r.followers).reverse(), borderColor: '#ff4757', tension: 0.3 },
+      { label: '抖音', data: (trends.douyin||[]).map(r=>r.followers).reverse(), borderColor: '#00f2ea', tension: 0.3 },
+      { label: 'B站', data: (trends.bilibili||[]).map(r=>r.followers).reverse(), borderColor: '#00a1d6', tension: 0.3 }
+    ]
+  },
+  options: chartOpts
+});
+
+// 平台对比
+const compareCtx = document.getElementById('compareChart');
+if (latest && latest.length > 0) {
+  new Chart(compareCtx, {
+    type: 'bar',
+    data: {
+      labels: latest.map(p => platformNames[p.platform]),
+      datasets: [
+        { label: '粉丝', data: latest.map(p => p.followers), backgroundColor: '#6c5ce7' },
+        { label: '播放', data: latest.map(p => p.total_views), backgroundColor: '#00cec9' },
+        { label: '点赞', data: latest.map(p => p.total_likes), backgroundColor: '#fdcb6e' }
+      ]
+    },
+    options: chartOpts
+  });
+}
+
+// 数据表
+const tbody = document.getElementById('tableBody');
+if (latest && latest.length > 0) {
+  latest.forEach(p => {
+    tbody.innerHTML += `<tr>
+      <td style="color:${platformColors[p.platform]}">${platformNames[p.platform]}</td>
+      <td>${p.date}</td>
+      <td>${Number(p.followers).toLocaleString()}</td>
+      <td>${Number(p.total_views).toLocaleString()}</td>
+      <td>${Number(p.total_likes).toLocaleString()}</td>
+      <td>${Number(p.total_comments).toLocaleString()}</td>
+      <td>${Number(p.total_favorites).toLocaleString()}</td>
+      <td>${p.interaction_rate || '-'}%</td>
+    </tr>`;
+  });
+}
+</script>
+</body>
+</html>

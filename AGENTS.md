@@ -275,3 +275,12 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## AIGC 创作原则
+
+- 不要考虑积分成本，质量优先
+- 所有场景图必须先线稿后渲染，无例外
+
+## 管线执行纪律
+
+**严格执行管线步骤，不跳步、不问用户是否跳步。** 每个步骤完成后展示产出物等审核，但绝不能主动建议跳过任何步骤。
