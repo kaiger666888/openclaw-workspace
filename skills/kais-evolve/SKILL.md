@@ -1,16 +1,16 @@
 ---
-name: autoresearch
-description: Universal autonomous iterative research framework. Inspired by karpathy/autoresearch. AI agent modifies code, runs experiments, keeps/discards based on metrics. Works with any project that has a measurable outcome and fast feedback loop.
+name: kais-evolve
+description: Universal autonomous iterative research framework. Inspired by karpathy/kais-evolve. AI agent modifies code, runs experiments, keeps/discards based on metrics. Works with any project that has a measurable outcome and fast feedback loop.
 metadata:
   clawdbot:
     always: false
-    skillKey: autoresearch
+    skillKey: kais-evolve
 ---
 
 # Autoresearch — 通用自主迭代研究框架
 
 > AI 驱动的实验进化系统：假设 → 实验 → 验证 → 迭代
-> 借鉴 karpathy/autoresearch，泛化到任何可量化、可快速验证的项目
+> 借鉴 karpathy/kais-evolve，泛化到任何可量化、可快速验证的项目
 
 ---
 
@@ -37,12 +37,12 @@ Autoresearch：AI想方案 → 自动改代码 → 自动跑测试 → 自动判
 
 ```bash
 # 1. 在项目根目录初始化
-python ~/.openclaw/workspace/skills/autoresearch/scripts/init-project.py
+python ~/.openclaw/workspace/skills/kais-evolve/scripts/init-project.py
 
 # 2. 让 AI 分析项目并生成 project.md 草案
 #    在 Claude Code 中说：
-#    "Run `python ~/.openclaw/workspace/skills/autoresearch/scripts/init-project.py --analyze-only .`
-#     then read the analysis, generate autoresearch/project.md, and present it to me for review."
+#    "Run `python ~/.openclaw/workspace/skills/kais-evolve/scripts/init-project.py --analyze-only .`
+#     then read the analysis, generate kais-evolve/project.md, and present it to me for review."
 
 # 3. 人类审阅 → 修改 → 确认 → 开始跑实验
 ```
@@ -51,7 +51,7 @@ python ~/.openclaw/workspace/skills/autoresearch/scripts/init-project.py
 
 ```bash
 # 1. 初始化
-python ~/.openclaw/workspace/skills/autoresearch/scripts/init-project.py /path/to/project --type [type]
+python ~/.openclaw/workspace/skills/kais-evolve/scripts/init-project.py /path/to/project --type [type]
 
 # 2. 手动编辑 project.md
 
@@ -63,7 +63,7 @@ python ~/.openclaw/workspace/skills/autoresearch/scripts/init-project.py /path/t
 ```bash
 # 直接让 Claude Code 读 project.md 开始跑
 claude --dangerously-skip-permissions
-# → "Read autoresearch/project.md and start the experiment loop"
+# → "Read kais-evolve/project.md and start the experiment loop"
 ```
 
 ---
@@ -73,7 +73,7 @@ claude --dangerously-skip-permissions
 初始化后项目根目录会生成：
 
 ```
-autoresearch/
+kais-evolve/
 ├── project.md          # 🎯 研究配置（你编辑这个）
 ├── results.tsv         # 📊 实验结果记录
 └── experiments/        # 📁 实验日志目录
@@ -281,7 +281,7 @@ cd /path/to/your/project
 claude --dangerously-skip-permissions
 
 # 然后说：
-# "Read autoresearch/project.md and start the experiment loop."
+# "Read kais-evolve/project.md and start the experiment loop."
 ```
 
 ### 方式 2：通过 OpenClaw 后台运行
@@ -289,7 +289,7 @@ claude --dangerously-skip-permissions
 ```bash
 # 使用 acpx 启动 Claude Code 后台任务
 acpx run --cwd /path/to/project \
-  --prompt "Read autoresearch/project.md and follow the experiment loop instructions. Start with the baseline, then iterate autonomously." \
+  --prompt "Read kais-evolve/project.md and follow the experiment loop instructions. Start with the baseline, then iterate autonomously." \
   --timeout 8h
 ```
 
@@ -366,7 +366,7 @@ acpx run --cwd /path/to/project \
 ## 触发词
 
 - "帮我自动优化 [项目]"
-- "启动 autoresearch"
+- "启动 kais-evolve"
 - "让 AI 自动迭代 [目标]"
-- "autoresearch [项目路径]"
+- "kais-evolve [项目路径]"
 - " overnight 实验 [项目]"

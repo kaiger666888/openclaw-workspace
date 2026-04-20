@@ -86,7 +86,7 @@ def run_experiment(command: str, timeout: int, cwd: str = ".") -> tuple[str, int
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run and record an autoresearch experiment")
+    parser = argparse.ArgumentParser(description="Run and record an kais-evolve experiment")
     parser.add_argument("--command", "-c", help="Experiment command (overrides project.md)")
     parser.add_argument("--parse", "-p", help="Metric parse pattern (overrides project.md)")
     parser.add_argument("--direction", "-d", choices=["lower", "higher"], default="lower",
@@ -99,7 +99,7 @@ def main():
     args = parser.parse_args()
 
     project_dir = Path(args.project_dir).resolve()
-    tsv_path = project_dir / "autoresearch" / "results.tsv"
+    tsv_path = project_dir / "kais-evolve" / "results.tsv"
 
     if not tsv_path.exists():
         print(f"❌ Not initialized. Run init-project.py first.")
@@ -110,7 +110,7 @@ def main():
 
     # Read from project.md if not provided
     if not command or not parse_pattern:
-        md_path = project_dir / "autoresearch" / "project.md"
+        md_path = project_dir / "kais-evolve" / "project.md"
         if not md_path.exists():
             print(f"❌ project.md not found")
             sys.exit(1)
