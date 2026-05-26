@@ -1,7 +1,0 @@
-commit	metric	status	description
-baseline	75	keep	Baseline: original prompt. structural_formula=19, narrative_angles=17, micro_fissure=15, data_verifiability=13, grammar_clash=11
-b3dcbdd	78	keep	exp1: add sensory detail requirement + character quote to micro_fissure. micro_fissure 15→18
-b86c059	83	keep	exp2: add anti-cliché discipline to narrative_angles. narrative_angles 17→22
-ff86b67	87	keep	exp3: add dual-force paradox template to structural_formula. structural_formula 19→23
-fe9f17f	90	keep	exp4: add explicit consumption_grammar_clash guidance with structural reasoning. grammar_clash 11→14
-40ec065	92	keep	exp5: add strict data citation format with source tagging. data_verifiability 13→15

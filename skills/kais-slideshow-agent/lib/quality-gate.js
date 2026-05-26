@@ -1,1 +1,0 @@
-../../kais-movie-agent/lib/quality-gate.js

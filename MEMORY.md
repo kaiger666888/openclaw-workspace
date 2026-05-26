@@ -94,6 +94,27 @@
 
 ---
 
+## 工作区架构 (2026-05-26)
+
+### 规则：单一真实源 + Symlink 桥接
+
+- **`/home/kai/workspace/`** = 唯一真实代码目录，所有 git repo 在这里开发和维护（Claude Code 主战场）
+- **`~/.openclaw/workspace/`** = OpenClaw 运行时（skills、memory、projects、state 等）
+- **Symlink 桥接**：所有 repo 通过 symlink 从 `~/.openclaw/workspace/` → `/home/kai/workspace/<repo>/`
+- **Skills**：`~/.openclaw/workspace/skills/` 中 57 个本地 skill + 9 个 symlink 指向 `/home/kai/workspace/` 中有独立 repo 的 skill
+- **Claude Code 和 OpenClaw 共享同一套代码**，任何一方修改另一方立即可见
+
+### 新增 repo 时的操作
+1. 在 `/home/kai/workspace/` clone 或创建 repo
+2. `ln -s /home/kai/workspace/<repo> ~/.openclaw/workspace/<repo>`
+3. 如果是 skill，额外 `ln -s /home/kai/workspace/<repo> ~/.openclaw/workspace/skills/<repo>`
+
+### 不要做的事
+- 不要在 `~/.openclaw/workspace/` 下直接 clone repo（会与 symlink 冲突）
+- 不要修改 symlink 为真实目录（会导致两边代码分叉）
+
+---
+
 ## 关于 Kai
 
 - 时区: Asia/Shanghai (GMT+8), 早起型 (05:00-07:00)

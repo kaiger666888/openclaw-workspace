@@ -14,10 +14,8 @@ __pycache__/
 .browser-data/
 .jimeng-cookies.json
 
-# Independent repos (have own .git)
-hermes-worker-agent/
-skills/kais-movie-agent/
-kais-aigc-platform/
+# Independent repos are now symlinks to /home/kai/workspace/
+# Symlinks are tracked by git, no need to ignore
 
 # Env
 .env
