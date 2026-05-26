@@ -1,0 +1,141 @@
+{
+  "name": "jimeng_coffee_shop_v2",
+  "display_name": "即梦咖啡厅（深度感知重建）",
+  "source_image": "/tmp/jimeng_coffee_shop.png",
+  "room": {
+    "width": 5.5,
+    "depth": 4.5,
+    "height": 3
+  },
+  "furniture": [
+    {
+      "name": "沙发",
+      "position": [
+        0.0,
+        1,
+        0
+      ],
+      "rotation": 0,
+      "asset": "sofa_02",
+      "scale": 1.34,
+      "relation": "center"
+    },
+    {
+      "name": "茶几",
+      "position": [
+        0.0,
+        1.5,
+        0
+      ],
+      "rotation": 0,
+      "asset": "coffee_table_round_01",
+      "relation": "near",
+      "target": "sofa_02"
+    },
+    {
+      "name": "电视",
+      "position": [
+        0.0,
+        4,
+        1.2
+      ],
+      "rotation": 0,
+      "asset": "Television_01",
+      "relation": "against_wall",
+      "wall": "back"
+    },
+    {
+      "name": "书架",
+      "position": [
+        -1.25,
+        2,
+        0
+      ],
+      "rotation": 0,
+      "asset": "bookshelf",
+      "relation": "against_wall",
+      "wall": "left"
+    }
+  ],
+  "decorations": [
+    {
+      "name": "植物",
+      "position": [
+        1.87,
+        3,
+        0
+      ],
+      "rotation": 0,
+      "asset": "potted_plant_01",
+      "relation": "corner"
+    },
+    {
+      "asset": "decorative_book_set_01",
+      "position": [
+        -2.0,
+        2.0,
+        0
+      ],
+      "rotation": 0
+    },
+    {
+      "asset": "potted_plant_02",
+      "position": [
+        2.5,
+        3.0,
+        0
+      ],
+      "rotation": 0
+    },
+    {
+      "asset": "Lantern_01",
+      "position": [
+        0,
+        1.0,
+        2.5
+      ],
+      "rotation": 0
+    }
+  ],
+  "lights": [
+    {
+      "type": "point",
+      "position": [
+        0,
+        1.5,
+        2.5
+      ],
+      "color": [
+        1.0,
+        0.9,
+        0.7
+      ],
+      "energy": 200,
+      "radius": 3
+    },
+    {
+      "type": "point",
+      "position": [
+        -2,
+        2,
+        2.0
+      ],
+      "color": [
+        0.9,
+        0.9,
+        1.0
+      ],
+      "energy": 100,
+      "radius": 4
+    }
+  ],
+  "lighting": {
+    "hdri": "kloppenheim_06_4k",
+    "scheme": "warm"
+  },
+  "camera_defaults": [
+    "wide",
+    "medium",
+    "closeup"
+  ]
+}

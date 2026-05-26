@@ -1,0 +1,17 @@
+{
+  "test_name": "咖啡厅对话",
+  "timestamp": "2026-04-19 08:18:51",
+  "duration_seconds": 191.7,
+  "phases": {
+    "phase0": "PASS",
+    "phase1": "PASS",
+    "phase2": "PASS",
+    "phase3": "PASS",
+    "phase4": "PASS (5 renders)",
+    "phase5": "PASS",
+    "phase6": "PASS"
+  },
+  "passed": 7,
+  "total": 7,
+  "server": "http://192.168.71.38:8080"
+}

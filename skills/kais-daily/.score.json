@@ -1,0 +1,17 @@
+{
+  "skill": "kais-daily",
+  "total": 96,
+  "grade": "🏆 优秀",
+  "dimensions": {
+    "🎯 触发精确度": 20,
+    "📐 结构完整性": 16,
+    "⚡ Token 效率": 20,
+    "🔧 可执行性": 20,
+    "🌏 本地化质量": 20
+  },
+  "issues": {
+    "📐 结构完整性": [
+      "引用不存在: scripts/daily-task-write.sh, scripts/lib/dedupe-validator.py"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "jimeng_coffee_shop",
+  "display_name": "即梦咖啡厅（AI参考图重建）",
+  "description": "基于AI参考图分析重建的咖啡厅场景，暖色调木质地板+沙发+电视+绿植+茶几+餐椅",
+  "source_image": "/tmp/jimeng_coffee_shop.png",
+  "room": {"width": 5.5, "depth": 4.5, "height": 3},
+  "environment": {
+    "floor": "wood_floor",
+    "walls": "beige_wall_001",
+    "ceiling": "white_plaster_02"
+  },
+  "furniture": [
+    {"type": "black_leather_sofa", "asset": "sofa_02", "position": [0.0, 1.12, 0], "rotation": 0, "scale": 1.34},
+    {"type": "wall-mounted_TV", "asset": "Television_01", "position": [-0.55, -0.56, 0.85], "rotation": 90, "scale": 1.2},
+    {"type": "圆茶几", "asset": "coffee_table_round_01", "position": [0.0, -0.1, 0], "rotation": 0, "scale": 0.8},
+    {"type": "餐椅", "asset": "dining_chair_02", "position": [1.8, -1.5, 0], "rotation": 30, "scale": 1.0},
+    {"type": "挂画框", "asset": "hanging_picture_frame_01", "position": [1.5, -2.0, 1.2], "rotation": 0, "scale": 0.8}
+  ],
+  "decorations": [
+    {"type": "龟背竹(左)", "asset": "potted_plant_01", "position": [-2.48, 0.23, 0], "rotation": 0, "scale": 0.9},
+    {"type": "龟背竹(右)", "asset": "potted_plant_02", "position": [2.31, 0.9, 0], "rotation": 0, "scale": 0.9},
+    {"type": "书籍", "asset": "decorative_book_set_01", "position": [-2.06, -0.22, 0], "rotation": 0, "scale": 0.5},
+    {"type": "小型盆栽", "asset": "fern_02", "position": [-2.06, -0.68, 0], "rotation": 0, "scale": 0.6},
+    {"type": "吊灯", "asset": "Lantern_01", "position": [0.96, -1.35, 0.75], "rotation": 0, "scale": 1.0},
+    {"type": "小盆栽(桌)", "asset": "potted_plant_04", "position": [0.2, -0.3, 0.55], "rotation": 0, "scale": 0.4},
+    {"type": "大理石半身像", "asset": "marble_bust_01", "position": [-2.3, -1.8, 0], "rotation": 15, "scale": 0.7}
+  ],
+  "lights": [
+    {"type": "point", "position": [0.96, -1.35, 2.5], "color": [1.0, 0.9, 0.7], "energy": 200, "radius": 4},
+    {"type": "point", "position": [-0.55, -0.56, 2.2], "color": [0.9, 0.85, 1.0], "energy": 120, "radius": 3},
+    {"type": "point", "position": [1.8, -1.5, 2.0], "color": [1.0, 0.95, 0.8], "energy": 80, "radius": 3}
+  ],
+  "lighting": {"scheme": "warm", "hdri": "kloppenheim_06_4k"},
+  "camera_defaults": ["wide", "medium", "closeup"]
+}

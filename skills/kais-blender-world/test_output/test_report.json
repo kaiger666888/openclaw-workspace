@@ -1,0 +1,92 @@
+{
+  "test_name": "地牢遭遇战 - 全管线极限测试",
+  "timestamp": "2026-04-18",
+  "skills_tested": {
+    "kais-blender-assets": {
+      "tested": "资产清单生成",
+      "coverage": "检查 4 类资产（2 角色 + 2 动画 + 3 模型 + 2 HDRI）",
+      "note": "实际下载需 Windows 端 + Poly Haven 访问"
+    },
+    "kais-blender-layout": {
+      "tested": "场景规划（阶段1-3）+ 渲染脚本生成（阶段4）",
+      "coverage": "3 个镜头 × 多机位，5 种空间关系，2 种灯光方案",
+      "phases_executed": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "kais-blender-engine": {
+      "tested": "渲染脚本生成（通过 layout 间接调用）",
+      "coverage": "动画渲染（3 个脚本）+ 5 种相机预设",
+      "note": "需 engine server 运行才能实际渲染"
+    },
+    "kais-blender-review": {
+      "tested": "审查流程设计",
+      "coverage": "蓝图对比 + 空间关系验证",
+      "note": "需渲染图片才能执行图像分析"
+    },
+    "kais-blender-world": {
+      "tested": "全管线编排",
+      "coverage": "解析分镜 → 蓝图生成 → 脚本生成 → 产出物组织",
+      "phases_executed": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "test_coverage": {
+    "spatial_relations": [
+      "facing",
+      "guarding",
+      "inside",
+      "between",
+      "near",
+      "opposite"
+    ],
+    "camera_presets": [
+      "extreme_wide",
+      "wide",
+      "medium",
+      "otw_over_shoulder",
+      "closeup",
+      "extreme_closeup"
+    ],
+    "lighting_schemes": [
+      "dark",
+      "dramatic"
+    ],
+    "hdri_switching": true,
+    "cross_shot_continuity": true,
+    "multi_character": true,
+    "animation_reuse": true
+  },
+  "outputs": {
+    "blueprints": "/home/kai/.openclaw/workspace/skills/kais-blender-world/test_output/scene_blueprints.json",
+    "render_scripts": [
+      "/home/kai/.openclaw/workspace/skills/kais-blender-world/test_output/render_S01.py",
+      "/home/kai/.openclaw/workspace/skills/kais-blender-world/test_output/render_S02.py",
+      "/home/kai/.openclaw/workspace/skills/kais-blender-world/test_output/render_S03.py"
+    ],
+    "expected_renders": [
+      "dungeon/S01/scene_extreme_wide.png",
+      "dungeon/S01/scene_wide.png",
+      "dungeon/S01/scene_medium.png",
+      "dungeon/S02/scene_medium.png",
+      "dungeon/S02/scene_otw_over_shoulder.png",
+      "dungeon/S02/scene_closeup.png",
+      "dungeon/S03/scene_closeup.png",
+      "dungeon/S03/scene_extreme_closeup.png"
+    ]
+  },
+  "next_steps": [
+    "1. 启动 Windows Blender Agent Server",
+    "2. 确认 Mixamo FBX 已就位（fighting_idle.fbx, roaring_inplace.fbx）",
+    "3. 确认 HDRI 已就位（night_roads_02_4k.hdr, kloppenheim_06_4k.hdr）",
+    "4. 执行渲染脚本：python render_S01.py / render_S02.py / render_S03.py",
+    "5. 运行审查：python scripts/batch_review.py --renders D:/BlenderAgent/outputs/dungeon/ --blueprint scene_blueprints.json"
+  ]
+}

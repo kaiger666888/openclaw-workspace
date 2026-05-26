@@ -1,0 +1,17 @@
+{
+    "daily_tasks": {
+        "failure_analysis": true,
+        "reading_summary": true,
+        "github_trends": true,
+        "vibecoding": true,
+        "daily_notes": true,
+        "research_summary": true,
+        "daily_language": true,
+        "claude_code_insights": true,
+        "knowledge_viz": true
+    },
+    "schedule": {
+        "morning_start": "05:00",
+        "evening_end": "23:00"
+    }
+}

@@ -1,0 +1,44 @@
+# Deep Research 配置
+
+# 默认搜索轮次 (1-5)
+default_search_rounds: 3
+
+# 默认思考深度 (quick/medium/deep)
+default_thinking_depth: medium
+
+# 每轮搜索结果数量 (5-20)
+results_per_round: 10
+
+# 是否自动抓取详细内容
+auto_fetch_details: true
+
+# 最大抓取页面数
+max_fetch_pages: 15
+
+# 输出格式 (markdown/html/notion)
+output_format: markdown
+
+# 是否包含来源链接
+include_sources: true
+
+# 来源可信度评估
+evaluate_credibility: true
+
+# 搜索语言偏好 (en/zh/auto)
+search_language: auto
+
+# 优先近期内容 (天数，0=不限)
+recency_days: 365
+
+# 并发搜索数
+concurrent_searches: 3
+
+# 超时设置（秒）
+timeout_seconds: 300
+
+# 降级策略（当 Brave API 不可用时）
+fallback_order:
+  - brave
+  - exa
+  - metaso
+  - bing_cn

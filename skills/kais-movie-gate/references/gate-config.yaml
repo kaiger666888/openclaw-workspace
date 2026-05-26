@@ -1,0 +1,61 @@
+# kais-movie-gate 门控配置
+
+# 总分阈值
+threshold:
+  pass: 65           # 放行线
+  warning: 75        # 警告线（放行但建议优化）
+  critical: 40       # 单维度一票否决线
+
+# 维度权重（总和100）
+dimensions:
+  hook: 25           # 🪝 黄金3秒钩子
+  structure: 20      # 🎼 内容结构节奏
+  realism: 20        # 🎭 AIGC真实感
+  title_cover: 15    # 🖼️ 标题与封面
+  duration: 10       # ⏱️ 时长适配
+  engagement: 10     # 💬 互动潜力
+
+# 平台预设
+platform_presets:
+  douyin:
+    name: 抖音
+    pass: 65
+    duration_optimal: [15, 60]
+    notes: "搜索流量占31%，完播率权重最高"
+  bilibili:
+    name: B站
+    pass: 60
+    duration_optimal: [30, 300]
+    notes: "中长视频友好，弹幕互动加分"
+  xiaohongshu:
+    name: 小红书
+    pass: 60
+    duration_optimal: [15, 90]
+    notes: "图文+视频混合，收藏率权重高"
+  youtube_shorts:
+    name: YouTube Shorts
+    pass: 60
+    duration_optimal: [15, 60]
+    notes: "国际受众，文化差异需注意"
+
+# 内容类型预设
+content_presets:
+  short_drama:
+    name: 短剧
+    duration_optimal: [30, 90]
+    hook_weight_bonus: 5      # 短剧钩子更重要
+    engagement_weight_bonus: 3 # 悬念引导互动
+  knowledge:
+    name: 知识/教程
+    duration_optimal: [30, 60]
+    structure_weight_bonus: 3 # 信息密度更重要
+    engagement_weight_bonus: 5 # 收藏价值
+  entertainment:
+    name: 娱乐/搞笑
+    duration_optimal: [15, 30]
+    hook_weight_bonus: 5      # 前3秒决定一切
+  advertising:
+    name: 广告/带货
+    duration_optimal: [15, 30]
+    title_cover_weight_bonus: 5 # 封面点击率关键
+    realism_weight_bonus: 3    # 去广告感

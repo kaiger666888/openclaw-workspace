@@ -1,0 +1,46 @@
+@startuml
+title 知识可视化流程
+
+!define PROCESS_COLOR #E3F2FD
+!define OUTPUT_COLOR #E8F5E9
+
+skinparam backgroundColor #FAFAFA
+skinparam defaultTextAlignment center
+
+package "输入" as input <<PROCESS_COLOR>> {
+    [Markdown\n知识文档] as md
+}
+
+package "处理" as process <<PROCESS_COLOR>> {
+    [knowledge-parser\n解析文档] as parser
+    [uml-designer\n生成 UML] as uml
+    [animation-orchestrator\n设计动画] as anim
+}
+
+package "输出" as output <<OUTPUT_COLOR>> {
+    [HTML 动画] as html
+    [教学视频] as video
+}
+
+md --> parser : 结构化数据
+parser --> uml : 知识图谱
+uml --> anim : UML 图表
+anim --> html : SVG + 动画
+anim --> video : 帧序列
+
+note right of parser
+  提取概念、关系
+  构建知识结构
+end note
+
+note right of uml
+  选择合适图表类型
+  生成 PlantUML
+end note
+
+note right of anim
+  设计动画序列
+  添加交互元素
+end note
+
+@enduml

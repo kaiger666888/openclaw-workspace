@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "shot": "S01_establishing",
+      "status": "ok",
+      "time": 106,
+      "renders": 2
+    },
+    {
+      "shot": "S02_confrontation",
+      "status": "ok",
+      "time": 169,
+      "renders": 3
+    },
+    {
+      "shot": "S03_demon_cu",
+      "status": "ok",
+      "time": 49,
+      "renders": 2
+    },
+    {
+      "shot": "S04_zombie_horde",
+      "status": "error"
+    },
+    {
+      "shot": "S05_wizard",
+      "status": "error"
+    }
+  ],
+  "total_renders": 7,
+  "total_time": 324
+}

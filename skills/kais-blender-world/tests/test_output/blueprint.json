@@ -1,0 +1,54 @@
+{
+  "scene": {
+    "name": "咖啡厅对话",
+    "description": "两人在咖啡厅沙发上面对面坐着聊天，温馨氛围"
+  },
+  "characters": [
+    {
+      "label": "角色A",
+      "animation": "D:\\BlenderAgent\\animations\\motions\\sitting_while_laughing_inplace_withskin.fbx",
+      "role": "speaker"
+    },
+    {
+      "label": "角色B",
+      "animation": "D:\\BlenderAgent\\animations\\motions\\sitting_unethusiastic_clap_inplace_withskin.fbx",
+      "role": "listener"
+    }
+  ],
+  "environment": {
+    "name": "咖啡厅",
+    "style": "warm"
+  },
+  "furniture": {
+    "sofa": "sofa_02"
+  },
+  "lighting": {
+    "scheme": "warm"
+  },
+  "relations": [
+    {
+      "subject": "角色A",
+      "relation": "facing",
+      "object": "角色B",
+      "distance": 1.5
+    },
+    {
+      "subject": "角色B",
+      "relation": "facing",
+      "object": "角色A",
+      "distance": 1.5
+    },
+    {
+      "subject": "角色A",
+      "relation": "near",
+      "object": "sofa",
+      "distance": 0.5
+    },
+    {
+      "subject": "角色B",
+      "relation": "near",
+      "object": "sofa",
+      "distance": 0.5
+    }
+  ]
+}

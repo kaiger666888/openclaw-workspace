@@ -1,0 +1,109 @@
+@startuml 婆媳冲突场景
+!define SEQUENCE sequence
+
+autonumber "<b>[#]</b>"
+
+actor "婆婆 👵" as MIL #pink
+actor "丈夫 👨" as H #lightyellow
+actor "媳妇 👩" as DIL #lightblue
+
+box "家庭冲突系统" #FAFAFA
+  participant MIL
+  participant H
+  participant DIL
+end box
+
+== 场景：孩子吃什么？ 🍼 ==
+
+group 问题提出
+  MIL -> H : 孩子该吃米糊了\n（经验判断）
+  note right of MIL
+    婆婆的出发点：
+    - 我养大3个孩子
+    - 有经验
+    - 想帮忙
+  end note
+
+  H -> DIL : 妈说给孩子吃米糊\n（简单传话）
+  note left of H
+    丈夫的问题：
+    ❌ 只当传话筒
+    ❌ 不加思考
+    ❌ 不提供信息
+  end note
+
+  DIL -> H : 医生建议6个月后\n（科学依据）
+  note right of DIL
+    媳妇的依据：
+    - 医生建议
+    - 科学育儿
+    - 专业权威
+  end note
+end
+
+group 冲突升级 🔥
+  H -> MIL : 媳妇说要听医生的\n（再次传话）
+
+  note right of MIL #pink
+    **婆婆的感受**
+    ━━━━━━━━━━
+    😢 我不被信任
+    😤 经验被否定
+    💔 儿子不站我这边
+  end note
+
+  MIL -> DIL : 我养大3个孩子，\n还不知道？\n（情绪化回应）
+
+  note left of DIL #lightblue
+    **媳妇的感受**
+    ━━━━━━━━━━
+    😤 专业被质疑
+    😡 婆婆不讲理
+    💔 丈夫不帮我
+  end note
+
+  DIL -> MIL : 现在的科学和\n以前不一样！\n（反击）
+
+  note across #red
+    **💥 冲突爆发**
+    ━━━━━━━━━━━━
+    双方都觉得自己对
+    双方都觉得受伤
+    关系开始恶化
+  end note
+end
+
+== 结果：关系紧张 ==
+
+group 后果
+  MIL -> H : 你媳妇不尊重我
+  DIL -> H : 你妈太固执了
+  H -> H : 我太难了... 😫
+end
+
+note bottom of H #lightyellow
+  **丈夫的困境加剧**
+  ━━━━━━━━━━━━
+  ❌ 两边都不讨好
+  ❌ 不敢做决定
+  ❌ 家庭氛围紧张
+  ❌ 自己也焦虑
+end note
+
+legend top right
+  |= 符号 | 含义 |
+  | <#pink> | 婆婆的情绪 |
+  | <#lightblue> | 媳妇的情绪 |
+  | <#lightyellow> | 丈夫的困境 |
+  | <#red> | 冲突爆发 |
+endlegend
+
+footer
+  **根本原因分析**：
+  1. 沟通路径错误（丈夫中转）
+  2. 缺乏共同决策机制
+  3. 期待不同（经验 vs 科学）
+  4. 情绪化表达代替理性讨论
+endfooter
+
+@enduml

@@ -1,0 +1,87 @@
+# 场景3D资源下载配置
+# ==========================================
+# 基于 Notion 页面「场景3D模型下载策略」
+# 优先集成 Poly Haven (HDRI + 模型 + 纹理) + ambientCG (PBR材质)
+# 全部 CC0 许可证，商用安全
+#
+# 资源类型:
+#   polyhaven/hdris    - 环境光照 HDRI
+#   polyhaven/models   - 3D 模型 (Blender 格式)
+#   polyhaven/textures - PBR 纹理贴图
+#   ambientcg/textures - PBR 材质包
+#
+# 字段说明:
+#   enabled:      是否启用下载 (true/false)
+#   categories:   按分类过滤，空列表或 ["all"] 表示全部
+#   max_count:    最多下载多少个资源 (0 = 全部)
+#   resolution:   下载分辨率 (1k/2k/4k/8k/16k)
+#   formats:      下载文件格式
+
+# ---- 全局设置 ----
+output_dir: "D:/BlenderAgent/assets"
+proxy: "http://127.0.0.1:7891"
+concurrent_downloads: 3        # 并发下载线程数
+delay_between_downloads: 0.5   # 每次下载间隔（秒）
+skip_existing: true            # 跳过已下载的文件
+
+# ---- Poly Haven 设置 ----
+polyhaven:
+  hdris:
+    enabled: true
+    categories:
+      - indoor
+      - outdoor
+      - urban
+      - nature
+      - studio
+    max_count: 30
+    resolution: "4k"       # Blender 预览用 4k 足够，最终渲染可按需下载 8k/16k
+    formats:
+      - hdr                # HDR 格式，Blender 世界环境直接用
+    # 排除列表（不需要的 HDRI）
+    exclude: []
+
+  models:
+    enabled: true
+    categories:
+      - furniture
+      - buildings
+      - nature
+      - props
+      - decorative
+      - lighting
+    max_count: 20
+    resolution: "2k"
+    formats:
+      - blend              # Blender 原生格式，保留完整材质和修改器
+      # 同时下载 PBR 贴图（Diffuse/Rough/AO/Metal/Normal）
+    download_textures: true
+    exclude: []
+
+  textures:
+    enabled: true
+    categories: []          # 全部类别
+    max_count: 50
+    resolution: "2k"
+    formats:
+      - jpg                 # Diffuse/Rough/AO/Metal/Normal 贴图
+    download_maps:          # 要下载哪些 PBR 贴图通道
+      - Diffuse
+      - Rough
+      - AO
+      - nor_gl              # OpenGL 法线（Blender 标准）
+      - Metal
+      - arm                 # ARM (Ambient Occlusion + Roughness + Metallic) 组合贴图
+    exclude: []
+
+# ---- ambientCG 设置 ----
+ambientcg:
+  textures:
+    enabled: true
+    categories: []          # 全部类别
+    max_count: 100
+    resolution: "2K"        # 1K / 2K / 4K / 8K
+    format: "JPG"           # JPG / PNG
+    # 下载 ZIP 包并解压
+    download_type: "zip"
+    exclude: []

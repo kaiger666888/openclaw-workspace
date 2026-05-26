@@ -1,0 +1,95 @@
+{
+  "execution_date": "2026-04-29",
+  "start_time": 1777485711591,
+  "tasks": {
+    "github-review": {
+      "status": "completed",
+      "runId": "ff4b2e9d-ef5f-4a73-8575-64a1184ef14d",
+      "sessionKey": "agent:claude:subagent:3b2d4014-391c-41b5-ae3b-cec3220ee99e",
+      "timeout": 130,
+      "duration": 8337,
+      "result": "unknown",
+      "block_count": null,
+      "retry_count": 0
+    },
+    "vibecoding": {
+      "status": "timeout",
+      "runId": "e3d5a2ab-937a-49b7-bc39-49044f290303",
+      "sessionKey": "agent:claude:subagent:08f39507-dc6a-4823-95f4-fe3556709462",
+      "timeout": 130,
+      "start_time": 1777485843239,
+      "duration": 55350,
+      "result": "timeout",
+      "block_count": null,
+      "retry_count": 0
+    },
+    "reading-notes": {
+      "status": "killed",
+      "runId": "b23ce2c3-3b0b-4fe9-b013-a56f2406d103",
+      "timeout": 140,
+      "duration": 11408,
+      "result": "killed",
+      "block_count": null,
+      "retry_count": 0
+    },
+    "failure-lessons": {
+      "status": "pending", 
+      "timeout": 170,
+      "expected_duration": null
+    },
+    "tech-research": {
+      "status": "pending",
+      "timeout": 130,
+      "expected_duration": null
+    },
+    "daily-language": {
+      "status": "pending",
+      "timeout": 130,
+      "expected_duration": null
+    },
+    "daily-aigc": {
+      "status": "pending",
+      "timeout": 170,
+      "expected_duration": null
+    },
+    "daily-news": {
+      "status": "pending",
+      "timeout": 130,
+      "expected_duration": null
+    },
+    "claude-code-insights": {
+      "status": "pending",
+      "timeout": 130,
+      "expected_duration": null
+    },
+    "github-trending": {
+      "status": "pending",
+      "timeout": 170,
+      "expected_duration": null
+    },
+    "investment-wisdom": {
+      "status": "pending",
+      "timeout": 160,
+      "expected_duration": null
+    },
+    "startup-failures": {
+      "status": "pending",
+      "timeout": 160,
+      "expected_duration": null
+    },
+    "knowledge-viz": {
+      "status": "pending",
+      "timeout": 170,
+      "expected_duration": null
+    },
+    "mental-models": {
+      "status": "pending",
+      "timeout": 130,
+      "expected_duration": null
+    }
+  },
+  "retry_queue": ["vibecoding", "reading-notes"],
+  "completed_count": 1,
+  "failed_count": 2,
+  "retry_count": 0
+}

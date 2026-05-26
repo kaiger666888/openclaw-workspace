@@ -1,0 +1,1120 @@
+{
+  "generated_at": "2026-04-19T05:19:38.023243+00:00",
+  "scene_assets": {
+    "polyhaven": {
+      "hdris": [
+        {
+          "name": "autumn_field_puresky_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\autumn_field_puresky_4k.hdr",
+          "files": 1,
+          "size": 16984221
+        },
+        {
+          "name": "belfast_sunset_puresky_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\belfast_sunset_puresky_4k.hdr",
+          "files": 1,
+          "size": 17420114
+        },
+        {
+          "name": "brown_photostudio_02_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\brown_photostudio_02_4k.hdr",
+          "files": 1,
+          "size": 25433817
+        },
+        {
+          "name": "canary_wharf_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\canary_wharf_4k.hdr",
+          "files": 1,
+          "size": 26173896
+        },
+        {
+          "name": "dikhololo_night_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\dikhololo_night_4k.hdr",
+          "files": 1,
+          "size": 28440057
+        },
+        {
+          "name": "je_gray_02_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\je_gray_02_4k.hdr",
+          "files": 1,
+          "size": 29120842
+        },
+        {
+          "name": "kiara_1_dawn_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\kiara_1_dawn_4k.hdr",
+          "files": 1,
+          "size": 25413182
+        },
+        {
+          "name": "kloofendal_48d_partly_cloudy_puresky_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\kloofendal_48d_partly_cloudy_puresky_4k.hdr",
+          "files": 1,
+          "size": 20674857
+        },
+        {
+          "name": "kloppenheim_02_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\kloppenheim_02_4k.hdr",
+          "files": 1,
+          "size": 27641994
+        },
+        {
+          "name": "kloppenheim_06_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\kloppenheim_06_4k.hdr",
+          "files": 1,
+          "size": 23526002
+        },
+        {
+          "name": "kloppenheim_06_puresky_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\kloppenheim_06_puresky_4k.hdr",
+          "files": 1,
+          "size": 17385661
+        },
+        {
+          "name": "lilienstein_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\lilienstein_4k.hdr",
+          "files": 1,
+          "size": 27890163
+        },
+        {
+          "name": "meadow_2_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\meadow_2_4k.hdr",
+          "files": 1,
+          "size": 25792146
+        },
+        {
+          "name": "moonless_golf_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\moonless_golf_4k.hdr",
+          "files": 1,
+          "size": 26665668
+        },
+        {
+          "name": "noon_grass_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\noon_grass_4k.hdr",
+          "files": 1,
+          "size": 25352937
+        },
+        {
+          "name": "photo_studio_01_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\photo_studio_01_4k.hdr",
+          "files": 1,
+          "size": 25393729
+        },
+        {
+          "name": "rooitou_park_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\rooitou_park_4k.hdr",
+          "files": 1,
+          "size": 26755875
+        },
+        {
+          "name": "rural_asphalt_road_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\rural_asphalt_road_4k.hdr",
+          "files": 1,
+          "size": 22931434
+        },
+        {
+          "name": "satara_night_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\satara_night_4k.hdr",
+          "files": 1,
+          "size": 30113260
+        },
+        {
+          "name": "satara_night_no_lamps_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\satara_night_no_lamps_4k.hdr",
+          "files": 1,
+          "size": 29851032
+        },
+        {
+          "name": "shanghai_bund_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\shanghai_bund_4k.hdr",
+          "files": 1,
+          "size": 25500375
+        },
+        {
+          "name": "spiaggia_di_mondello_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\spiaggia_di_mondello_4k.hdr",
+          "files": 1,
+          "size": 24922166
+        },
+        {
+          "name": "spruit_sunrise_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\spruit_sunrise_4k.hdr",
+          "files": 1,
+          "size": 23830974
+        },
+        {
+          "name": "studio_small_03_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\studio_small_03_4k.hdr",
+          "files": 1,
+          "size": 26056941
+        },
+        {
+          "name": "studio_small_08_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\studio_small_08_4k.hdr",
+          "files": 1,
+          "size": 23545064
+        },
+        {
+          "name": "studio_small_09_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\studio_small_09_4k.hdr",
+          "files": 1,
+          "size": 24670900
+        },
+        {
+          "name": "sunflowers_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\sunflowers_4k.hdr",
+          "files": 1,
+          "size": 26582747
+        },
+        {
+          "name": "the_sky_is_on_fire_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\the_sky_is_on_fire_4k.hdr",
+          "files": 1,
+          "size": 23779584
+        },
+        {
+          "name": "venice_sunset_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\venice_sunset_4k.hdr",
+          "files": 1,
+          "size": 22841596
+        },
+        {
+          "name": "wide_street_01_4k",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\hdris\\wide_street_01_4k.hdr",
+          "files": 1,
+          "size": 23774400
+        }
+      ],
+      "models": [
+        {
+          "name": "bookshelf",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\bookshelf",
+          "files": 1,
+          "size": 127323
+        },
+        {
+          "name": "Camera_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\Camera_01",
+          "files": 1,
+          "size": 955188
+        },
+        {
+          "name": "celandine_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\celandine_01",
+          "files": 16,
+          "size": 41153584
+        },
+        {
+          "name": "coffee_table_round_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\coffee_table_round_01",
+          "files": 2,
+          "size": 473908
+        },
+        {
+          "name": "decorative_book_set_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\decorative_book_set_01",
+          "files": 1,
+          "size": 5129562
+        },
+        {
+          "name": "dining_chair_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\dining_chair_02",
+          "files": 2,
+          "size": 1596287
+        },
+        {
+          "name": "fern_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\fern_02",
+          "files": 16,
+          "size": 36384787
+        },
+        {
+          "name": "fir_tree_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\fir_tree_01",
+          "files": 1,
+          "size": 218986513
+        },
+        {
+          "name": "grass_bermuda_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\grass_bermuda_01",
+          "files": 16,
+          "size": 39584471
+        },
+        {
+          "name": "grass_medium_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\grass_medium_01",
+          "files": 16,
+          "size": 58800016
+        },
+        {
+          "name": "hanging_picture_frame_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\hanging_picture_frame_01",
+          "files": 2,
+          "size": 405933
+        },
+        {
+          "name": "island_tree_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\island_tree_01",
+          "files": 16,
+          "size": 159075987
+        },
+        {
+          "name": "island_tree_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\island_tree_02",
+          "files": 16,
+          "size": 128714687
+        },
+        {
+          "name": "jacaranda_tree",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\jacaranda_tree",
+          "files": 1,
+          "size": 180227903
+        },
+        {
+          "name": "Lantern_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\Lantern_01",
+          "files": 1,
+          "size": 940114
+        },
+        {
+          "name": "marble_bust_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\marble_bust_01",
+          "files": 16,
+          "size": 82366544
+        },
+        {
+          "name": "painted_wooden_shelves",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\painted_wooden_shelves",
+          "files": 1,
+          "size": 127323
+        },
+        {
+          "name": "potted_plant_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\potted_plant_01",
+          "files": 1,
+          "size": 2784329
+        },
+        {
+          "name": "potted_plant_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\potted_plant_02",
+          "files": 1,
+          "size": 8110103
+        },
+        {
+          "name": "potted_plant_04",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\potted_plant_04",
+          "files": 19,
+          "size": 38106141
+        },
+        {
+          "name": "rock_moss_set_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\rock_moss_set_01",
+          "files": 16,
+          "size": 55042360
+        },
+        {
+          "name": "rock_moss_set_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\rock_moss_set_02",
+          "files": 16,
+          "size": 61423092
+        },
+        {
+          "name": "sofa_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\sofa_02",
+          "files": 16,
+          "size": 58010477
+        },
+        {
+          "name": "Television_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\Television_01",
+          "files": 16,
+          "size": 60828861
+        },
+        {
+          "name": "tree_small_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\models\\tree_small_02",
+          "files": 16,
+          "size": 162995864
+        }
+      ],
+      "textures": [
+        {
+          "name": "aerial_beach_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\aerial_beach_01",
+          "files": 15,
+          "size": 67808593
+        },
+        {
+          "name": "aerial_grass_rock",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\aerial_grass_rock",
+          "files": 15,
+          "size": 127995678
+        },
+        {
+          "name": "aerial_rocks_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\aerial_rocks_02",
+          "files": 15,
+          "size": 68268073
+        },
+        {
+          "name": "aerial_rocks_04",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\aerial_rocks_04",
+          "files": 15,
+          "size": 70317160
+        },
+        {
+          "name": "asphalt_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\asphalt_02",
+          "files": 15,
+          "size": 79836077
+        },
+        {
+          "name": "bark_brown_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\bark_brown_02",
+          "files": 15,
+          "size": 69530629
+        },
+        {
+          "name": "beige_wall_001",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\beige_wall_001",
+          "files": 15,
+          "size": 101212461
+        },
+        {
+          "name": "book_pattern",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\book_pattern",
+          "files": 12,
+          "size": 72123009
+        },
+        {
+          "name": "brown_leather",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\brown_leather",
+          "files": 15,
+          "size": 75789376
+        },
+        {
+          "name": "brown_mud_leaves_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\brown_mud_leaves_01",
+          "files": 15,
+          "size": 133116537
+        },
+        {
+          "name": "brown_planks_03",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\brown_planks_03",
+          "files": 15,
+          "size": 66377975
+        },
+        {
+          "name": "coast_sand_rocks_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\coast_sand_rocks_02",
+          "files": 15,
+          "size": 72645682
+        },
+        {
+          "name": "concrete_floor_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\concrete_floor_02",
+          "files": 15,
+          "size": 91136643
+        },
+        {
+          "name": "concrete_floor_worn_001",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\concrete_floor_worn_001",
+          "files": 15,
+          "size": 107183312
+        },
+        {
+          "name": "dark_wood",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\dark_wood",
+          "files": 15,
+          "size": 105114562
+        },
+        {
+          "name": "denmin_fabric_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\denmin_fabric_02",
+          "files": 15,
+          "size": 100825089
+        },
+        {
+          "name": "fabric_pattern_05",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\fabric_pattern_05",
+          "files": 12,
+          "size": 63623775
+        },
+        {
+          "name": "fabric_pattern_07",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\fabric_pattern_07",
+          "files": 12,
+          "size": 51165511
+        },
+        {
+          "name": "floor_tiles_06",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\floor_tiles_06",
+          "files": 15,
+          "size": 45952178
+        },
+        {
+          "name": "forest_ground_04",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\forest_ground_04",
+          "files": 15,
+          "size": 82932611
+        },
+        {
+          "name": "forest_leaves_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\forest_leaves_02",
+          "files": 15,
+          "size": 76191180
+        },
+        {
+          "name": "forrest_ground_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\forrest_ground_01",
+          "files": 15,
+          "size": 134583604
+        },
+        {
+          "name": "green_metal_rust",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\green_metal_rust",
+          "files": 15,
+          "size": 51126850
+        },
+        {
+          "name": "kitchen_wood",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\kitchen_wood",
+          "files": 15,
+          "size": 80999739
+        },
+        {
+          "name": "laminate_floor_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\laminate_floor_02",
+          "files": 15,
+          "size": 113804662
+        },
+        {
+          "name": "leather_red_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\leather_red_02",
+          "files": 12,
+          "size": 80616753
+        },
+        {
+          "name": "leather_white",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\leather_white",
+          "files": 15,
+          "size": 77238942
+        },
+        {
+          "name": "marble_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\marble_01",
+          "files": 15,
+          "size": 34928846
+        },
+        {
+          "name": "metal_plate",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\metal_plate",
+          "files": 18,
+          "size": 139857911
+        },
+        {
+          "name": "oak_veneer_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\oak_veneer_01",
+          "files": 15,
+          "size": 119837691
+        },
+        {
+          "name": "painted_plaster_wall",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\painted_plaster_wall",
+          "files": 15,
+          "size": 105943382
+        },
+        {
+          "name": "planks_brown_10",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\planks_brown_10",
+          "files": 15,
+          "size": 94264228
+        },
+        {
+          "name": "plywood",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\plywood",
+          "files": 15,
+          "size": 77587324
+        },
+        {
+          "name": "red_brick",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\red_brick",
+          "files": 15,
+          "size": 96807802
+        },
+        {
+          "name": "red_brick_03",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\red_brick_03",
+          "files": 15,
+          "size": 75864103
+        },
+        {
+          "name": "rock_face_03",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\rock_face_03",
+          "files": 15,
+          "size": 123383633
+        },
+        {
+          "name": "rocky_terrain_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\rocky_terrain_02",
+          "files": 15,
+          "size": 109815351
+        },
+        {
+          "name": "rough_wood",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\rough_wood",
+          "files": 15,
+          "size": 63089407
+        },
+        {
+          "name": "rust_coarse_01",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\rust_coarse_01",
+          "files": 15,
+          "size": 126895350
+        },
+        {
+          "name": "rusty_metal_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\rusty_metal_02",
+          "files": 15,
+          "size": 53866931
+        },
+        {
+          "name": "snow_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\snow_02",
+          "files": 15,
+          "size": 53057472
+        },
+        {
+          "name": "synthetic_wood",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\synthetic_wood",
+          "files": 15,
+          "size": 107719113
+        },
+        {
+          "name": "weathered_brown_planks",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\weathered_brown_planks",
+          "files": 15,
+          "size": 120199523
+        },
+        {
+          "name": "white_plaster_02",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\white_plaster_02",
+          "files": 15,
+          "size": 126190330
+        },
+        {
+          "name": "wood_cabinet_worn_long",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\wood_cabinet_worn_long",
+          "files": 15,
+          "size": 64543968
+        },
+        {
+          "name": "wood_floor",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\wood_floor",
+          "files": 15,
+          "size": 108219413
+        },
+        {
+          "name": "wood_floor_deck",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\wood_floor_deck",
+          "files": 15,
+          "size": 126610937
+        },
+        {
+          "name": "wood_planks_dirt",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\wood_planks_dirt",
+          "files": 15,
+          "size": 67603275
+        },
+        {
+          "name": "wood_table_001",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\wood_table_001",
+          "files": 15,
+          "size": 110185521
+        },
+        {
+          "name": "wood_table_worn",
+          "path": "D:\\BlenderAgent\\assets\\polyhaven\\textures\\wood_table_worn",
+          "files": 15,
+          "size": 117977035
+        }
+      ]
+    },
+    "ambientcg": {
+      "textures": [
+        {
+          "name": "Asphalt031",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Asphalt031",
+          "files": 11,
+          "size": 30860071
+        },
+        {
+          "name": "Bark001",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bark001",
+          "files": 10,
+          "size": 18136576
+        },
+        {
+          "name": "Bark006",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bark006",
+          "files": 11,
+          "size": 29183345
+        },
+        {
+          "name": "Bark012",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bark012",
+          "files": 11,
+          "size": 33674343
+        },
+        {
+          "name": "Bricks036",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bricks036",
+          "files": 11,
+          "size": 29595137
+        },
+        {
+          "name": "Bricks040",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bricks040",
+          "files": 11,
+          "size": 32647133
+        },
+        {
+          "name": "Bricks043",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bricks043",
+          "files": 11,
+          "size": 32341479
+        },
+        {
+          "name": "Bricks045",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bricks045",
+          "files": 11,
+          "size": 33720262
+        },
+        {
+          "name": "Bricks053",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bricks053",
+          "files": 11,
+          "size": 29289108
+        },
+        {
+          "name": "Bricks058",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bricks058",
+          "files": 11,
+          "size": 25881946
+        },
+        {
+          "name": "Bricks060",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Bricks060",
+          "files": 11,
+          "size": 26796847
+        },
+        {
+          "name": "Concrete013",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Concrete013",
+          "files": 11,
+          "size": 15904788
+        },
+        {
+          "name": "Concrete017",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Concrete017",
+          "files": 10,
+          "size": 27591059
+        },
+        {
+          "name": "Concrete025",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Concrete025",
+          "files": 11,
+          "size": 33560876
+        },
+        {
+          "name": "Concrete029",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Concrete029",
+          "files": 11,
+          "size": 28710371
+        },
+        {
+          "name": "Concrete031",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Concrete031",
+          "files": 11,
+          "size": 29326830
+        },
+        {
+          "name": "Concrete035",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Concrete035",
+          "files": 10,
+          "size": 14349733
+        },
+        {
+          "name": "Concrete038",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Concrete038",
+          "files": 10,
+          "size": 29882713
+        },
+        {
+          "name": "Fabric008",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Fabric008",
+          "files": 11,
+          "size": 24940959
+        },
+        {
+          "name": "Fabric012",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Fabric012",
+          "files": 11,
+          "size": 21281824
+        },
+        {
+          "name": "Fabric017",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Fabric017",
+          "files": 11,
+          "size": 26824617
+        },
+        {
+          "name": "Fabric021",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Fabric021",
+          "files": 11,
+          "size": 23524724
+        },
+        {
+          "name": "Fabric030",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Fabric030",
+          "files": 11,
+          "size": 38030506
+        },
+        {
+          "name": "Fabric035",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Fabric035",
+          "files": 11,
+          "size": 36476165
+        },
+        {
+          "name": "Fabric039",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Fabric039",
+          "files": 11,
+          "size": 35384843
+        },
+        {
+          "name": "Gravel014",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Gravel014",
+          "files": 11,
+          "size": 33177730
+        },
+        {
+          "name": "Gravel015",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Gravel015",
+          "files": 11,
+          "size": 36444989
+        },
+        {
+          "name": "Ground028",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Ground028",
+          "files": 11,
+          "size": 34631918
+        },
+        {
+          "name": "Ground033",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Ground033",
+          "files": 11,
+          "size": 26576522
+        },
+        {
+          "name": "Ground039",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Ground039",
+          "files": 11,
+          "size": 34077294
+        },
+        {
+          "name": "Ground042",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Ground042",
+          "files": 11,
+          "size": 38674389
+        },
+        {
+          "name": "Ground052",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Ground052",
+          "files": 11,
+          "size": 25553120
+        },
+        {
+          "name": "Ground077",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Ground077",
+          "files": 11,
+          "size": 37078916
+        },
+        {
+          "name": "Ground081",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Ground081",
+          "files": 11,
+          "size": 18178462
+        },
+        {
+          "name": "Leather005",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Leather005",
+          "files": 10,
+          "size": 26268107
+        },
+        {
+          "name": "Leather008",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Leather008",
+          "files": 11,
+          "size": 27972018
+        },
+        {
+          "name": "Leather011",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Leather011",
+          "files": 10,
+          "size": 18611036
+        },
+        {
+          "name": "Leather015",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Leather015",
+          "files": 12,
+          "size": 24271062
+        },
+        {
+          "name": "Leather023",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Leather023",
+          "files": 10,
+          "size": 26702965
+        },
+        {
+          "name": "Leather026",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Leather026",
+          "files": 10,
+          "size": 24015335
+        },
+        {
+          "name": "Marble007",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Marble007",
+          "files": 10,
+          "size": 15588631
+        },
+        {
+          "name": "Marble008",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Marble008",
+          "files": 10,
+          "size": 15511368
+        },
+        {
+          "name": "Marble013",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Marble013",
+          "files": 10,
+          "size": 17156779
+        },
+        {
+          "name": "Metal012",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Metal012",
+          "files": 11,
+          "size": 12865333
+        },
+        {
+          "name": "Metal015",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Metal015",
+          "files": 11,
+          "size": 23295863
+        },
+        {
+          "name": "Metal020",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Metal020",
+          "files": 11,
+          "size": 26184249
+        },
+        {
+          "name": "Metal024",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Metal024",
+          "files": 11,
+          "size": 19154682
+        },
+        {
+          "name": "Metal032",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Metal032",
+          "files": 11,
+          "size": 13034006
+        },
+        {
+          "name": "Metal036",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Metal036",
+          "files": 11,
+          "size": 12211824
+        },
+        {
+          "name": "Metal041A",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Metal041A",
+          "files": 11,
+          "size": 13363555
+        },
+        {
+          "name": "PavingStones138",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\PavingStones138",
+          "files": 11,
+          "size": 15250069
+        },
+        {
+          "name": "PavingStones150",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\PavingStones150",
+          "files": 11,
+          "size": 16080625
+        },
+        {
+          "name": "Rock001",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock001",
+          "files": 10,
+          "size": 16616725
+        },
+        {
+          "name": "Rock007",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock007",
+          "files": 10,
+          "size": 27518802
+        },
+        {
+          "name": "Rock009",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock009",
+          "files": 10,
+          "size": 27007376
+        },
+        {
+          "name": "Rock013",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock013",
+          "files": 11,
+          "size": 29208266
+        },
+        {
+          "name": "Rock015",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock015",
+          "files": 11,
+          "size": 30571009
+        },
+        {
+          "name": "Rock021",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock021",
+          "files": 11,
+          "size": 23007377
+        },
+        {
+          "name": "Rock025",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock025",
+          "files": 11,
+          "size": 22790013
+        },
+        {
+          "name": "Rock034",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Rock034",
+          "files": 11,
+          "size": 34534799
+        },
+        {
+          "name": "Snow003",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Snow003",
+          "files": 10,
+          "size": 23321800
+        },
+        {
+          "name": "Snow006",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Snow006",
+          "files": 11,
+          "size": 28717685
+        },
+        {
+          "name": "Tiles073",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Tiles073",
+          "files": 11,
+          "size": 22227767
+        },
+        {
+          "name": "Tiles076",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Tiles076",
+          "files": 10,
+          "size": 13017128
+        },
+        {
+          "name": "Tiles082",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Tiles082",
+          "files": 10,
+          "size": 11880395
+        },
+        {
+          "name": "Tiles088",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Tiles088",
+          "files": 11,
+          "size": 33685738
+        },
+        {
+          "name": "Wood047",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood047",
+          "files": 10,
+          "size": 15108747
+        },
+        {
+          "name": "Wood048",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood048",
+          "files": 10,
+          "size": 24409620
+        },
+        {
+          "name": "Wood049",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood049",
+          "files": 10,
+          "size": 23168626
+        },
+        {
+          "name": "Wood051",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood051",
+          "files": 10,
+          "size": 23150788
+        },
+        {
+          "name": "Wood053",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood053",
+          "files": 10,
+          "size": 25149156
+        },
+        {
+          "name": "Wood057",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood057",
+          "files": 10,
+          "size": 28286823
+        },
+        {
+          "name": "Wood058",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood058",
+          "files": 10,
+          "size": 25489723
+        },
+        {
+          "name": "Wood061",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood061",
+          "files": 11,
+          "size": 37775511
+        },
+        {
+          "name": "Wood062",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood062",
+          "files": 11,
+          "size": 36501576
+        },
+        {
+          "name": "Wood065",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood065",
+          "files": 11,
+          "size": 35045962
+        },
+        {
+          "name": "Wood067",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood067",
+          "files": 10,
+          "size": 21449380
+        },
+        {
+          "name": "Wood069",
+          "path": "D:\\BlenderAgent\\assets\\ambientcg\\textures\\Wood069",
+          "files": 10,
+          "size": 21847517
+        }
+      ]
+    },
+    "stats": {
+      "polyhaven": 105,
+      "ambientcg": 78,
+      "total": 183
+    }
+  }
+}

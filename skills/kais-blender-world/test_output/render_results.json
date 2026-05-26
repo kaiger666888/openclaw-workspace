@@ -1,0 +1,20 @@
+[
+  {
+    "shot": "S01_idle",
+    "status": "ok",
+    "time": 55.902318239212036,
+    "files": []
+  },
+  {
+    "shot": "S02_happy",
+    "status": "ok",
+    "time": 60.31221580505371,
+    "files": []
+  },
+  {
+    "shot": "S03_multi",
+    "status": "ok",
+    "time": 199.25900602340698,
+    "files": []
+  }
+]

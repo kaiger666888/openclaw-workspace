@@ -1,0 +1,271 @@
+---
+name: kais-blender-engine
+version: 0.1.0
+description: "Blender 渲染引擎客户端。通过 HTTP API 远程调用 Windows 端 Blender 执行动画渲染、姿态渲染、资产管理。场景布局渲染由 kais-blender-layout 提供。触发词：blender engine, 渲染引擎, blender客户端, 动画渲染, 姿态渲染, 角色渲染, render animation, pose render, blender api, blenderrun, 跑blender, 提交渲染"
+---
+
+# kais-blender-engine — Blender 渲染引擎客户端
+
+> Linux 端通过 HTTP 远程调用 Windows Blender 执行渲染任务。
+> 本 skill 封装 client 部分，server 部分同仓库维护（`server/` 目录）。
+
+## 前置依赖
+
+- Windows 端已启动 Blender Agent Server（默认 `http://<IP>:8080`）
+- `pip install requests pydantic`
+
+## 服务启动规则
+
+- **默认端口**: 8080（配置于 `server/config.py` → `PORT = 8080`）
+- **监听地址**: `0.0.0.0`（局域网可访问）
+- **启动命令**: `cd server && python -m uvicorn blender_agent_server:app --host 0.0.0.0 --port 8080 --reload`
+- **端口占用处理**: 若 8080 已被占用，杀掉占用进程后重启（`taskkill /F /PID <pid>`）
+- **防火墙**: 首次启动需放行端口：`netsh advfirewall firewall add rule name="Blender Server" dir=in action=allow protocol=TCP localport=8080`
+
+## 快速使用
+
+```python
+import sys
+sys.path.insert(0, "/home/kai/.openclaw/workspace/skills/kais-blender-engine/client")
+
+from blender_client import BlenderAgentClient
+
+cli = BlenderAgentClient("http://192.168.1.100:8080")
+
+# 健康检查
+print(cli.health())
+
+# 查询环境（Blender版本、GPU、插件）
+print(cli.capabilities())
+```
+
+## 核心能力
+
+### 1. 动画渲染（Animation Rendering）
+
+导入 Mixamo 角色+动画 FBX，渲染为视频/帧序列。
+
+```python
+import sys
+sys.path.insert(0, "/home/kai/.openclaw/workspace/skills/kais-blender-engine/client")
+
+from blender_client import BlenderAgentClient
+from generators.animation import AnimationParams
+
+cli = BlenderAgentClient("http://192.168.1.100:8080")
+
+# 列出可用资源
+assets = cli.list_animations()
+print("角色:", [c["name"] for c in assets["characters"]])
+print("动画:", [m["name"] for m in assets["motions"]])
+
+# 提交动画渲染
+result = cli.render_animation(
+    AnimationParams(
+        preset_name="hero_walk",
+        character="hero.fbx",
+        motions=["walk.fbx", "run.fbx"],
+        output_format="both",        # frames / video / both
+        resolution=1024,
+        samples=256,
+        fps=24,
+        lighting_preset="studio",    # studio / dramatic / soft / neon
+        camera_preset="three_quarter",  # front / side / three_quarter / follow / orbit
+    ),
+    timeout=1800,
+)
+print("状态:", result["status"])
+print("输出:", result["outputs"])
+```
+
+**AnimationParams 字段：**
+
+| 字段 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `preset_name` | str | 必填 | 输出文件名前缀 |
+| `character` | str | 必填 | 角色 FBX 文件名 |
+| `motions` | str[] | 必填 | 动画 FBX 文件名列表 |
+| `output_format` | str | `"frames"` | `frames` / `video` / `both` |
+| `resolution` | int | `1024` | 渲染分辨率 |
+| `samples` | int | `256` | Cycles 采样数 (32-2048) |
+| `fps` | int | `24` | 帧率 |
+| `lighting_preset` | str | `"studio"` | `studio` / `dramatic` / `soft` / `neon` |
+| `camera_preset` | str | `"three_quarter"` | `front` / `side` / `three_quarter` / `follow` / `orbit` |
+| `transparent_bg` | bool | `false` | 透明背景 |
+| `character_scale` | float | `1.0` | 角色缩放 |
+
+**灯光预设：**
+- `studio` — 三点布光，均匀柔和
+- `dramatic` — 高对比主光+补光，戏剧性
+- `soft` — 单一大面积柔光
+- `neon` — 双色霓虹灯效果
+
+**相机模式：**
+- `front` / `side` / `three_quarter` — 固定机位
+- `follow` — 跟随角色根骨骼
+- `orbit` — 环绕旋转
+
+### 2. 姿态渲染（Pose Rendering）
+
+设置角色骨骼姿态（FK 旋转 + IK 约束），渲染静态图。
+
+#### FK 模式（直接设骨骼角度）
+
+```python
+import sys
+sys.path.insert(0, "/home/kai/.openclaw/workspace/skills/kais-blender-engine/client")
+
+from blender_client import BlenderAgentClient
+from generators.pose import generate_pose_script
+from pose_presets import get_pose_preset
+
+cli = BlenderAgentClient("http://192.168.1.100:8080")
+
+script = generate_pose_script(
+    preset_name="hero_001",
+    bone_rotations=get_pose_preset("wave"),  # 或自定义骨骼旋转
+    camera_preset="front",                   # 见 camera_presets.py
+    resolution=1024,
+)
+
+result = cli.run_sync(script, timeout=300)
+print("渲染完成:", result["returncode"] == 0)
+```
+
+**FK 预设：**
+
+| 预设名 | 说明 |
+|--------|------|
+| `t-pose` | T 姿势（默认） |
+| `standing` | 自然站立 |
+| `arms_up` | 双手举过头顶 |
+| `wave` | 挥手 |
+| `walk_left` / `walk_right` | 迈步 |
+| `sit` | 坐姿 |
+| `run` | 跑步 |
+| `fighting_stance` | 格斗站姿 |
+| `hands_on_hips` | 双手叉腰 |
+| `crossed_arms` | 抱臂 |
+| `sitting_relaxed` | 放松坐姿 |
+
+#### IK 模式（指定手脚目标位置，自动反算骨骼链）
+
+```python
+from generators.pose import generate_pose_script
+from ik_presets import get_ik_preset
+
+# 使用预设
+script = generate_pose_script(
+    preset_name="hero_001",
+    ik_targets=get_ik_preset("reach_forward"),  # 双手伸向前方
+    camera_preset="front",
+)
+
+# 或自定义目标位置
+script = generate_pose_script(
+    preset_name="hero_001",
+    ik_targets={
+        "mixamorig:RightHand": (-0.3, -0.6, 1.5),  # 右手伸向前方
+        "mixamorig:LeftFoot": (0.3, -0.2, 0.0),    # 左脚迈出
+    },
+    camera_preset="three_quarter",
+)
+
+# FK + IK 混合：IK 控制的骨骼会覆盖同链上的 FK 旋转
+script = generate_pose_script(
+    preset_name="hero_001",
+    bone_rotations={"mixamorig:Spine": (-0.1, 0, 0)},
+    ik_targets=get_ik_preset("box_guard"),
+    camera_preset="front",
+)
+```
+
+**IK 预设：**
+
+| 预设名 | 说明 |
+|--------|------|
+| `reach_forward` | 双手伸向前方 |
+| `reach_up` | 双手举高 |
+| `reach_left` / `reach_right` | 单手侧伸 |
+| `reach_down` | 双手向下 |
+| `hands_behind_head` | 双手抱头 |
+| `wave_left` / `wave_right` | 单手挥手 |
+| `box_guard` | 格斗防守姿势 |
+| `point_forward` | 单手指向前方 |
+| `arms_wide` | 双手张开 |
+| `kick_left` / `kick_right` | 踢腿 |
+| `wide_stance` | 宽站姿 |
+| `lunge_left` | 弓步 |
+| `superman` | 飞行姿势（四肢全 IK） |
+| `squat_reach` | 蹲下伸手 |
+| `taunt` | 挑衅姿势 |
+
+**IK 链默认配置：**
+
+| 末端骨骼 | chain_count | 控制范围 |
+|----------|-------------|---------|
+| `mixamorig:LeftHand` | 3 | Hand → ForeArm → Arm |
+| `mixamorig:RightHand` | 3 | Hand → ForeArm → Arm |
+| `mixamorig:LeftFoot` | 3 | Foot → Leg → UpLeg |
+| `mixamorig:RightFoot` | 3 | Foot → Leg → UpLeg |
+
+坐标单位：米（Mixamo 角色约 1.7m 高，Y 前方，Z 上方）。
+
+> ⚠️ 场景布局渲染（多角色+家具+HDRI+多机位）由 **kais-blender-layout** 提供，本 skill 不再包含场景渲染功能。
+
+### 3. 资产管理
+
+```python
+# 查看可用角色和动画
+assets = cli.list_animations()
+
+# 放入新 FBX 后刷新索引
+cli.rebuild_animation_index()
+
+# 查看场景素材（Poly Haven + ambientCG）
+cli._get("/assets/stats")
+cli._get("/assets/rebuild")
+
+# 管理输出文件
+files = cli.list_outputs(prefix="hero_")
+data = cli.download_output("hero_walk.mp4", save_to="/tmp/hero.mp4")
+cli.delete_output("hero_walk.mp4")
+```
+
+### 4. 底层任务控制
+
+```python
+# 同步执行任意 Blender Python 脚本
+result = cli.run_sync("import bpy\nprint(bpy.data.objects.keys())", timeout=120)
+
+# 异步执行（长任务）
+job_id = cli.run_async(script, timeout=1800)
+
+# 轮询任务状态
+status = cli.poll_job(job_id, interval=10, max_wait=3600)
+
+# 等待完成并获取输出
+result = cli.wait_and_get_outputs(job_id)
+```
+
+## 与其他 Skill 的协作
+
+```
+kais-blender-layout (场景规划+布局渲染)
+       ↓ 调用 engine API
+kais-blender-engine (本skill) → 动画渲染 / 姿态渲染 / 资产管理
+       ↓
+kais-camera (视频生成)
+```
+
+**分工说明：**
+- **engine（本skill）**：底层 API 客户端，单角色动画/姿态渲染
+- **layout**：场景规划+布局渲染（多角色+家具+HDRI+多机位），内部调用 engine server
+- **assets**：3D 资产获取与管理
+
+## 注意事项
+
+- 所有路径为 Windows 端路径（`D:\BlenderAgent\...`），由 server 本地执行
+- Mixamo FBX 放入后需调用 `rebuild_animation_index()` 刷新
+- 动画渲染建议 timeout ≥ 1800s
+- 本 skill 是 client 部分，server 部分见同仓库 `server/` 目录

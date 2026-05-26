@@ -1,0 +1,1095 @@
+{
+  "children": [
+    {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [{"type": "text", "text": {"content": "📡 技术雷达 - 2026年3月14日"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "💡 今日摘要\n\n本期技术雷达聚焦于 2026 年初最重要的五大技术趋势：MCP 标准协议、自主编程代理、Vibe Coding、AI 驱动的可视化工具，以及新一代大语言模型。这些技术正在重新定义软件开发的工作方式。"}}
+        ],
+        "icon": {"emoji": "💡"}
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🔧 1. Model Context Protocol (MCP)"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "简介"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "Model Context Protocol（MCP）是由 Anthropic 在 2024 年 11 月发布的开放标准协议，旨在解决 AI 应用与外部数据源和工具之间的集成问题。到 2026 年，MCP 已经成为 AI 工具生态系统的\"通用接口\"。"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "为什么值得关注"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "技术价值："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "标准化集成：提供统一的协议让 LLM 应用连接数据库、文件系统、API 等外部资源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "减少重复工作：一次集成，处处可用（One standard. One integration. Works everywhere）"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "降低维护成本：避免 N×M 的连接器混乱局面"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "应用场景："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "AI IDE 集成外部工具链"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "企业级 AI 助手连接内部系统"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "开发环境中的上下文获取"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "行业采用情况："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "Zed、Replit、Codeium、Sourcegraph 等主流开发工具已支持"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "Block、Apollo 等企业已集成到生产系统"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "OpenAI Agents SDK 也开始支持 MCP"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "成熟度评估"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "🎯 采用（Adopt）\n\nMCP 已经成为 2026 年 AI 工具开发的事实标准，建议所有涉及 AI 工具集成的团队立即采用。"}}],
+        "icon": {"emoji": "🎯"}
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "相关资源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "官方规范："}},
+          {"type": "text", "text": {"content": "https://modelcontextprotocol.io/specification/2025-11-25", "link": {"url": "https://modelcontextprotocol.io/specification/2025-11-25"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "GitHub 组织："}},
+          {"type": "text", "text": {"content": "https://github.com/modelcontextprotocol", "link": {"url": "https://github.com/modelcontextprotocol"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Anthropic 公告："}},
+          {"type": "text", "text": {"content": "https://www.anthropic.com/news/model-context-protocol", "link": {"url": "https://www.anthropic.com/news/model-context-protocol"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Google Cloud 指南："}},
+          {"type": "text", "text": {"content": "https://cloud.google.com/discover/what-is-model-context-protocol", "link": {"url": "https://cloud.google.com/discover/what-is-model-context-protocol"}}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🤖 2. 自主编程代理（Agentic AI Coding）"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "简介"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "2026 年见证了从\"AI 代码补全\"到\"自主编程代理\"的范式转变。这些 AI 代理不仅能理解代码库，还能自主规划、执行多步骤任务、运行测试并迭代改进，几乎不需要人工干预。"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "为什么值得关注"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "技术价值："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "仓库级智能（Repository Intelligence）：理解代码关系、架构模式和提交历史"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "长时间运行的工作流：从简单的代码补全到持续数小时的自主任务"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "多代理协调：多个 AI 代理协同工作，分工明确"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "应用场景："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "自动化功能开发：从需求描述到可运行代码"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "代码审查与重构：自动检测并修复问题"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "技术债务清理：自主完成大规模重构任务"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "关键能力："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "多文件修改与测试"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "错误自动修复与迭代"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "理解项目上下文和架构意图"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "数据洞察："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "55% 的开发者关注点转向自主 AI 系统"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "80% 的企业应用预计将在 2026 年嵌入 AI 代理"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "46%+ 的年复合增长率"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "成熟度评估"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "🧪 试验（Trial）\n\n虽然技术快速发展，但大规模生产部署仍需谨慎。建议在非关键项目上先行试验。"}}],
+        "icon": {"emoji": "🧪"}
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "相关资源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Anthropic 2026 报告："}},
+          {"type": "text", "text": {"content": "https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf", "link": {"url": "https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Claude 趋势分析："}},
+          {"type": "text", "text": {"content": "https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026", "link": {"url": "https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "开发者工具对比："}},
+          {"type": "text", "text": {"content": "https://www.faros.ai/blog/best-ai-coding-agents-2026", "link": {"url": "https://www.faros.ai/blog/best-ai-coding-agents-2026"}}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🎨 3. Vibe Coding（氛围编程）"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "简介"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "Vibe Coding 是一种 AI 辅助的软件开发实践，开发者使用自然语言描述想要构建的内容，AI 生成相应的代码。这种方式正在模糊\"程序员\"与\"非程序员\"之间的界限。"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "为什么值得关注"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "技术价值："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "降低编程门槛：让非专业人员也能构建应用"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "提升开发效率：从想法到原型的时间大幅缩短"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "自然语言优先：用母语描述需求，AI 负责实现"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "工具生态分层："}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "AI 原生 IDE：Cursor、Claude Code、Replit Agent 3"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "多代理平台：OpenClaw、Devin AI、MetaGPT"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "设计转代码：Bolt.new、Lovable、v0.dev"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "企业编排层：GitHub Copilot Workspace、GitLab Duo"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "市场数据："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "92% 的美国开发者每天使用 AI 编程工具"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "82% 的全球开发者每周至少使用一次"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "17+ 个主流工具覆盖不同场景"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "成熟度评估"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "🎯 采用（Adopt）\n\nVibe Coding 已成为主流开发方式，特别适合原型开发、快速迭代和非专业开发者。"}}],
+        "icon": {"emoji": "🎯"}
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "相关资源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "完整指南："}},
+          {"type": "text", "text": {"content": "https://www.rapidnative.com/blogs/vibe-coding-complete-guide", "link": {"url": "https://www.rapidnative.com/blogs/vibe-coding-complete-guide"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "工具对比："}},
+          {"type": "text", "text": {"content": "https://medium.com/towards-agentic-ai/vibe-coding-tools-2026-c84a5ddc198f", "link": {"url": "https://medium.com/towards-agentic-ai/vibe-coding-tools-2026-c84a5ddc198f"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Wikipedia 定义："}},
+          {"type": "text", "text": {"content": "https://en.wikipedia.org/wiki/Vibe_coding", "link": {"url": "https://en.wikipedia.org/wiki/Vibe_coding"}}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "📊 4. AI 驱动的 UML 可视化工具"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "简介"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "传统的 UML 工具需要手动拖拽元素，效率低下。新一代 AI 驱动的可视化工具（如 Eraser.io）可以理解自然语言描述，自动生成专业的架构图、流程图和 UML 图。"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "为什么值得关注"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "技术价值："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "文本转图表：用自然语言描述，AI 自动生成"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "多格式支持：类图、序列图、活动图、ERD 等"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "实时协作：云端编辑，团队共享"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "版本控制友好：文本格式便于 Git 管理"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "典型工具："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "Eraser.io：AI UML 生成器，支持预设模板"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "PlantUML：开源文本转 UML 工具"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "Lucidchart：AI 增强的云端图表工具"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "Visual Paradigm：企业级建模工具"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "成熟度评估"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "🧪 试验（Trial）\n\nAI 生成图表的准确性和美观度仍有提升空间，建议用于快速原型和非正式文档。"}}],
+        "icon": {"emoji": "🧪"}
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "相关资源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Eraser.io AI 生成器："}},
+          {"type": "text", "text": {"content": "https://www.eraser.io/ai/uml-diagram-generator", "link": {"url": "https://www.eraser.io/ai/uml-diagram-generator"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "PlantUML 官网："}},
+          {"type": "text", "text": {"content": "https://plantuml.com/", "link": {"url": "https://plantuml.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Lucidchart："}},
+          {"type": "text", "text": {"content": "https://www.lucidchart.com/pages/examples/uml_diagram_tool", "link": {"url": "https://www.lucidchart.com/pages/examples/uml_diagram_tool"}}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🧠 5. Claude Sonnet 4.6"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "简介"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "Claude Sonnet 4.6 是 Anthropic 在 2026 年初发布的最新模型，作为 claude.ai 的默认免费模型，提供了 1M token 的上下文窗口（测试版），定价保持不变（$3/$15）。"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "为什么值得关注"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "技术价值："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "超长上下文：1M token 上下文窗口，可处理整本书或大型代码库"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "性价比优异：免费使用，付费版本价格不变"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "Claude Code 优选：在 Claude Code 中，59% 的情况下优于 Opus 4.5"}}]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "关键改进："}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "更好的代码生成质量"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "增强的多语言理解"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "改进的推理能力"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "更快的响应速度"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "成熟度评估"}}]
+      }
+    },
+    {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "🎯 采用（Adopt）\n\n作为默认免费模型且性能优异，建议所有 Claude 用户立即升级使用。"}}],
+        "icon": {"emoji": "🎯"}
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "相关资源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Claude 官网："}},
+          {"type": "text", "text": {"content": "https://claude.com/", "link": {"url": "https://claude.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "模型对比："}},
+          {"type": "text", "text": {"content": "https://blog.logrocket.com/ai-dev-tool-power-rankings/", "link": {"url": "https://blog.logrocket.com/ai-dev-tool-power-rankings/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "API 文档："}},
+          {"type": "text", "text": {"content": "https://docs.anthropic.com/", "link": {"url": "https://docs.anthropic.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "📊 技术雷达总览"}}]
+      }
+    },
+    {
+      "type": "table",
+      "table": {
+        "table_width": 4,
+        "has_column_header": true,
+        "children": [
+          {
+            "type": "table_row",
+            "table_row": {
+              "cells": [
+                [{"type": "text", "text": {"content": "技术名称"}}],
+                [{"type": "text", "text": {"content": "成熟度"}}],
+                [{"type": "text", "text": {"content": "推荐度"}}],
+                [{"type": "text", "text": {"content": "主要应用领域"}}]
+              ]
+            }
+          },
+          {
+            "type": "table_row",
+            "table_row": {
+              "cells": [
+                [{"type": "text", "text": {"content": "MCP (Model Context Protocol)"}}],
+                [{"type": "text", "text": {"content": "🎯 采用"}}],
+                [{"type": "text", "text": {"content": "⭐⭐⭐⭐⭐"}}],
+                [{"type": "text", "text": {"content": "AI 工具集成、开发环境"}}]
+              ]
+            }
+          },
+          {
+            "type": "table_row",
+            "table_row": {
+              "cells": [
+                [{"type": "text", "text": {"content": "自主编程代理"}}],
+                [{"type": "text", "text": {"content": "🧪 试验"}}],
+                [{"type": "text", "text": {"content": "⭐⭐⭐⭐"}}],
+                [{"type": "text", "text": {"content": "自动化开发、代码审查"}}]
+              ]
+            }
+          },
+          {
+            "type": "table_row",
+            "table_row": {
+              "cells": [
+                [{"type": "text", "text": {"content": "Vibe Coding"}}],
+                [{"type": "text", "text": {"content": "🎯 采用"}}],
+                [{"type": "text", "text": {"content": "⭐⭐⭐⭐⭐"}}],
+                [{"type": "text", "text": {"content": "快速原型、降低编程门槛"}}]
+              ]
+            }
+          },
+          {
+            "type": "table_row",
+            "table_row": {
+              "cells": [
+                [{"type": "text", "text": {"content": "AI UML 可视化"}}],
+                [{"type": "text", "text": {"content": "🧪 试验"}}],
+                [{"type": "text", "text": {"content": "⭐⭐⭐"}}],
+                [{"type": "text", "text": {"content": "架构设计、技术文档"}}]
+              ]
+            }
+          },
+          {
+            "type": "table_row",
+            "table_row": {
+              "cells": [
+                [{"type": "text", "text": {"content": "Claude Sonnet 4.6"}}],
+                [{"type": "text", "text": {"content": "🎯 采用"}}],
+                [{"type": "text", "text": {"content": "⭐⭐⭐⭐⭐"}}],
+                [{"type": "text", "text": {"content": "通用 AI 助手、长文本处理"}}]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "💭 思考与建议"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "对于个人开发者"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "立即行动：开始使用 Claude Sonnet 4.6 和 Vibe Coding 工具"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "技能升级：学习如何编写高质量的 prompt"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "工具探索：试用 Cursor、Claude Code 等 AI 原生 IDE"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "对于团队"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "建立规范：制定 AI 工具使用指南和代码审查标准"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "试点项目：在非关键项目上试验自主编程代理"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "知识共享：建立团队内部的 AI 工具使用最佳实践"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "对于企业"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "战略规划：将 AI 工具纳入技术栈规划"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "培训投入：为开发团队提供 AI 工具培训"}}]
+      }
+    },
+    {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "安全考量：评估 AI 工具的数据安全和合规性"}}]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "🔗 快速链接"}}]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "AI 编程助手"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Claude Code: "}},
+          {"type": "text", "text": {"content": "https://claude.com/code", "link": {"url": "https://claude.com/code"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Cursor: "}},
+          {"type": "text", "text": {"content": "https://cursor.com/", "link": {"url": "https://cursor.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "GitHub Copilot: "}},
+          {"type": "text", "text": {"content": "https://github.com/features/copilot", "link": {"url": "https://github.com/features/copilot"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Replit Agent: "}},
+          {"type": "text", "text": {"content": "https://replit.com/", "link": {"url": "https://replit.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "可视化工具"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Eraser.io: "}},
+          {"type": "text", "text": {"content": "https://www.eraser.io/", "link": {"url": "https://www.eraser.io/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "PlantUML: "}},
+          {"type": "text", "text": {"content": "https://plantuml.com/", "link": {"url": "https://plantuml.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Lucidchart: "}},
+          {"type": "text", "text": {"content": "https://www.lucidchart.com/", "link": {"url": "https://www.lucidchart.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "开发框架"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "MCP 官方: "}},
+          {"type": "text", "text": {"content": "https://modelcontextprotocol.io/", "link": {"url": "https://modelcontextprotocol.io/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "OpenAI Agents SDK: "}},
+          {"type": "text", "text": {"content": "https://openai.github.io/openai-agents-python/", "link": {"url": "https://openai.github.io/openai-agents-python/"}}}
+        ]
+      }
+    },
+    {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "学习资源"}}]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Anthropic 博客: "}},
+          {"type": "text", "text": {"content": "https://www.anthropic.com/news", "link": {"url": "https://www.anthropic.com/news"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "ByteByteGo: "}},
+          {"type": "text", "text": {"content": "https://blog.bytebytego.com/", "link": {"url": "https://blog.bytebytego.com/"}}}
+        ]
+      }
+    },
+    {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "Dev.to AI 社区: "}},
+          {"type": "text", "text": {"content": "https://dev.to/t/ai", "link": {"url": "https://dev.to/t/ai"}}}
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "📅 生成日期：2026年3月14日"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "🔄 更新频率：每周"}}
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {"type": "text", "text": {"content": "📧 反馈与建议：欢迎在评论区留言"}}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Output
+output/
+*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log

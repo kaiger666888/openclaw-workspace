@@ -1,0 +1,147 @@
+{
+  "description": "Notion 块格式参考模板 - 所有向 Notion 传输文本时使用此格式",
+  "version": "2026-02-28",
+  
+  "blockTypes": {
+    "heading_1": {
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [{"type": "text", "text": {"content": "一级标题"}}]
+      }
+    },
+    "heading_2": {
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "二级标题"}}]
+      }
+    },
+    "heading_3": {
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [{"type": "text", "text": {"content": "三级标题"}}]
+      }
+    },
+    "paragraph": {
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "普通段落文本"}}]
+      }
+    },
+    "callout_info": {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "信息高亮块"}}],
+        "icon": {"type": "emoji", "emoji": "💡"}
+      }
+    },
+    "callout_warning": {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "警告高亮块"}}],
+        "icon": {"type": "emoji", "emoji": "⚠️"}
+      }
+    },
+    "callout_success": {
+      "type": "callout",
+      "callout": {
+        "rich_text": [{"type": "text", "text": {"content": "成功高亮块"}}],
+        "icon": {"type": "emoji", "emoji": "✅"}
+      }
+    },
+    "quote": {
+      "type": "quote",
+      "quote": {
+        "rich_text": [{"type": "text", "text": {"content": "引用块文本"}}]
+      }
+    },
+    "bulleted_list_item": {
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "无序列表项"}}]
+      }
+    },
+    "numbered_list_item": {
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{"type": "text", "text": {"content": "有序列表项"}}]
+      }
+    },
+    "to_do_unchecked": {
+      "type": "to_do",
+      "to_do": {
+        "rich_text": [{"type": "text", "text": {"content": "待办事项"}}],
+        "checked": false
+      }
+    },
+    "to_do_checked": {
+      "type": "to_do",
+      "to_do": {
+        "rich_text": [{"type": "text", "text": {"content": "已完成事项"}}],
+        "checked": true
+      }
+    },
+    "code": {
+      "type": "code",
+      "code": {
+        "rich_text": [{"type": "text", "text": {"content": "代码内容"}}],
+        "language": "javascript"
+      }
+    },
+    "toggle": {
+      "type": "toggle",
+      "toggle": {
+        "rich_text": [{"type": "text", "text": {"content": "折叠块标题"}}]
+      }
+    },
+    "divider": {
+      "type": "divider",
+      "divider": {}
+    }
+  },
+
+  "richTextAnnotations": {
+    "bold": {"type": "text", "text": {"content": "粗体"}, "annotations": {"bold": true}},
+    "italic": {"type": "text", "text": {"content": "斜体"}, "annotations": {"italic": true}},
+    "underline": {"type": "text", "text": {"content": "下划线"}, "annotations": {"underline": true}},
+    "strikethrough": {"type": "text", "text": {"content": "删除线"}, "annotations": {"strikethrough": true}},
+    "code": {"type": "text", "text": {"content": "行内代码"}, "annotations": {"code": true}}
+  },
+
+  "colorAnnotations": {
+    "red": {"type": "text", "text": {"content": "红色文字"}, "annotations": {"color": "red"}},
+    "blue": {"type": "text", "text": {"content": "蓝色文字"}, "annotations": {"color": "blue"}},
+    "green": {"type": "text", "text": {"content": "绿色文字"}, "annotations": {"color": "green"}},
+    "yellow_background": {"type": "text", "text": {"content": "黄色背景"}, "annotations": {"color": "yellow_background"}},
+    "blue_background": {"type": "text", "text": {"content": "蓝色背景"}, "annotations": {"color": "blue_background"}},
+    "green_background": {"type": "text", "text": {"content": "绿色背景"}, "annotations": {"color": "green_background"}},
+    "red_background": {"type": "text", "text": {"content": "红色背景"}, "annotations": {"color": "red_background"}}
+  },
+
+  "colorUsageRules": {
+    "red": "警告、失败、负面信息、下降数据",
+    "blue": "技术术语、链接提示、关键概念",
+    "green": "成功、正面信息、增长数据",
+    "yellow_background": "需要注意的信息、重要提示",
+    "purple": "投资相关、金融术语"
+  },
+
+  "completeExample": {
+    "children": [
+      {"type": "heading_1", "heading_1": {"rich_text": [{"type": "text", "text": {"content": "标题"}}]}},
+      {"type": "paragraph", "paragraph": {"rich_text": [{"type": "text", "text": {"content": "段落"}}]}},
+      {"type": "divider", "divider": {}},
+      {"type": "callout", "callout": {"rich_text": [{"type": "text", "text": {"content": "高亮"}}], "icon": {"type": "emoji", "emoji": "💡"}}},
+      {"type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": "列表项"}}]}}
+    ]
+  },
+
+  "usageNotes": [
+    "所有块必须放在 'children' 数组中",
+    "每个块必须有 'type' 字段",
+    "rich_text 必须是数组，即使只有一个元素",
+    "使用 notion-cli block append --children-file <json-file> <page-id> 提交",
+    "关键信息使用颜色标注（红/蓝/绿）",
+    "重要提示使用 callout + 颜色",
+    "每个页面开头用 callout 做摘要"
+  ]
+}

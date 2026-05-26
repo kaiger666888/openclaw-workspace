@@ -1,0 +1,164 @@
+#!/usr/bin/env bash
+# tg-progress — 基于 OpenClaw CLI 的 Telegram 实时进度汇报
+#
+# 核心思路: editMessageText 原地更新，完成后删除
+#
+# 用法:
+#   source ~/.openclaw/scripts/tg-progress
+#   tg_progress_init "🚀 开始任务..."
+#   tg_progress "进度 30% - 下载中..."
+#   tg_progress "进度 80% - 编译中..."
+#   tg_progress_done "✅ 任务完成"
+#
+# 或者独立使用:
+#   tg-progress init "🚀 开始任务"
+#   tg-progress update "30% 下载中"
+#   tg-progress update "80% 编译中"
+#   tg-progress done "✅ 完成"
+#   tg-progress fail "❌ 失败: xxx"
+
+set -euo pipefail
+
+TG_PROGRESS_CHAT_ID="${TG_PROGRESS_CHAT_ID:--1003809592909}"
+TG_PROGRESS_STATE_FILE="/tmp/tg-progress-${$}.json"
+TG_PROGRESS_TAG="${TG_PROGRESS_TAG:-}"
+
+# ---- 底层函数 ----
+
+_oc_msg() {
+    openclaw message "$@" --channel telegram --target "$TG_PROGRESS_CHAT_ID"
+}
+
+_send() {
+    local text="$1"
+    local extra_flags=()
+    [[ -n "${2:-}" ]] && extra_flags+=(--json)
+    _oc_msg send --message "$text" "${extra_flags[@]}"
+}
+
+_edit() {
+    local msg_id="$1" text="$2"
+    _oc_msg edit --message-id "$msg_id" --message "$text"
+}
+
+_delete() {
+    local msg_id="$1"
+    _oc_msg delete --message-id "$msg_id" 2>/dev/null || true
+}
+
+_get_msg_id() {
+    python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+print(data.get('result', {}).get('message_id', ''))
+" 2>/dev/null
+}
+
+_fmt() {
+    local text="$1"
+    if [[ -n "$TG_PROGRESS_TAG" ]]; then
+        echo "*${TG_PROGRESS_TAG}* | ${text}"
+    else
+        echo "$text"
+    fi
+}
+
+# ---- 状态持久化 ----
+
+_save_state() {
+    echo "{\"msg_id\": \"${1}\"}" > "$TG_PROGRESS_STATE_FILE"
+}
+
+_load_state() {
+    if [[ -f "$TG_PROGRESS_STATE_FILE" ]]; then
+        python3 -c "
+import json, sys
+d = json.load(open('$TG_PROGRESS_STATE_FILE'))
+print(d.get('msg_id', ''))
+" 2>/dev/null
+    fi
+}
+
+_clear_state() {
+    rm -f "$TG_PROGRESS_STATE_FILE"
+}
+
+# ---- 公开 API ----
+
+# 初始化: 发送第一条进度消息
+tg_progress_init() {
+    local text="$(_fmt "${1:-⏳ 启动中...}")"
+    local msg_id
+    msg_id=$(_send "$text" --json | _get_msg_id)
+    _save_state "$msg_id"
+    echo "$msg_id"
+}
+
+# 更新进度: 编辑已有消息
+tg_progress() {
+    local text="$(_fmt "$1")"
+    local msg_id
+    msg_id=$(_load_state)
+    if [[ -n "$msg_id" ]]; then
+        _edit "$msg_id" "$text" 2>/dev/null || {
+            # 编辑失败，重新发送
+            msg_id=$(_send "$text" --json | _get_msg_id)
+            _save_state "$msg_id"
+        }
+    else
+        msg_id=$(_send "$text" --json | _get_msg_id)
+        _save_state "$msg_id"
+    fi
+}
+
+# 完成: 显示最终消息，可选保留或延迟删除
+tg_progress_done() {
+    local text="$(_fmt "${1:-✅ 完成}")"
+    local msg_id
+    msg_id=$(_load_state)
+    if [[ -n "$msg_id" ]]; then
+        _edit "$msg_id" "$text" 2>/dev/null || true
+        sleep "${TG_PROGRESS_LINGER:-3}"
+        _delete "$msg_id"
+    else
+        # 没有状态，发送后延迟删除
+        msg_id=$(_send "$text" --json | _get_msg_id)
+        sleep "${TG_PROGRESS_LINGER:-3}"
+        _delete "$msg_id"
+    fi
+    _clear_state
+}
+
+# 失败: 显示错误消息并保留
+tg_progress_fail() {
+    local text="$(_fmt "${1:-❌ 失败}")"
+    local msg_id
+    msg_id=$(_load_state)
+    if [[ -n "$msg_id" ]]; then
+        _edit "$msg_id" "$text" 2>/dev/null || true
+        # 失败消息保留，不删除
+    else
+        _send "$text" >/dev/null
+    fi
+    _clear_state
+}
+
+# ---- 独立命令行模式 ----
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]] && [[ $# -ge 1 ]]; then
+    CMD="$1"; shift
+    case "$CMD" in
+        init)   tg_progress_init "$@" ;;
+        update) tg_progress "$@" ;;
+        done)   tg_progress_done "$@" ;;
+        fail)   tg_progress_fail "$@" ;;
+        *)
+            echo "用法: $(basename "$0") {init|update|done|fail} <message>"
+            echo "  init   - 发送初始进度消息"
+            echo "  update - 更新进度"
+            echo "  done   - 完成并删除消息"
+            echo "  fail   - 显示错误并保留消息"
+            exit 1
+            ;;
+    esac
+fi

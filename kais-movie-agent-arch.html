@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kais-movie-agent 架构图</title>
+<style>* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'SF Pro Display', -apple-system, sans-serif; background: #0a0a0f; color: #e0e0e0; padding: 40px; }
+h1 { text-align: center; font-size: 28px; color: #fff; margin-bottom: 8px; }
+h1 span { color: #6c5ce7; }
+.subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 14px; }
+.pipeline { max-width: 900px; margin: 0 auto; }
+.phase { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid #2d2d4a; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; transition: all 0.3s; }
+.phase:hover { border-color: #6c5ce7; transform: translateX(4px); }
+.phase-header { display: flex; align-items: center; gap: 12px; }
+.phase-num { background: #6c5ce7; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+.phase-num.git { background: #00b894; }
+.phase-name { font-weight: 600; font-size: 15px; color: #fff; }
+.phase-skill { font-size: 12px; color: #a29bfe; font-family: monospace; }
+.phase-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag { font-size: 10px; padding: 2px 8px; border-radius: 10px; background: rgba(108,92,231,0.15); color: #a29bfe; border: 1px solid rgba(108,92,231,0.3); }
+.arrow { text-align: center; color: #444; font-size: 18px; padding: 2px 0; }
+.section-title { font-size: 18px; color: #fff; margin: 30px 0 15px; padding-left: 12px; border-left: 3px solid #6c5ce7; }
+.cross-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; max-width: 900px; margin: 0 auto; }
+.cross-box { background: #1a1a2e; border: 1px solid #2d2d4a; border-radius: 10px; padding: 16px; }
+.cross-box h3 { font-size: 13px; color: #a29bfe; margin-bottom: 6px; }
+.cross-box p { font-size: 11px; color: #888; line-height: 1.6; }
+.data-flow { max-width: 900px; margin: 20px auto; background: #1a1a2e; border: 1px solid #2d2d4a; border-radius: 12px; padding: 20px; font-family: monospace; font-size: 11px; line-height: 1.8; color: #aaa; }
+.data-flow .hl { color: #a29bfe; }
+.data-flow .green { color: #00b894; }
+.chain-box { max-width: 900px; margin: 20px auto; background: linear-gradient(135deg, #1a1a2e 0%, #0d1b2a 100%); border: 1px solid #2d2d4a; border-radius: 12px; padding: 20px; }
+.chain-step { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(45,45,74,0.5); }
+.chain-step:last-child { border-bottom: none; }
+.chain-idx { background: #6c5ce7; color: #fff; font-size: 12px; font-weight: 700; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; }
+.chain-content { flex: 1; }
+.chain-refs { font-size: 11px; color: #fdcb6e; margin-bottom: 2px; }
+.chain-prompt { font-size: 11px; color: #74b9ff; font-family: monospace; }
+.chain-arrow { color: #444; font-size: 16px; padding: 4px 0; text-align: center; }
+.legend { max-width: 900px; margin: 30px auto; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #888; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+</style>
+</head>
+<body>
+<h1>🤖 <span>kais-movie-agent</span> 架构图</h1>
+<p class="subtitle">16阶段 · 12内部库 · 14子Skill · 9横切能力</p>
+<div class="pipeline"><div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 1</span>
+    <span class="phase-name">需求确认 + 深度调研</span>
+    
+  </div>
+  <div class="phase-tags"><span class="tag">1st-director</span><span class="tag">自动</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" class="git">Phase 1.5a 📌</span>
+    <span class="phase-name">选题发散</span>
+    <span class="phase-skill">kais-topic-selector</span>
+  </div>
+  <div class="phase-tags"><span class="tag">多约束聚合</span><span class="tag">3-5候选</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" class="git">Phase 1.6 📌</span>
+    <span class="phase-name">选题投票筛选</span>
+    <span class="phase-skill">kais-audience</span>
+  </div>
+  <div class="phase-tags"><span class="tag">12人评审团</span><span class="tag">快速投票</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 2</span>
+    <span class="phase-name">剧本大纲</span>
+    <span class="phase-skill">kais-scenario-writer</span>
+  </div>
+  <div class="phase-tags"><span class="tag">🔒REVIEW GATE</span><span class="tag">剧本预测试</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" class="git">Phase 2.5 📌</span>
+    <span class="phase-name">四维约束蓝图生成</span>
+    <span class="phase-skill">1st-director</span>
+  </div>
+  <div class="phase-tags"><span class="tag">自动</span><span class="tag">blueprint.json</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 3</span>
+    <span class="phase-name">美术方向</span>
+    <span class="phase-skill">kais-art-direction</span>
+  </div>
+  <div class="phase-tags"><span class="tag">🔒REVIEW GATE</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 4</span>
+    <span class="phase-name">角色设计 (4D-Anchor)</span>
+    <span class="phase-skill">kais-character-designer</span>
+  </div>
+  <div class="phase-tags"><span class="tag">🔒REVIEW GATE</span><span class="tag">压力测试</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase" style="border-color: #ff6b6b44;">
+  <div class="phase-header">
+    <span class="phase-num" style="background:#636e72;">Phase 4.5</span>
+    <span class="phase-name">配音</span>
+    <span class="phase-skill">kais-voice</span>
+  </div>
+  <div class="phase-tags"><span class="tag">🔒REVIEW GATE</span><span class="tag">GLM-TTS</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase" style="border-color: #ff6b6b44;">
+  <div class="phase-header">
+    <span class="phase-num" style="background:#636e72;">Phase 5</span>
+    <span class="phase-name">场景图生成</span>
+    <span class="phase-skill">kais-scene-designer</span>
+  </div>
+  <div class="phase-tags"><span class="tag">checkpoint</span><span class="tag">种子变异</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase" style="border-color: #ff6b6b44;">
+  <div class="phase-header">
+    <span class="phase-num" style="background:#636e72;">Phase 5.3</span>
+    <span class="phase-name">线稿生成</span>
+    <span class="phase-skill">kais-anatomy-guard</span>
+  </div>
+  <div class="phase-tags"><span class="tag">三级防御</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase" style="border-color: #ff6b6b44;">
+  <div class="phase-header">
+    <span class="phase-num" style="background:#636e72;">Phase 5.5</span>
+    <span class="phase-name">基于线稿渲染</span>
+    
+  </div>
+  <div class="phase-tags"><span class="tag">图生图</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase" style="border-color: #ff6b6b44;">
+  <div class="phase-header">
+    <span class="phase-num" style="background:#636e72;">Phase 5.6</span>
+    <span class="phase-name">渲染审核</span>
+    
+  </div>
+  <div class="phase-tags"><span class="tag">🔒REVIEW GATE</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 5.7</span>
+    <span class="phase-name">拍摄手法规划</span>
+    <span class="phase-skill">kais-cinematography-planner</span>
+  </div>
+  <div class="phase-tags"><span class="tag">Coverage Map</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 6</span>
+    <span class="phase-name">分镜板</span>
+    <span class="phase-skill">kais-storyboard-designer</span>
+  </div>
+  <div class="phase-tags"><span class="tag">🔒REVIEW GATE</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 7</span>
+    <span class="phase-name">视频生成</span>
+    <span class="phase-skill">kais-camera</span>
+  </div>
+  <div class="phase-tags"><span class="tag">🔒REVIEW GATE</span><span class="tag">延长链</span><span class="tag">DNA注入</span></div>
+</div>
+  <div class="arrow">↓</div>
+  <div class="phase">
+  <div class="phase-header">
+    <span class="phase-num" >Phase 8</span>
+    <span class="phase-name">后期合成 + 交付</span>
+    
+  </div>
+  <div class="phase-tags"><span class="tag">checkpoint</span></div>
+</div></div>
+
+<h2 class="section-title">⚡ 横切能力</h2>
+<div class="cross-grid">
+  <div class="cross-box">
+    <h3>📌 4D-Anchor 角色锁定</h3>
+    <p>参考图锚定+分层STYLE_PREFIX(CORE/IDENTITY/VARIANCE)+压力测试+CharacterBible 2.0</p>
+  </div>
+  <div class="cross-box">
+    <h3>📊 情绪曲线编辑器</h3>
+    <p>7种情绪类型+节点CRUD+曲线验证+下游prompt/lighting/camera映射</p>
+  </div>
+  <div class="cross-box">
+    <h3>🌱 种子图变异流程</h3>
+    <p>候选生成→导演选种子→图生图批量变异+动态Strength(远景0.25→特写0.55)</p>
+  </div>
+  <div class="cross-box">
+    <h3>🎨 场景一致性控制</h3>
+    <p>场景DNA卡(style_variance+negative_traits)+camera自动注入</p>
+  </div>
+  <div class="cross-box">
+    <h3>🔄 Git版本管理</h3>
+    <p>每Phase自动checkpoint+回滚能力</p>
+  </div>
+  <div class="cross-box">
+    <h3>🚦 质量门控系统</h3>
+    <p>6维度评分+完播率预测+毒点检测+审核页面</p>
+  </div>
+  <div class="cross-box">
+    <h3>⚡ API限流调度</h3>
+    <p>指数退避(1-16s)+429/45感知+多session轮询+自动切换</p>
+  </div>
+  <div class="cross-box">
+    <h3>🏷️ 元数据写入</h3>
+    <p>JSON sidecar+phase manifest+style_prefix hash</p>
+  </div>
+  <div class="cross-box">
+    <h3>🪝 开场钩子专项</h3>
+    <p>5种钩子类型(visual/suspense/emotion/question/conflict)×3候选</p>
+  </div></div>
+<h2 class="section-title">📊 数据流</h2>
+<div class="data-flow"><span class="hl">需求确认</span> ──→ 四维蓝图<br><span class="hl">四维蓝图</span> ──→ 美术方向<br><span class="hl">美术方向</span> ──→ 角色设计<br><span class="hl">角色设计</span> ──→ DNA注册<br><span class="hl">DNA注册</span> ──→ character-dna.json<br><span class="hl">DNA注册</span> ──→ 视频生成<br><span class="hl">场景设计</span> ──→ scene-dna.json<br><span class="hl">场景设计</span> ──→ 种子变异<br><span class="hl">种子变异</span> ──→ 视频生成<br><span class="hl">四维蓝图</span> ──→ 情绪曲线<br><span class="hl">情绪曲线</span> ──→ 视频生成<br><span class="hl">选题发散</span> ──→ 选题投票<br><span class="hl">剧本大纲</span> ──→ 分镜板<br><span class="hl">分镜板</span> ──→ 视频生成<br><span class="hl">视频生成</span> ──→ 质量门控<br><span class="hl">配音</span> ──→ 后期合成</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#00b894;"></div> 产出物</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6c5ce7;"></div> Skill / 模块</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fdcb6e;"></div> 锚定 / 注意</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#74b9ff;"></div> 引用 / 链接</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ff6b6b;"></div> 守卫 / 检查</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#636e72;"></div> 审核关卡</div>
+</div>
+</body>
+</html>

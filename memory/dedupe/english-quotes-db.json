@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "version": "1.0",
+    "task_type": "english-german",
+    "task_name": "每日英语德语",
+    "created_at": "2026-03-19T07:34:55.692932",
+    "last_updated": "2026-05-16T02:12:14.544252",
+    "total_count": 23
+  },
+  "items": [
+    {
+      "id": "english-german_20260319_001",
+      "date": "2026-03-19",
+      "quote": "Stay hungry, stay foolish.",
+      "author": "Steve Jobs",
+      "source": "Stanford Commencement Speech, 2005"
+    },
+    {
+      "id": "english-german_20260326_001",
+      "date": "2026-03-26",
+      "quote": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "source": "Stanford Commencement Speech, 2005",
+      "page_id": "32c11082-af8e-8178-a2c6-c05f05ce5af7"
+    },
+    {
+      "id": "english-german_20260416_001",
+      "date": "2026-04-16",
+      "quote": "Language learning with AI",
+      "author": "Migaku",
+      "source": "Migaku Blog",
+      "page_id": "placeholder"
+    },
+    {
+      "id": "english-german_20260422_001",
+      "date": "2026-04-22",
+      "quote": "Wer fremde Sprachen nicht kennt, weiß nichts von seiner eigenen.",
+      "author": "Johann Wolfgang von Goethe",
+      "source": "Maximen und Reflexionen",
+      "page_id": "34911082-af8e-81f3-9e50-c311d23f77df"
+    },
+    {
+      "id": "english-german_20260422_002",
+      "date": "2026-04-22",
+      "quote": "The only true wisdom is in knowing you know nothing.",
+      "author": "Socrates",
+      "source": "Plato, Apology",
+      "page_id": "34911082-af8e-81f3-9e50-c311d23f77df"
+    },
+    {
+      "id": "english-german_20260423_001",
+      "date": "2026-04-23",
+      "quote": "We suffer more often in imagination than in reality.",
+      "author": "Seneca",
+      "source": "Letters to a Lucilius",
+      "page_id": "34a11082-af8e-81de-a535-cbd817b5564a"
+    },
+    {
+      "id": "english-german_20260424_001",
+      "date": "2026-04-24",
+      "quote": "In the middle of difficulty lies opportunity.",
+      "author": "Albert Einstein",
+      "source": "The World As I See It",
+      "page_id": "34b11082-af8e-8115-a4c0-dab01f101c4c"
+    },
+    {
+      "id": "english-german_20260424_002",
+      "date": "2026-04-24",
+      "quote": "Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt.",
+      "author": "Ludwig Wittgenstein",
+      "source": "Tractatus Logico-Philosophicus",
+      "page_id": "34b11082-af8e-8115-a4c0-dab01f101c4c"
+    },
+    {
+      "id": "english-german_20260426_001",
+      "date": "2026-04-26",
+      "quote": "What we think, we become.",
+      "author": "Buddha",
+      "source": "Daily Language Learning",
+      "page_id": "34d11082-af8e-817b-bed8-cd8e441c5c59"
+    },
+    {
+      "id": "english-german_20260426_002",
+      "date": "2026-04-26",
+      "quote": "Die Sprache ist das Haus des Seins.",
+      "author": "Martin Heidegger",
+      "source": "Daily Language Learning",
+      "page_id": "34d11082-af8e-817b-bed8-cd8e441c5c59"
+    },
+    {
+      "id": "english-german_20260428_001",
+      "date": "2026-04-28",
+      "quote": "What we know is a drop, what we don't know is an ocean.",
+      "author": "Isaac Newton",
+      "source": "general",
+      "page_id": "34f11082-af8e-815e-b1de-f41860900186"
+    },
+    {
+      "id": "english-german_20260428_002",
+      "date": "2026-04-28",
+      "quote": "Das Leben ist zu kurz, um schlecht zu essen.",
+      "author": "Sokrates",
+      "source": "general",
+      "page_id": "34f11082-af8e-815e-b1de-f41860900186"
+    },
+    {
+      "id": "english-german_20260501_001",
+      "date": "2026-05-01",
+      "quote": "Die Aufgabe ist nicht zu sehen, was noch niemand gesehen hat, sondern über das, was jeder sieht, zu denken, was noch niemand gedacht hat.",
+      "author": "Arthur Schopenhauer",
+      "source": "Parerga und Paralipomena",
+      "page_id": "35211082-af8e-81fe-9669-e3a233aa6cbd"
+    },
+    {
+      "id": "english-german_20260501_002",
+      "date": "2026-05-01",
+      "quote": "The mind is everything. What you think you become.",
+      "author": "Buddha",
+      "source": "Dhammapada",
+      "page_id": "35211082-af8e-81fe-9669-e3a233aa6cbd"
+    },
+    {
+      "id": "english-german_20260502_001",
+      "date": "2026-05-02",
+      "quote": "Man is but a reed, the most feeble thing in nature; but he is a thinking reed.",
+      "author": "Blaise Pascal",
+      "source": "Pensées",
+      "page_id": "35311082-af8e-8128-842b-c795af0f301d"
+    },
+    {
+      "id": "english-german_20260502_002",
+      "date": "2026-05-02",
+      "quote": "Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt.",
+      "author": "Albert Einstein",
+      "source": "Interview",
+      "page_id": "35311082-af8e-8128-842b-c795af0f301d"
+    },
+    {
+      "id": "english-german_20260508_001",
+      "date": "2026-05-08",
+      "quote": "Erziehung ist das, was den Menschen zum Menschen macht. Ohne Erziehung bleibt er ein Tier.",
+      "author": "Immanuel Kant",
+      "source": "Aphorismen.de",
+      "page_id": "35911082-af8e-8189-a548-f71f18cfeecc"
+    },
+    {
+      "id": "english-german_20260508_002",
+      "date": "2026-05-08",
+      "quote": "A smooth sea never made a skilled sailor.",
+      "author": "Franklin D. Roosevelt",
+      "source": "BrainyQuote",
+      "page_id": "35911082-af8e-8189-a548-f71f18cfeecc"
+    },
+    {
+      "id": "english-german_20260509_001",
+      "date": "2026-05-09",
+      "quote": "A mind that is stretched by a new experience can never go back to its old dimensions.",
+      "author": "Oliver Wendell Holmes Jr.",
+      "source": "essay",
+      "page_id": "35a11082-af8e-8186-8358-ce0f9c6dd809"
+    },
+    {
+      "id": "english-german_20260509_002",
+      "date": "2026-05-09",
+      "quote": "Das Problem ist nicht das Problem. Das Problem ist deine Einstellung zum Problem.",
+      "author": "Jack Canfield",
+      "source": "motivational",
+      "page_id": "35a11082-af8e-8186-8358-ce0f9c6dd809"
+    },
+    {
+      "id": "english-german_20260510_001",
+      "date": "2026-05-10",
+      "quote": "Wer mit dem Strom schwimmt, erreicht die Quelle nicht.",
+      "author": "Albert Schweitzer",
+      "source": "wikiquote",
+      "page_id": "35b11082-af8e-81aa-b8e1-e433b55f5138"
+    },
+    {
+      "id": "english-german_20260510_002",
+      "date": "2026-05-10",
+      "quote": "A different language is a different vision of life.",
+      "author": "Federico Fellini",
+      "source": "wikiquote",
+      "page_id": "35b11082-af8e-81aa-b8e1-e433b55f5138"
+    },
+    {
+      "id": "english-german_20260516_001",
+      "date": "2026-05-16",
+      "quote": "He who has a why to live can bear almost any how.",
+      "author": "Friedrich Nietzsche",
+      "source": "Twilight of the Idols",
+      "page_id": "36111082-af8e-81f7-b883-e2d86705c20e"
+    }
+  ]
+}

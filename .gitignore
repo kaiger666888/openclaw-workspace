@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+package-lock.json
+
+# Build
+dist/
+
+# Data & cache
+data/
+__pycache__/
+*.pyc
+.browser-data/
+.jimeng-cookies.json
+
+# Independent repos (have own .git)
+hermes-worker-agent/
+skills/kais-movie-agent/
+kais-aigc-platform/
+
+# Env
+.env
+.env.local
+.gitignore.local
+
+# LFS / binary
+*.png
+*.jpg
+*.wav
+*.mp4
+*.mp3
+*.bin
+*.safetensors
+*.pt
+*.onnx
+*.gguf
+*.pkl
+
+# Backup
+*.bak/
+hermes-worker-agent.bak/
+skills/kais-movie-agent.bak/
+
+# Claude Code worktrees
+.claude/worktrees/
+
+# Planning backups
+.planning/

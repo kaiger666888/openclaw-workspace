@@ -1,0 +1,38 @@
+@startuml
+title RESTful API 设计流程
+
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontSize 14
+}
+
+|资源设计|
+start
+:识别资源;
+note right
+  分析业务需求
+  提取核心对象
+end note
+
+:定义 URI;
+note right
+  使用名词
+  层级清晰
+end note
+
+|接口设计|
+:选择 HTTP 方法;
+note right
+  GET/POST/PUT/DELETE
+  语义对应操作
+end note
+
+:设计响应格式;
+note right
+  统一数据结构
+  错误处理规范
+end note
+
+stop
+@enduml

@@ -1,0 +1,66 @@
+{
+  "title": "地牢遭遇战 - 暴龙守卫宝藏",
+  "shots": [
+    {
+      "shot_id": "S01",
+      "description": "全景：战士推开地牢大门，发现一条巨龙正守卫着闪闪发光的宝箱，火把照亮幽暗的石柱走廊",
+      "scene": "地牢大厅",
+      "characters": [
+        {"label": "战士", "animation": "idle_combat", "role": "protagonist", "animation_hint": "fighting_idle.fbx"},
+        {"label": "巨龙", "animation": "idle_aggressive", "role": "antagonist", "animation_hint": "roaring_inplace.fbx"}
+      ],
+      "props": ["宝箱", "火把", "石柱"],
+      "camera": {"type": "extreme_wide", "movement": "固定"},
+      "lighting": {"scheme": "dark", "notes": "火把暖光为主光源，远处有微弱蓝光"},
+      "relations": [
+        {"subject": "战士", "relation": "facing", "object": "巨龙", "distance": 5},
+        {"subject": "巨龙", "relation": "guarding", "object": "宝箱", "distance": 1},
+        {"subject": "战士", "relation": "inside", "object": "地牢大厅"},
+        {"subject": "宝箱", "relation": "between", "object": "战士", "object2": "巨龙"},
+        {"subject": "火把", "relation": "near", "object": "石柱", "distance": 0.5}
+      ],
+      "camera_shots": ["extreme_wide", "wide"],
+      "hdri": "night_roads_02_4k"
+    },
+    {
+      "shot_id": "S02",
+      "description": "中景：战士拔剑备战，目光锁定巨龙，紧张对峙",
+      "scene": "地牢大厅",
+      "characters": [
+        {"label": "战士", "animation": "idle_combat", "role": "protagonist"},
+        {"label": "巨龙", "animation": "idle_aggressive", "role": "antagonist"}
+      ],
+      "props": ["宝箱"],
+      "camera": {"type": "medium", "movement": "固定"},
+      "lighting": {"scheme": "dramatic", "notes": "战士正面有暖光，巨龙身后冷蓝光"},
+      "relations": [
+        {"subject": "战士", "relation": "facing", "object": "巨龙", "distance": 5},
+        {"subject": "战士", "relation": "opposite", "object": "巨龙"}
+      ],
+      "camera_shots": ["medium", "otw_over_shoulder"],
+      "hdri": "night_roads_02_4k"
+    },
+    {
+      "shot_id": "S03",
+      "description": "近景特写：巨龙张开大口咆哮，火焰在口中酝酿",
+      "scene": "地牢大厅",
+      "characters": [
+        {"label": "巨龙", "animation": "roaring", "role": "antagonist"}
+      ],
+      "props": ["火把"],
+      "camera": {"type": "closeup", "movement": "缓慢推进"},
+      "lighting": {"scheme": "dramatic", "notes": "火光映照龙脸，戏剧性高对比"},
+      "relations": [
+        {"subject": "巨龙", "relation": "facing", "object": "camera", "distance": 2}
+      ],
+      "camera_shots": ["closeup", "extreme_closeup"],
+      "hdri": "kloppenheim_06_4k"
+    }
+  ],
+  "assets_required": {
+    "characters": ["hero_knight.fbx", "dragon_red.fbx"],
+    "animations": ["fighting_idle.fbx", "roaring_inplace.fbx"],
+    "models": ["treasure_chest", "torch_wall", "stone_pillar"],
+    "hdris": ["night_roads_02_4k", "kloppenheim_06_4k"]
+  }
+}

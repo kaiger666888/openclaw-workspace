@@ -1,0 +1,151 @@
+{
+  "_description": "每日任务历史执行耗时（秒），调度器用此计算每个任务的 timeout",
+  "tasks": {
+    "github-review": {
+      "max_seconds": 75,
+      "actual_seconds": 9,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": true,
+      "blocks_written": 0,
+      "issue": "无新提交，跳过执行"
+    },
+    "vibecoding": {
+      "max_seconds": 130,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "reading-notes": {
+      "max_seconds": 140,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "failure-lessons": {
+      "max_seconds": 170,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "tech-research": {
+      "max_seconds": 130,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "daily-language": {
+      "max_seconds": 130,
+      "actual_seconds": 120,
+      "runs": 2,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "daily-aigc": {
+      "max_seconds": 170,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "daily-news": {
+      "max_seconds": 130,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "claude-code-insights": {
+      "max_seconds": 130,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "github-trending": {
+      "max_seconds": 170,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "investment-wisdom": {
+      "max_seconds": 0,
+      "actual_seconds": 0,
+      "runs": 2,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 0,
+      "issue": "未知任务名，脚本不支持"
+    },
+    "startup-failures": {
+      "max_seconds": 0,
+      "actual_seconds": 0,
+      "runs": 2,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 0,
+      "issue": "未知任务名，脚本不支持"
+    },
+    "knowledge-viz": {
+      "max_seconds": 170,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    },
+    "mental-models": {
+      "max_seconds": 130,
+      "actual_seconds": 120,
+      "runs": 6,
+      "last_execution": "2026-05-07",
+      "success": false,
+      "blocks_written": 1,
+      "issue": "仅标题块，内容写入失败"
+    }
+  },
+  "summary": {
+    "date": "2026-05-07",
+    "successful_tasks": 1,
+    "failed_tasks": 13,
+    "retry_tasks": 0,
+    "retry_success_rate": 0,
+    "average_timeout": 130.0,
+    "average_actual": 120.0,
+    "script_issues": true,
+    "unknown_task_names": 2,
+    "content_write_failures": 11,
+    "execution_time": 600,
+    "total_attempts": 14,
+    "overall_success_rate": 7.1,
+    "major_issues": [
+      "daily-task-write.sh 内容写入失败",
+      "investment-wisdom 和 startup-failures 任务不支持",
+      "需要补执行所有失败任务"
+    ]
+  }
+}

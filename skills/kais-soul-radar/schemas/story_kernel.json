@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Story Kernel",
+  "description": "灵魂雷达提取的故事核，从社会结构性数据中挖掘的叙事素材",
+  "type": "object",
+  "required": ["kernel_id", "stratum", "stratified", "strata_involved", "tectonic_forces", "macro_fissure", "micro_fissure", "narrative_angles", "unspeakability", "verifiability"],
+  "properties": {
+    "kernel_id": {
+      "type": "string",
+      "pattern": "^sr-\\d{6}-[A-Z]\\d{3}$",
+      "description": "故事核唯一标识，格式：sr-YYMMDD-序号（单层）或 sr-YYMMDD-M序号（叠加）"
+    },
+    "analysis_date": {
+      "type": "string",
+      "format": "date",
+      "description": "分析日期"
+    },
+    "stratum": {
+      "type": "string",
+      "enum": ["L1", "L2", "L3", "L4", "L5", "L6"],
+      "description": "主地层（单层分析时等于 strata_involved[0]，叠加分析时写为 L1+L2 格式）"
+    },
+    "stratified": {
+      "type": "boolean",
+      "description": "是否为多层叠加分析结果"
+    },
+    "strata_involved": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["L1", "L2", "L3", "L4", "L5", "L6"]},
+      "minItems": 1,
+      "maxItems": 5,
+      "description": "涉及的地层列表"
+    },
+    "tectonic_forces": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1,
+      "description": "识别出的结构性力量列表"
+    },
+    "macro_fissure": {
+      "type": "object",
+      "required": ["data_points", "structural_formula"],
+      "properties": {
+        "data_points": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1,
+          "description": "可验证的公开数据引用（含来源URL或报告名称）"
+        },
+        "structural_formula": {
+          "type": "string",
+          "minLength": 10,
+          "description": "一句话结构性公式：描述结构性力量如何制造矛盾"
+        }
+      },
+      "description": "宏观裂缝：数据驱动的结构性矛盾概括"
+    },
+    "micro_fissure": {
+      "type": "object",
+      "required": ["who", "scene", "conflict"],
+      "properties": {
+        "who": {
+          "type": "string",
+          "description": "典型人物描述（结构性位置，非真实个人）"
+        },
+        "scene": {
+          "type": "string",
+          "description": "具体场景描述"
+        },
+        "conflict": {
+          "type": "string",
+          "description": "冲突描述：结构性力量与个人意志的碰撞"
+        }
+      },
+      "description": "微观裂隙：宏观裂缝在个体层面的投影"
+    },
+    "narrative_angles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["angle", "question"],
+        "properties": {
+          "angle": {"type": "string", "description": "叙事角度名称"},
+          "question": {"type": "string", "description": "驱动故事的核心问题"}
+        }
+      },
+      "minItems": 2,
+      "description": "叙事角度列表"
+    },
+    "consumption_grammar_clash": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "elder_grammar", "younger_grammar", "untranslatable_core"],
+        "properties": {
+          "item": {"type": "string", "description": "冲突物品/行为"},
+          "elder_grammar": {"type": "string", "description": "父辈辩护句式"},
+          "younger_grammar": {"type": "string", "description": "子辈辩护句式"},
+          "untranslatable_core": {"type": "string", "description": "两代之间不可翻译的核心分歧"}
+        }
+      },
+      "description": "代际消费语法冲突（L5必填，其他可选）"
+    },
+    "unspeakability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "不可言说性评分：0=广泛讨论，10=几乎不可公开讨论"
+    },
+    "verifiability": {
+      "type": "string",
+      "enum": ["public_data", "derived_inference"],
+      "description": "可验证性：public_data=有公开数据直接支撑，derived_inference=基于公开数据的合理推断"
+    },
+    "narrative_blind_spot": {
+      "type": "string",
+      "description": "叙事盲区描述（叠加分析时可选）：这个结构性力量造成的、无人关注的困境"
+    },
+    "psychic_landscape": {
+      "type": "object",
+      "description": "心灵景观（L6必填，其他可选）：当外部结构力量作用于内在世界时产生的心理状态描述",
+      "properties": {
+        "dominant_emotion": {
+          "type": "string",
+          "description": "主导情绪（如：伪装的平静、被禁止的愤怒、慢性无力感）"
+        },
+        "meaning_structure": {
+          "type": "string",
+          "description": "当前的意义叙事（人们用什么来说服自己'值得活下去'）"
+        },
+        "forbidden_feeling": {
+          "type": "string",
+          "description": "被压抑的情绪（什么感受在公共空间无法表达）"
+        },
+        "identity_fragmentation": {
+          "type": "string",
+          "description": "身份碎片化描述（当外部角色被剥夺后，'我'还剩什么）"
+        },
+        "collective_symptom": {
+          "type": "string",
+          "description": "集体症候（这个群体共有的心理症状，如'精致地摆烂'）"
+        }
+      },
+      "required": ["dominant_emotion", "meaning_structure", "forbidden_feeling", "identity_fragmentation", "collective_symptom"]
+    }
+  }
+}

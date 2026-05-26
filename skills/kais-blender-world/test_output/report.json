@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "shot": "S01_warm_interior",
+      "ok": true,
+      "time": 64,
+      "renders": 3
+    },
+    {
+      "shot": "S02_studio_hero",
+      "ok": true,
+      "time": 92,
+      "renders": 4
+    },
+    {
+      "shot": "S03_night_confront",
+      "ok": true,
+      "time": 153,
+      "renders": 3
+    },
+    {
+      "shot": "S04_sunrise_walk",
+      "ok": true,
+      "time": 61,
+      "renders": 3
+    },
+    {
+      "shot": "S05_dramatic_dragon",
+      "ok": true,
+      "time": 67,
+      "renders": 3
+    }
+  ],
+  "renders": 16,
+  "time": 437
+}

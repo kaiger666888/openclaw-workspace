@@ -1,0 +1,163 @@
+{
+  "S01": {
+    "scene": {
+      "name": "地牢大厅",
+      "description": "战士推开地牢大门，发现一条巨龙正守卫着闪闪发光的宝箱"
+    },
+    "layout": {
+      "战士": {
+        "position": [
+          0,
+          -2.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "巨龙": {
+        "position": [
+          0,
+          2.5,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ]
+      },
+      "宝箱": {
+        "position": [
+          0,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          90,
+          0
+        ]
+      },
+      "火把": {
+        "position": [
+          -3,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "石柱": {
+        "position": [
+          -2.8,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "relations_verified": [
+      "战士 facing 巨龙 (d=5.0) ✅",
+      "巨龙 guarding 宝箱 (d=1.0) ✅",
+      "宝箱 between 战士 and 巨龙 ✅",
+      "战士 inside 地牢大厅 ✅",
+      "火把 near 石柱 (d=0.5) ✅"
+    ],
+    "spatial_notes": "5种关系全覆盖，碰撞检测通过（最小间距>0.3m）"
+  },
+  "S02": {
+    "scene": {
+      "name": "地牢大厅",
+      "description": "战士拔剑备战，目光锁定巨龙"
+    },
+    "layout": {
+      "战士": {
+        "position": [
+          0,
+          -2.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "巨龙": {
+        "position": [
+          0,
+          2.5,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ]
+      },
+      "宝箱": {
+        "position": [
+          0,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          90,
+          0
+        ]
+      }
+    },
+    "relations_verified": [
+      "战士 facing 巨龙 (d=5.0) ✅",
+      "战士 opposite 巨龙 ✅"
+    ],
+    "spatial_notes": "与S01同场景，角色位置保持连续性"
+  },
+  "S03": {
+    "scene": {
+      "name": "地牢大厅",
+      "description": "巨龙咆哮特写"
+    },
+    "layout": {
+      "巨龙": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "火把": {
+        "position": [
+          2,
+          1,
+          0
+        ],
+        "rotation": [
+          0,
+          -90,
+          0
+        ]
+      }
+    },
+    "relations_verified": [
+      "巨龙 facing camera (d=2.0) ✅"
+    ],
+    "spatial_notes": "单角色特写，火把提供侧光"
+  }
+}
