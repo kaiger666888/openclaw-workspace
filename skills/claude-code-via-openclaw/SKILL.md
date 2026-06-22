@@ -49,7 +49,11 @@ If `mode` not specified:
 ## Constants
 
 ```bash
-SESSION_NAME="oc-<project_name>"          # tmux session name
+TIMESTAMP=$(date +%s)                     # Unix timestamp for unique identification
+SESSION_NAME="oc-<project_name>-${TIMESTAMP}"  # tmux session name (unique per run)
+LOG_DIR="/tmp/oc-logs"                    # Log directory
+LOG_FILE="$LOG_DIR/${SESSION_NAME}.log"  # Continuous output log
+STATE_FILE="$LOG_DIR/${SESSION_NAME}.state"  # Progress tracking state
 TMUX_CMD="tmux new-session -d -s $SESSION_NAME"
 ```
 
@@ -68,7 +72,8 @@ TMUX_CMD="tmux new-session -d -s $SESSION_NAME"
 
 ```bash
 # Create tmux session and launch Claude Code inside it
-SESSION_NAME="oc-<project_name>"
+TIMESTAMP=$(date +%s)
+SESSION_NAME="oc-<project_name>-${TIMESTAMP}"
 PROJECT_DIR="/path/to/project"
 
 tmux new-session -d -s "$SESSION_NAME" \
@@ -128,9 +133,11 @@ tmux list-panes -t "$SESSION_NAME" -F '#{pane_current_command}'
 Use `tmux pipe-pane` to continuously stream Claude Code output to a log file:
 
 ```bash
-SESSION_NAME="oc-<project_name>"
+TIMESTAMP=$(date +%s)
+SESSION_NAME="oc-<project_name>-${TIMESTAMP}"
 LOG_DIR="/tmp/oc-logs"
 LOG_FILE="$LOG_DIR/${SESSION_NAME}.log"
+STATE_FILE="$LOG_DIR/${SESSION_NAME}.state"
 mkdir -p "$LOG_DIR"
 
 # Start continuous logging (runs in background, captures everything, strips ANSI)
@@ -148,9 +155,10 @@ Use the progress tracker to detect milestones and send targeted updates:
 
 ```bash
 # Run progress tracker (continuous, checks log every 30s)
-SESSION_NAME="oc-<project_name>"
+TIMESTAMP=$(date +%s)
+SESSION_NAME="oc-<project_name>-${TIMESTAMP}"
 LOG_FILE="/tmp/oc-logs/${SESSION_NAME}.log"
-STATE_FILE="/tmp/oc-logs/${SESSION_NAME}.state"
+STATE_FILE="$LOG_DIR/${SESSION_NAME}.state"
 
 # Check progress: what's new since last check?
 PROGRESS=$(tail -100 "$LOG_FILE" | grep -v "^$" | tail -20)
@@ -176,7 +184,7 @@ cron action=add --job '{
   "schedule": {"kind": "every", "everyMs": 60000},
   "payload": {
     "kind": "agentTurn",
-    "message": "检查 Claude Code 进度 <SESSION_NAME>：\n1. 读 /tmp/oc-logs/<SESSION_NAME>.state 获取上次进度位置\n2. 读 /tmp/oc-logs/<SESSION_NAME>.log 从上次位置之后的新内容（已自动过滤ANSI）\n3. 检测关键事件（Phase完成/错误/PR创建/退出）\n4. 有新进展 → 汇报关键变化（不超过5行），更新 state 文件\n5. 无新内容但仍在运行 → 不发消息\n6. Claude Code 已退出 → 发送完成通知，附最后30行输出\n\n重要：只在有实质性变化时才发消息。不要重复报告相同内容。",
+    "message": "检查 Claude Code 进度 <SESSION_NAME>：\n1. 读 /tmp/oc-logs/<SESSION_NAME>.state 获取上次进度位置\n2. 读 /tmp/oc-logs/<SESSION_NAME>.log 从上次位置之后的新内容（已自动过滤ANSI）\n3. 检测关键事件（Phase完成/错误/PR创建/退出）\n4. 有新进展 → 汇报关键变化（不超过5行），更新 state 文件\n5. 无新内容但仍在运行 → 不发消息\n6. Claude Code 已退出（pane_current_command 不是 claude）→ 执行自清理：\n   a. 发送完成通知（附最后30行输出）\n   b. 禁用本监控 cron（cron action=update --jobId __CRON_JOB_ID__ --patch '{\"enabled\": false}'）\n   c. 清理 tmux session（tmux kill-session -t <SESSION_NAME>）\n   d. 删除日志文件（rm -f /tmp/oc-logs/<SESSION_NAME>.log /tmp/oc-logs/<SESSION_NAME>.state）\n\n重要：只在有实质性变化时才发消息。不要重复报告相同内容。__CRON_JOB_ID__ 会被编排者注入为实际的 cron job ID。",
     "timeoutSeconds": 30
   },
   "sessionTarget": "current",
@@ -190,7 +198,7 @@ cron action=add --job '{
 
 ```json
 {
-  "session": "oc-myproject",
+  "session": "oc-myproject-1748765200",  // Unix timestamp included
   "logOffset": 12345,
   "lastReport": "2026-05-09T18:30:00+08:00",
   "lastMilestone": "Phase 2 complete",
@@ -282,7 +290,8 @@ Send Q&A decisions to user as a summary card (don't wait for reply, just inform)
 ### Phase 4: Research → Requirements → Roadmap
 
 ```bash
-SESSION_NAME="oc-<project_name>"
+TIMESTAMP=$(date +%s)
+SESSION_NAME="oc-<project_name>-${TIMESTAMP}"
 
 tmux new-session -d -s "$SESSION_NAME" \
   "cd <project_dir> && claude -p --dangerously-skip-permissions \
@@ -336,7 +345,8 @@ fi
 
 **For GSD projects:**
 ```bash
-SESSION_NAME="oc-<project_name>"
+TIMESTAMP=$(date +%s)
+SESSION_NAME="oc-<project_name>-${TIMESTAMP}"
 tmux new-session -d -s "$SESSION_NAME" \
   "cd <project_dir> && claude -p --dangerously-skip-permissions '/gsd:progress'"
 ```
@@ -399,11 +409,138 @@ cron action=add --job '{
 
 ### Teardown
 
-**Always disable monitoring when task completes:**
+**Always perform full cleanup when task completes:**
+
 ```bash
-cron action=update --jobId <id> --patch '{"enabled": false}'
+# 1. Stop continuous logging
+tmux pipe-pane -t "$SESSION_NAME"
+
+# 2. Send completion notification with final output
+FINAL_OUTPUT=$(tail -30 /tmp/oc-logs/${SESSION_NAME}.log)
+echo "Claude Code task completed. Final output:" && echo "$FINAL_OUTPUT"
+
+# 3. Disable monitoring cron
+cron action=update --jobId <CRON_JOB_ID> --patch '{"enabled": false}'
+
+# 4. Kill tmux session
 tmux kill-session -t "$SESSION_NAME"
+
+# 5. Clean up log files
+rm -f /tmp/oc-logs/${SESSION_NAME}.log /tmp/oc-logs/${SESSION_NAME}.state
+
+# 6. Verify cleanup
+tmux list-sessions | grep "$SESSION_NAME" && echo "WARNING: Session still exists" || echo "Cleanup complete"
 ```
+
+**IMPORTANT**: Execute teardown in this exact order to prevent orphaned resources.
+
+
+### Cleanup
+
+Session TTL and orphan prevention mechanisms.
+
+#### Session TTL
+
+Each Claude Code session has a maximum lifetime of **24 hours**. After this period:
+- Session will be automatically terminated
+- All associated logs and state files will be purged
+- Monitoring cron will be disabled
+
+Calculate TTL from session name timestamp:
+```bash
+SESSION_AGE=$(($(date +%s) - ${TIMESTAMP}))
+MAX_AGE=86400  # 24 hours in seconds
+if [ $SESSION_AGE -gt $MAX_AGE ]; then
+  echo "Session expired, forcing cleanup"
+  # Force cleanup commands here
+fi
+```
+
+#### Orphan Detection & Cleanup
+
+Create a daily maintenance cron (or run manually) to clean up orphaned resources:
+
+```bash
+#!/bin/bash
+# orphan-cleanup.sh - Daily orphan cleanup script
+
+echo "Starting orphan cleanup..."
+
+# 1. Clean up orphaned tmux sessions (pane not running claude)
+for session in $(tmux list-sessions -F '#{session_name}' | grep "^oc-"); do
+  pane_cmd=$(tmux list-panes -t "$session" -F '#{pane_current_command}' 2>/dev/null)
+  if [ "$pane_cmd" != "claude" ]; then
+    echo "Killing orphaned session: $session (pane: $pane_cmd)"
+    tmux kill-session -t "$session"
+  fi
+done
+
+# 2. Clean up orphaned cron jobs (session no longer exists)
+for cron_id in $(cron action=list | jq -r '.[] | select(.name | startswith("CC Monitor:")) | .id'); do
+  cron_name=$(cron action=list | jq -r ".[] | select(.id == \"$cron_id\") | .name")
+  session_name=$(echo "$cron_name" | sed 's/CC Monitor: //')
+  if ! tmux has-session -t "$session_name" 2>/dev/null; then
+    echo "Disabling orphaned cron: $cron_name (session not found)"
+    cron action=update --jobId "$cron_id" --patch '{"enabled": false}'
+  fi
+done
+
+# 3. Clean up orphaned log files (no corresponding session)
+for log_file in /tmp/oc-logs/oc-*.log; do
+  session_name=$(basename "$log_file" .log)
+  if ! tmux has-session -t "$session_name" 2>/dev/null; then
+    echo "Removing orphaned log: $log_file"
+    rm -f "$log_file" "/tmp/oc-logs/${session_name}.state"
+  fi
+done
+
+echo "Orphan cleanup completed"
+```
+
+#### One-Click Cleanup Template
+
+For immediate manual cleanup of all OpenClaw-related resources:
+
+```bash
+# cleanup-all-oc-resources.sh
+echo "Cleaning up all Claude Code via OpenClaw resources..."
+
+# Kill all oc- tmux sessions
+tmux list-sessions -F '#{session_name}' | grep "^oc-" | xargs -I {} tmux kill-session -t {}
+
+# Disable all CC Monitor cron jobs
+for cron_id in $(cron action=list | jq -r '.[] | select(.name | startswith("CC Monitor:") or .name | startswith("CC Progress:")) | .id'); do
+  cron action=update --jobId "$cron_id" --patch '{"enabled": false}'
+done
+
+# Remove all log files
+rm -rf /tmp/oc-logs/oc-*
+
+echo "Cleanup complete. All resources removed."
+```
+
+#### Maintenance Schedule
+
+Recommended cleanup frequency:
+- **Session TTL**: Automatic, 24 hours after creation
+- **Orphan scan**: Daily cron (recommended: 2 AM local time)
+- **Manual cleanup**: As needed, using one-click script
+
+```bash
+# Add daily orphan cleanup cron
+cron action=add --job '{
+  "name": "OC Daily Orphan Cleanup",
+  "schedule": {"kind": "daily", "hour": 2, "minute": 0},
+  "payload": {
+    "kind": "agentTurn",
+    "message": "执行 /path/to/orphan-cleanup.sh 脚本，清理所有 orphaned tmux sessions、cron jobs 和 log 文件。报告清理结果（删除了多少项）。",
+    "timeoutSeconds": 120
+  },
+  "sessionTarget": "current",
+  "delivery": {"mode": "announce", "channel": "<channel>", "to": "<target>"
+}'
+```
+
 
 ### Steering Decision Framework
 
@@ -449,7 +586,7 @@ Claude Code's `AskUserQuestion` tool requires interactive input — can't use wi
 - **One command per tmux send-keys** — wait for previous to complete before sending next
 - **Check pane_current_command** to detect if Claude Code exited
 - **Cron prompt must be minimal** (~50 words) and forbid NO_REPLY
-- **Always disable monitoring cron** when task completes
+- **Always disable monitoring cron** when task completes (or let auto-cleanup handle it)
 - **Self-verify outputs** before reporting to user
 - **Screenshots**: use `deviceScaleFactor: 3` + `asDocument=true`
 - **Forum groups**: always specify `threadId` when using message tool
